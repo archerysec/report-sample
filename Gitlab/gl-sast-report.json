@@ -1,0 +1,714 @@
+{
+  "version": "2.4",
+  "vulnerabilities": [
+    {
+      "id": "e2958ea78394361aa2ee81b4ef5c8a45f26cd133821a55bd203f00f1ffd149f4",
+      "category": "sast",
+      "name": "Password in URL",
+      "message": "Password in URL",
+      "description": "Password in URL detected; please remove and revoke it if this is a leak.",
+      "cve": "Jenkinsfile:95d36273c1c5ea5e740f81faf864726111e9ca489c3661d2f84793e5f1e88a61:Password in URL",
+      "severity": "Critical",
+      "confidence": "Unknown",
+      "scanner": {
+        "id": "trufflehog",
+        "name": "TruffleHog"
+      },
+      "location": {
+        "file": "Jenkinsfile",
+        "start_line": 117,
+        "end_line": 117,
+        "dependency": {
+          "package": {}
+        }
+      },
+      "identifiers": [
+        {
+          "type": "trufflehog_rule_id",
+          "name": "TruffleHog rule ID Password in URL",
+          "value": "Password in URL"
+        }
+      ]
+    },
+    {
+      "id": "2ef26d14976d9456d6c3a70d1f6ec0a8d4d3619bf67e7c5180043cd2b9230aae",
+      "category": "sast",
+      "name": "AWS API key",
+      "message": "AWS API key",
+      "description": "Amazon Web Services API key detected; please remove and revoke it if this is a leak.",
+      "cve": "src/app.py:8698b895edbad632c93a6eaf43e12c605091ddacbe378e237e4c32c67056d0aa:AWS",
+      "severity": "Critical",
+      "confidence": "Unknown",
+      "scanner": {
+        "id": "gitleaks",
+        "name": "Gitleaks"
+      },
+      "location": {
+        "file": "src/app.py",
+        "start_line": 112,
+        "end_line": 112,
+        "dependency": {
+          "package": {}
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gitleaks_rule_id",
+          "name": "Gitleaks rule ID AWS",
+          "value": "AWS"
+        }
+      ]
+    },
+    {
+      "id": "a049c0b58d3846c5450a4fe4e1c0a461b490bc8a7fc3829b38f64851eb5a20cb",
+      "category": "sast",
+      "message": "Possible binding to all interfaces.",
+      "cve": "src/app.py:c6eaa56b21c7ef8f5f58ceb19be379d901f9a6884445a18fd09b532eff0095d1:B104",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "src/app.py",
+        "start_line": 119,
+        "end_line": 119
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B104",
+          "value": "B104",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b104_hardcoded_bind_all_interfaces.html"
+        }
+      ]
+    },
+    {
+      "id": "5a838d310120a1713500d24ba4c0078bbe74cd092d7428b916c9c37784f67b86",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py:162e4ad6545d5e724e340fee1014ec294c1605110f6894025f3e229d1ea3c1ae:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py",
+        "start_line": 46,
+        "end_line": 46
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "4c44d8bda1a95babcb90ea4406e260ce728f37171ae82abbe7adffd9e8175b47",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py:19d034a510382743adf90910eff4f5dc24afa15ab05c72b7aac27ac330460192:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py",
+        "start_line": 48,
+        "end_line": 48
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "9932dc583a477d1b04ab1d780f2aae040ccca5459491ce1617b4cf84bcd1db30",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py:1a316be046019857b8b6ba9088d4bbc4f63517a7ebe34dca29785528d90e2cac:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py",
+        "start_line": 32,
+        "end_line": 32
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "f13bd1be5c67169f47fc8fc62bf6441fc73d46f291213c4bc4b107f9571e3f25",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py:3e0be7cd70274cecd2be62f63f638b5baeade32f8eeaff0146941db28ba782f2:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py",
+        "start_line": 33,
+        "end_line": 33
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "9764bce0dd2fd94d3d38f69c954c39d6205f173d8e7085fc30e0484a846a9631",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py:440b0183da3c56eaa13dbf9491ab1a6a67f0896449b6ae0c88187a68251bf624:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py",
+        "start_line": 47,
+        "end_line": 47
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "159b646625ed1de6ff203d54a117f69eb91d7df60a53866046d58fe73f152c2e",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py:58d4f0023f6d145b3ad4b6704072f57f1b64665f7971cfb90cad742a5ebb4055:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py",
+        "start_line": 49,
+        "end_line": 49
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "162f26730a75de613278520eff4f06d37b631a891521adaff29d8a08db5d2ff2",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py:7da21ca0435dcff7ea6be81f2dc727d6c8fbd9d4400984e366eefc80a0e1c10d:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py",
+        "start_line": 50,
+        "end_line": 50
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "a1c04344476c94b74d98c03874cf89e4a85b5ac5755f9136bd78f1d3a13d8332",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py:858d7eb495606f5de792f48869841e4cc763d08ecf3411f4174c1825be13cde7:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py",
+        "start_line": 35,
+        "end_line": 35
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "3a43c15d332a00967285146d0234f895f51d55004e227e7e91e2e024242780f5",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py:b24daedb65eddb8bc33df5504ba90fa23d478b4410d63316396ac2d09c39b3ec:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py",
+        "start_line": 11,
+        "end_line": 11
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "b8577eb90dd7ad3d81c51427b3b888da633a68efe66998348237e99759afe0f6",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py:b71ef9b80bf46762f05145217a6f7b53fd8ca3a3bec64f697d5c2c226983fc7c:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py",
+        "start_line": 34,
+        "end_line": 34
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "2ff36e3c26165c0e4ef19f54c96764101edebae2fb237aa38b88e59e65d31b90",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py:ca45dd4be9114c20e7a39a1a37ed30a02a106a4350a7f04603f912cfd0242483:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "3d343d39069bfd042e30ec8b1a5c976d0f9f5e74aa116457f06c4500752e2341",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py:cdd4caccf1965bbfc0a8ddbacf6e8b6518fd263893d70e3fac7381754991b779:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/default/tests/test_role.py",
+        "start_line": 36,
+        "end_line": 36
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "01279c0ca804a1d11ecab0e1a1712b50eed90f9eaeff52b30ec6667a9d02d864",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py:162e4ad6545d5e724e340fee1014ec294c1605110f6894025f3e229d1ea3c1ae:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py",
+        "start_line": 40,
+        "end_line": 40
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "99321ddaefccd5533cea5c68162311c47d07eb1e50f34d3ad8f10a99a09709c6",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py:19d034a510382743adf90910eff4f5dc24afa15ab05c72b7aac27ac330460192:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py",
+        "start_line": 42,
+        "end_line": 42
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "c3f5861aa471bece5a11fa928487ac384b275451b8ba5ae48ec0e7d37066ccae",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py:1a316be046019857b8b6ba9088d4bbc4f63517a7ebe34dca29785528d90e2cac:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py",
+        "start_line": 30,
+        "end_line": 30
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "3b3912f03b72b4afc6f716f99a0458fb5b0814390d48170a13ba4f38037df39a",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py:3e0be7cd70274cecd2be62f63f638b5baeade32f8eeaff0146941db28ba782f2:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py",
+        "start_line": 31,
+        "end_line": 31
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "1893577d93c4b4fd02edcd69f82b550ef7c8655f509be3080bf84264b9fe6c38",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py:440b0183da3c56eaa13dbf9491ab1a6a67f0896449b6ae0c88187a68251bf624:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py",
+        "start_line": 41,
+        "end_line": 41
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "49fa13a663edd7a7ea5aefa5e631f53bb3fae9c6104d3828ab03a0f4f28a8d2c",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py:58d4f0023f6d145b3ad4b6704072f57f1b64665f7971cfb90cad742a5ebb4055:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py",
+        "start_line": 43,
+        "end_line": 43
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "48be6bc3dd0dd159c927c90e1f0c1ade4e9c496133679d121783b53d4ffa2d2e",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py:7da21ca0435dcff7ea6be81f2dc727d6c8fbd9d4400984e366eefc80a0e1c10d:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py",
+        "start_line": 44,
+        "end_line": 44
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "f11a849f62ffd3dfb835767729ff65f60521f61951c436c31667e79647468d1b",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py:858d7eb495606f5de792f48869841e4cc763d08ecf3411f4174c1825be13cde7:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py",
+        "start_line": 33,
+        "end_line": 33
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "8c41ad2f83e757f31efae3d79931bda6610937388977088c56eb5624dd8ec4c0",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py:b24daedb65eddb8bc33df5504ba90fa23d478b4410d63316396ac2d09c39b3ec:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py",
+        "start_line": 11,
+        "end_line": 11
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "78a22d2da79e5fe18d719b64580fff1b737cb898a97319799f4992b2dd1d362c",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py:b71ef9b80bf46762f05145217a6f7b53fd8ca3a3bec64f697d5c2c226983fc7c:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py",
+        "start_line": 32,
+        "end_line": 32
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "d587e6115a7775f77a1192033b19564fad425e1579169d1c22b3049c1e889b83",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py:ca45dd4be9114c20e7a39a1a37ed30a02a106a4350a7f04603f912cfd0242483:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "be3b4fcfef2cd8c521622d5c6a7cc9e58fa40faeda131c8c1354b4b2c06e9888",
+      "category": "sast",
+      "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "cve": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py:cdd4caccf1965bbfc0a8ddbacf6e8b6518fd263893d70e3fac7381754991b779:B101",
+      "severity": "Low",
+      "confidence": "High",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "infrastructure/provisioning/roles/ansible-role-maven/molecule/single/tests/test_role.py",
+        "start_line": 34,
+        "end_line": 34
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B101",
+          "value": "B101",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b101_assert_used.html"
+        }
+      ]
+    },
+    {
+      "id": "b3d17cfc68bb07185e8fd97e64b1f2bc30486e3a196e3f22ce87ae82b096a192",
+      "category": "sast",
+      "message": "Possible hardcoded password: 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'",
+      "cve": "src/app.py:50a423218c3853938583ee7fa3b45415ace70b13bf4eab9137c2f3f654be15fe:B105",
+      "severity": "Low",
+      "confidence": "Medium",
+      "scanner": {
+        "id": "bandit",
+        "name": "Bandit"
+      },
+      "location": {
+        "file": "src/app.py",
+        "start_line": 113,
+        "end_line": 113
+      },
+      "identifiers": [
+        {
+          "type": "bandit_test_id",
+          "name": "Bandit Test ID B105",
+          "value": "B105",
+          "url": "https://docs.openstack.org/bandit/latest/plugins/b105_hardcoded_password_string.html"
+        }
+      ]
+    }
+  ],
+  "remediations": []
+}

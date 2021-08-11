@@ -1,0 +1,1225 @@
+{
+  "results": [
+    {
+      "check_id": "javascript.lang.correctness.useless-eqeq.eqeq-is-bad",
+      "path": "webgoat-container/src/main/resources/static/js/libs/underscore-min.js",
+      "start": {
+        "line": 6,
+        "col": 5178
+      },
+      "end": {
+        "line": 6,
+        "col": 5182
+      },
+      "extra": {
+        "message": "Detected a useless comparison operation `r == r` or `r != r`. This \noperation is always true.\nIf testing for floating point NaN, use `math.isnan`, or\n`cmath.isnan` if the number is complex.\n",
+        "metavars": {
+          "$X": {
+            "start": {
+              "line": 6,
+              "col": 5178,
+              "offset": 5628
+            },
+            "end": {
+              "line": 6,
+              "col": 5179,
+              "offset": 5629
+            },
+            "abstract_content": "r",
+            "unique_id": {
+              "type": "id",
+              "value": "r",
+              "kind": "Param",
+              "sid": 202
+            }
+          }
+        },
+        "metadata": {},
+        "severity": "ERROR",
+        "lines": "var n=\"object\"==typeof self&&self.self===self&&self||\"object\"==typeof global&&global.global===global&&global||Function(\"return this\")()||{},e=Array.prototype,i=Object.prototype,p=\"undefined\"!=typeof Symbol?Symbol.prototype:null,u=e.push,f=e.slice,s=i.toString,o=i.hasOwnProperty,r=Array.isArray,a=Object.keys,t=Object.create,c=n.isNaN,l=n.isFinite,v=function(){};function h(n){return n instanceof h?n:this instanceof h?void(this._wrapped=n):new h(n)}var g=h.VERSION=\"1.10.2\";function y(u,o,n){if(void 0===o)return u;switch(null==n?3:n){case 1:return function(n){return u.call(o,n)};case 3:return function(n,r,t){return u.call(o,n,r,t)};case 4:return function(n,r,t,e){return u.call(o,n,r,t,e)}}return function(){return u.apply(o,arguments)}}function d(n,r,t){return null==n?ur:Cn(n)?y(n,r,t):Ln(n)&&!Kn(n)?ir(n):or(n)}function m(n,r){return d(n,r,1/0)}function b(n,r,t){return h.iteratee!==m?h.iteratee(n,r):d(n,r,t)}function j(u,o){return o=null==o?u.length-1:+o,function(){for(var n=Math.max(arguments.length-o,0),r=Array(n),t=0;t<n;t++)r[t]=arguments[t+o];switch(o){case 0:return u.call(this,r);case 1:return u.call(this,arguments[0],r);case 2:return u.call(this,arguments[0],arguments[1],r)}var e=Array(o+1);for(t=0;t<o;t++)e[t]=arguments[t];return e[o]=r,u.apply(this,e)}}function _(n){if(!Ln(n))return{};if(t)return t(n);v.prototype=n;var r=new v;return v.prototype=null,r}function w(r){return function(n){return null==n?void 0:n[r]}}function x(n,r){return null!=n&&o.call(n,r)}function S(n,r){for(var t=r.length,e=0;e<t;e++){if(null==n)return;n=n[r[e]]}return t?n:void 0}h.iteratee=m;var A=Math.pow(2,53)-1,O=w(\"length\");function M(n){var r=O(n);return\"number\"==typeof r&&0<=r&&r<=A}function E(n,r,t){var e,u;if(r=y(r,t),M(n))for(e=0,u=n.length;e<u;e++)r(n[e],e,n);else{var o=Sn(n);for(e=0,u=o.length;e<u;e++)r(n[o[e]],o[e],n)}return n}function N(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=Array(u),i=0;i<u;i++){var a=e?e[i]:i;o[i]=r(n[a],a,n)}return o}function k(f){return function(n,r,t,e){var u=3<=arguments.length;return function(n,r,t,e){var u=!M(n)&&Sn(n),o=(u||n).length,i=0<f?0:o-1;for(e||(t=n[u?u[i]:i],i+=f);0<=i&&i<o;i+=f){var a=u?u[i]:i;t=r(t,n[a],a,n)}return t}(n,y(r,e,4),t,u)}}var I=k(1),T=k(-1);function B(n,r,t){var e=(M(n)?on:Tn)(n,r,t);if(void 0!==e&&-1!==e)return n[e]}function R(n,e,r){var u=[];return e=b(e,r),E(n,function(n,r,t){e(n,r,t)&&u.push(n)}),u}function F(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=0;o<u;o++){var i=e?e[o]:o;if(!r(n[i],i,n))return!1}return!0}function q(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=0;o<u;o++){var i=e?e[o]:o;if(r(n[i],i,n))return!0}return!1}function D(n,r,t,e){return M(n)||(n=On(n)),(\"number\"!=typeof t||e)&&(t=0),0<=ln(n,r,t)}var W=j(function(n,t,e){var u,o;return Cn(t)?o=t:Kn(t)&&(u=t.slice(0,-1),t=t[t.length-1]),N(n,function(n){var r=o;if(!r){if(u&&u.length&&(n=S(n,u)),null==n)return;r=n[t]}return null==r?r:r.apply(n,e)})});function z(n,r){return N(n,or(r))}function P(n,e,r){var t,u,o=-1/0,i=-1/0;if(null==e||\"number\"==typeof e&&\"object\"!=typeof n[0]&&null!=n)for(var a=0,f=(n=M(n)?n:On(n)).length;a<f;a++)null!=(t=n[a])&&o<t&&(o=t);else e=b(e,r),E(n,function(n,r,t){u=e(n,r,t),(i<u||u===-1/0&&o===-1/0)&&(o=n,i=u)});return o}function K(n,r,t){if(null==r||t)return M(n)||(n=On(n)),n[ar(n.length-1)];var e=M(n)?Dn(n):On(n),u=O(e);r=Math.max(Math.min(r,u),0);for(var o=u-1,i=0;i<r;i++){var a=ar(i,o),f=e[i];e[i]=e[a],e[a]=f}return e.slice(0,r)}function L(i,r){return function(e,u,n){var o=r?[[],[]]:{};return u=b(u,n),E(e,function(n,r){var t=u(n,r,e);i(o,n,t)}),o}}var V=L(function(n,r,t){x(n,t)?n[t].push(r):n[t]=[r]}),C=L(function(n,r,t){n[t]=r}),J=L(function(n,r,t){x(n,t)?n[t]++:n[t]=1}),U=/[^\\ud800-\\udfff]|[\\ud800-\\udbff][\\udc00-\\udfff]|[\\ud800-\\udfff]/g;var $=L(function(n,r,t){n[t?0:1].push(r)},!0);function G(n,r,t){return null==n||n.length<1?null==r?void 0:[]:null==r||t?n[0]:H(n,n.length-r)}function H(n,r,t){return f.call(n,0,Math.max(0,n.length-(null==r||t?1:r)))}function Q(n,r,t){return f.call(n,null==r||t?1:r)}function X(n,r,t,e){for(var u=(e=e||[]).length,o=0,i=O(n);o<i;o++){var a=n[o];if(M(a)&&(Kn(a)||Vn(a)))if(r)for(var f=0,c=a.length;f<c;)e[u++]=a[f++];else X(a,r,t,e),u=e.length;else t||(e[u++]=a)}return e}var Y=j(function(n,r){return rn(n,r)});function Z(n,r,t,e){er(r)||(e=t,t=r,r=!1),null!=t&&(t=b(t,e));for(var u=[],o=[],i=0,a=O(n);i<a;i++){var f=n[i],c=t?t(f,i,n):f;r&&!t?(i&&o===c||u.push(f),o=c):t?D(o,c)||(o.push(c),u.push(f)):D(u,f)||u.push(f)}return u}var nn=j(function(n){return Z(X(n,!0,!0))});var rn=j(function(n,r){return r=X(r,!0,!0),R(n,function(n){return!D(r,n)})});function tn(n){for(var r=n&&P(n,O).length||0,t=Array(r),e=0;e<r;e++)t[e]=z(n,e);return t}var en=j(tn);function un(o){return function(n,r,t){r=b(r,t);for(var e=O(n),u=0<o?0:e-1;0<=u&&u<e;u+=o)if(r(n[u],u,n))return u;return-1}}var on=un(1),an=un(-1);function fn(n,r,t,e){for(var u=(t=b(t,e,1))(r),o=0,i=O(n);o<i;){var a=Math.floor((o+i)/2);t(n[a])<u?o=a+1:i=a}return o}function cn(o,i,a){return function(n,r,t){var e=0,u=O(n);if(\"number\"==typeof t)0<o?e=0<=t?t:Math.max(t+u,e):u=0<=t?Math.min(t+1,u):t+u+1;else if(a&&t&&u)return n[t=a(n,r)]===r?t:-1;if(r!=r)return 0<=(t=i(f.call(n,e,u),tr))?t+e:-1;for(t=0<o?e:u-1;0<=t&&t<u;t+=o)if(n[t]===r)return t;return-1}}var ln=cn(1,on,fn),pn=cn(-1,an);function sn(n,r,t,e,u){if(!(e instanceof r))return n.apply(t,u);var o=_(n.prototype),i=n.apply(o,u);return Ln(i)?i:o}var vn=j(function(r,t,e){if(!Cn(r))throw new TypeError(\"Bind must be called on a function\");var u=j(function(n){return sn(r,u,t,this,e.concat(n))});return u}),hn=j(function(u,o){var i=hn.placeholder,a=function(){for(var n=0,r=o.length,t=Array(r),e=0;e<r;e++)t[e]=o[e]===i?arguments[n++]:o[e];for(;n<arguments.length;)t.push(arguments[n++]);return sn(u,a,this,this,t)};return a});hn.placeholder=h;var gn=j(function(n,r){var t=(r=X(r,!1,!1)).length;if(t<1)throw new Error(\"bindAll must be passed function names\");for(;t--;){var e=r[t];n[e]=vn(n[e],n)}});var yn=j(function(n,r,t){return setTimeout(function(){return n.apply(null,t)},r)}),dn=hn(yn,h,1);function mn(n){return function(){return!n.apply(this,arguments)}}function bn(n,r){var t;return function(){return 0<--n&&(t=r.apply(this,arguments)),n<=1&&(r=null),t}}var jn=hn(bn,2),_n=!{toString:null}.propertyIsEnumerable(\"toString\"),wn=[\"valueOf\",\"isPrototypeOf\",\"toString\",\"propertyIsEnumerable\",\"hasOwnProperty\",\"toLocaleString\"];function xn(n,r){var t=wn.length,e=n.constructor,u=Cn(e)&&e.prototype||i,o=\"constructor\";for(x(n,o)&&!D(r,o)&&r.push(o);t--;)(o=wn[t])in n&&n[o]!==u[o]&&!D(r,o)&&r.push(o)}function Sn(n){if(!Ln(n))return[];if(a)return a(n);var r=[];for(var t in n)x(n,t)&&r.push(t);return _n&&xn(n,r),r}function An(n){if(!Ln(n))return[];var r=[];for(var t in n)r.push(t);return _n&&xn(n,r),r}function On(n){for(var r=Sn(n),t=r.length,e=Array(t),u=0;u<t;u++)e[u]=n[r[u]];return e}function Mn(n){for(var r={},t=Sn(n),e=0,u=t.length;e<u;e++)r[n[t[e]]]=t[e];return r}function En(n){var r=[];for(var t in n)Cn(n[t])&&r.push(t);return r.sort()}function Nn(f,c){return function(n){var r=arguments.length;if(c&&(n=Object(n)),r<2||null==n)return n;for(var t=1;t<r;t++)for(var e=arguments[t],u=f(e),o=u.length,i=0;i<o;i++){var a=u[i];c&&void 0!==n[a]||(n[a]=e[a])}return n}}var kn=Nn(An),In=Nn(Sn);function Tn(n,r,t){r=b(r,t);for(var e,u=Sn(n),o=0,i=u.length;o<i;o++)if(r(n[e=u[o]],e,n))return e}function Bn(n,r,t){return r in t}var Rn=j(function(n,r){var t={},e=r[0];if(null==n)return t;Cn(e)?(1<r.length&&(e=y(e,r[1])),r=An(n)):(e=Bn,r=X(r,!1,!1),n=Object(n));for(var u=0,o=r.length;u<o;u++){var i=r[u],a=n[i];e(a,i,n)&&(t[i]=a)}return t}),Fn=j(function(n,t){var r,e=t[0];return Cn(e)?(e=mn(e),1<t.length&&(r=t[1])):(t=N(X(t,!1,!1),String),e=function(n,r){return!D(t,r)}),Rn(n,e,r)}),qn=Nn(An,!0);function Dn(n){return Ln(n)?Kn(n)?n.slice():kn({},n):n}function Wn(n,r){var t=Sn(r),e=t.length;if(null==n)return!e;for(var u=Object(n),o=0;o<e;o++){var i=t[o];if(r[i]!==u[i]||!(i in u))return!1}return!0}function zn(n,r,t,e){if(n===r)return 0!==n||1/n==1/r;if(null==n||null==r)return!1;if(n!=n)return r!=r;var u=typeof n;return(\"function\"===u||\"object\"===u||\"object\"==typeof r)&&function(n,r,t,e){n instanceof h&&(n=n._wrapped);r instanceof h&&(r=r._wrapped);var u=s.call(n);if(u!==s.call(r))return!1;switch(u){case\"[object RegExp]\":case\"[object String]\":return\"\"+n==\"\"+r;case\"[object Number]\":return+n!=+n?+r!=+r:0==+n?1/+n==1/r:+n==+r;case\"[object Date]\":case\"[object Boolean]\":return+n==+r;case\"[object Symbol]\":return p.valueOf.call(n)===p.valueOf.call(r)}var o=\"[object Array]\"===u;if(!o){if(\"object\"!=typeof n||\"object\"!=typeof r)return!1;var i=n.constructor,a=r.constructor;if(i!==a&&!(Cn(i)&&i instanceof i&&Cn(a)&&a instanceof a)&&\"constructor\"in n&&\"constructor\"in r)return!1}e=e||[];var f=(t=t||[]).length;for(;f--;)if(t[f]===n)return e[f]===r;if(t.push(n),e.push(r),o){if((f=n.length)!==r.length)return!1;for(;f--;)if(!zn(n[f],r[f],t,e))return!1}else{var c,l=Sn(n);if(f=l.length,Sn(r).length!==f)return!1;for(;f--;)if(c=l[f],!x(r,c)||!zn(n[c],r[c],t,e))return!1}return t.pop(),e.pop(),!0}(n,r,t,e)}function Pn(r){return function(n){return s.call(n)===\"[object \"+r+\"]\"}}var Kn=r||Pn(\"Array\");function Ln(n){var r=typeof n;return\"function\"===r||\"object\"===r&&!!n}var Vn=Pn(\"Arguments\"),Cn=Pn(\"Function\"),Jn=Pn(\"String\"),Un=Pn(\"Number\"),$n=Pn(\"Date\"),Gn=Pn(\"RegExp\"),Hn=Pn(\"Error\"),Qn=Pn(\"Symbol\"),Xn=Pn(\"Map\"),Yn=Pn(\"WeakMap\"),Zn=Pn(\"Set\"),nr=Pn(\"WeakSet\");!function(){Vn(arguments)||(Vn=function(n){return x(n,\"callee\")})}();var rr=n.document&&n.document.childNodes;function tr(n){return Un(n)&&c(n)}function er(n){return!0===n||!1===n||\"[object Boolean]\"===s.call(n)}function ur(n){return n}function or(r){return Kn(r)?function(n){return S(n,r)}:w(r)}function ir(r){return r=In({},r),function(n){return Wn(n,r)}}function ar(n,r){return null==r&&(r=n,n=0),n+Math.floor(Math.random()*(r-n+1))}\"function\"!=typeof/./&&\"object\"!=typeof Int8Array&&\"function\"!=typeof rr&&(Cn=function(n){return\"function\"==typeof n||!1});var fr=Date.now||function(){return(new Date).getTime()},cr={\"&\":\"&amp;\",\"<\":\"&lt;\",\">\":\"&gt;\",'\"':\"&quot;\",\"'\":\"&#x27;\",\"`\":\"&#x60;\"},lr=Mn(cr);function pr(r){var t=function(n){return r[n]},n=\"(?:\"+Sn(r).join(\"|\")+\")\",e=RegExp(n),u=RegExp(n,\"g\");return function(n){return n=null==n?\"\":\"\"+n,e.test(n)?n.replace(u,t):n}}var sr=pr(cr),vr=pr(lr);var hr=0;var gr=h.templateSettings={evaluate:/<%([\\s\\S]+?)%>/g,interpolate:/<%=([\\s\\S]+?)%>/g,escape:/<%-([\\s\\S]+?)%>/g},yr=/(.)^/,dr={\"'\":\"'\",\"\\\\\":\"\\\\\",\"\\r\":\"r\",\"\\n\":\"n\",\"\\u2028\":\"u2028\",\"\\u2029\":\"u2029\"},mr=/\\\\|'|\\r|\\n|\\u2028|\\u2029/g,br=function(n){return\"\\\\\"+dr[n]};function jr(n,r){return n._chain?h(r).chain():r}function _r(t){return E(En(t),function(n){var r=h[n]=t[n];h.prototype[n]=function(){var n=[this._wrapped];return u.apply(n,arguments),jr(this,r.apply(h,n))}}),h}E([\"pop\",\"push\",\"reverse\",\"shift\",\"sort\",\"splice\",\"unshift\"],function(r){var t=e[r];h.prototype[r]=function(){var n=this._wrapped;return t.apply(n,arguments),\"shift\"!==r&&\"splice\"!==r||0!==n.length||delete n[0],jr(this,n)}}),E([\"concat\",\"join\",\"slice\"],function(n){var r=e[n];h.prototype[n]=function(){return jr(this,r.apply(this._wrapped,arguments))}}),h.prototype.valueOf=h.prototype.toJSON=h.prototype.value=function(){return this._wrapped},h.prototype.toString=function(){return String(this._wrapped)};var wr=_r({default:h,VERSION:g,iteratee:m,restArguments:j,each:E,forEach:E,map:N,collect:N,reduce:I,foldl:I,inject:I,reduceRight:T,foldr:T,find:B,detect:B,filter:R,select:R,reject:function(n,r,t){return R(n,mn(b(r)),t)},every:F,all:F,some:q,any:q,contains:D,includes:D,include:D,invoke:W,pluck:z,where:function(n,r){return R(n,ir(r))},findWhere:function(n,r){return B(n,ir(r))},max:P,min:function(n,e,r){var t,u,o=1/0,i=1/0;if(null==e||\"number\"==typeof e&&\"object\"!=typeof n[0]&&null!=n)for(var a=0,f=(n=M(n)?n:On(n)).length;a<f;a++)null!=(t=n[a])&&t<o&&(o=t);else e=b(e,r),E(n,function(n,r,t){((u=e(n,r,t))<i||u===1/0&&o===1/0)&&(o=n,i=u)});return o},shuffle:function(n){return K(n,1/0)},sample:K,sortBy:function(n,e,r){var u=0;return e=b(e,r),z(N(n,function(n,r,t){return{value:n,index:u++,criteria:e(n,r,t)}}).sort(function(n,r){var t=n.criteria,e=r.criteria;if(t!==e){if(e<t||void 0===t)return 1;if(t<e||void 0===e)return-1}return n.index-r.index}),\"value\")},groupBy:V,indexBy:C,countBy:J,toArray:function(n){return n?Kn(n)?f.call(n):Jn(n)?n.match(U):M(n)?N(n,ur):On(n):[]},size:function(n){return null==n?0:M(n)?n.length:Sn(n).length},partition:$,first:G,head:G,take:G,initial:H,last:function(n,r,t){return null==n||n.length<1?null==r?void 0:[]:null==r||t?n[n.length-1]:Q(n,Math.max(0,n.length-r))},rest:Q,tail:Q,drop:Q,compact:function(n){return R(n,Boolean)},flatten:function(n,r){return X(n,r,!1)},without:Y,uniq:Z,unique:Z,union:nn,intersection:function(n){for(var r=[],t=arguments.length,e=0,u=O(n);e<u;e++){var o=n[e];if(!D(r,o)){var i;for(i=1;i<t&&D(arguments[i],o);i++);i===t&&r.push(o)}}return r},difference:rn,unzip:tn,zip:en,object:function(n,r){for(var t={},e=0,u=O(n);e<u;e++)r?t[n[e]]=r[e]:t[n[e][0]]=n[e][1];return t},findIndex:on,findLastIndex:an,sortedIndex:fn,indexOf:ln,lastIndexOf:pn,range:function(n,r,t){null==r&&(r=n||0,n=0),t||(t=r<n?-1:1);for(var e=Math.max(Math.ceil((r-n)/t),0),u=Array(e),o=0;o<e;o++,n+=t)u[o]=n;return u},chunk:function(n,r){if(null==r||r<1)return[];for(var t=[],e=0,u=n.length;e<u;)t.push(f.call(n,e,e+=r));return t},bind:vn,partial:hn,bindAll:gn,memoize:function(e,u){var o=function(n){var r=o.cache,t=\"\"+(u?u.apply(this,arguments):n);return x(r,t)||(r[t]=e.apply(this,arguments)),r[t]};return o.cache={},o},delay:yn,defer:dn,throttle:function(t,e,u){var o,i,a,f,c=0;u||(u={});var l=function(){c=!1===u.leading?0:fr(),o=null,f=t.apply(i,a),o||(i=a=null)},n=function(){var n=fr();c||!1!==u.leading||(c=n);var r=e-(n-c);return i=this,a=arguments,r<=0||e<r?(o&&(clearTimeout(o),o=null),c=n,f=t.apply(i,a),o||(i=a=null)):o||!1===u.trailing||(o=setTimeout(l,r)),f};return n.cancel=function(){clearTimeout(o),c=0,o=i=a=null},n},debounce:function(t,e,u){var o,i,a=function(n,r){o=null,r&&(i=t.apply(n,r))},n=j(function(n){if(o&&clearTimeout(o),u){var r=!o;o=setTimeout(a,e),r&&(i=t.apply(this,n))}else o=yn(a,e,this,n);return i});return n.cancel=function(){clearTimeout(o),o=null},n},wrap:function(n,r){return hn(r,n)},negate:mn,compose:function(){var t=arguments,e=t.length-1;return function(){for(var n=e,r=t[e].apply(this,arguments);n--;)r=t[n].call(this,r);return r}},after:function(n,r){return function(){if(--n<1)return r.apply(this,arguments)}},before:bn,once:jn,keys:Sn,allKeys:An,values:On,mapObject:function(n,r,t){r=b(r,t);for(var e=Sn(n),u=e.length,o={},i=0;i<u;i++){var a=e[i];o[a]=r(n[a],a,n)}return o},pairs:function(n){for(var r=Sn(n),t=r.length,e=Array(t),u=0;u<t;u++)e[u]=[r[u],n[r[u]]];return e},invert:Mn,functions:En,methods:En,extend:kn,extendOwn:In,assign:In,findKey:Tn,pick:Rn,omit:Fn,defaults:qn,create:function(n,r){var t=_(n);return r&&In(t,r),t},clone:Dn,tap:function(n,r){return r(n),n},isMatch:Wn,isEqual:function(n,r){return zn(n,r)},isEmpty:function(n){return null==n||(M(n)&&(Kn(n)||Jn(n)||Vn(n))?0===n.length:0===Sn(n).length)},isElement:function(n){return!(!n||1!==n.nodeType)},isArray:Kn,isObject:Ln,isArguments:Vn,isFunction:Cn,isString:Jn,isNumber:Un,isDate:$n,isRegExp:Gn,isError:Hn,isSymbol:Qn,isMap:Xn,isWeakMap:Yn,isSet:Zn,isWeakSet:nr,isFinite:function(n){return!Qn(n)&&l(n)&&!c(parseFloat(n))},isNaN:tr,isBoolean:er,isNull:function(n){return null===n},isUndefined:function(n){return void 0===n},has:function(n,r){if(!Kn(r))return x(n,r);for(var t=r.length,e=0;e<t;e++){var u=r[e];if(null==n||!o.call(n,u))return!1;n=n[u]}return!!t},identity:ur,constant:function(n){return function(){return n}},noop:function(){},property:or,propertyOf:function(r){return null==r?function(){}:function(n){return Kn(n)?S(r,n):r[n]}},matcher:ir,matches:ir,times:function(n,r,t){var e=Array(Math.max(0,n));r=y(r,t,1);for(var u=0;u<n;u++)e[u]=r(u);return e},random:ar,now:fr,escape:sr,unescape:vr,result:function(n,r,t){Kn(r)||(r=[r]);var e=r.length;if(!e)return Cn(t)?t.call(n):t;for(var u=0;u<e;u++){var o=null==n?void 0:n[r[u]];void 0===o&&(o=t,u=e),n=Cn(o)?o.call(n):o}return n},uniqueId:function(n){var r=++hr+\"\";return n?n+r:r},templateSettings:gr,template:function(o,n,r){!n&&r&&(n=r),n=qn({},n,h.templateSettings);var t,e=RegExp([(n.escape||yr).source,(n.interpolate||yr).source,(n.evaluate||yr).source].join(\"|\")+\"|$\",\"g\"),i=0,a=\"__p+='\";o.replace(e,function(n,r,t,e,u){return a+=o.slice(i,u).replace(mr,br),i=u+n.length,r?a+=\"'+\\n((__t=(\"+r+\"))==null?'':_.escape(__t))+\\n'\":t?a+=\"'+\\n((__t=(\"+t+\"))==null?'':__t)+\\n'\":e&&(a+=\"';\\n\"+e+\"\\n__p+='\"),n}),a+=\"';\\n\",n.variable||(a=\"with(obj||{}){\\n\"+a+\"}\\n\"),a=\"var __t,__p='',__j=Array.prototype.join,\"+\"print=function(){__p+=__j.call(arguments,'');};\\n\"+a+\"return __p;\\n\";try{t=new Function(n.variable||\"obj\",\"_\",a)}catch(n){throw n.source=a,n}var u=function(n){return t.call(this,n,h)},f=n.variable||\"obj\";return u.source=\"function(\"+f+\"){\\n\"+a+\"}\",u},chain:function(n){var r=h(n);return r._chain=!0,r},mixin:_r});return wr._=wr});"
+      }
+    },
+    {
+      "check_id": "javascript.lang.correctness.useless-eqeq.eqeq-is-bad",
+      "path": "webgoat-container/src/main/resources/static/js/libs/underscore-min.js",
+      "start": {
+        "line": 6,
+        "col": 8078
+      },
+      "end": {
+        "line": 6,
+        "col": 8082
+      },
+      "extra": {
+        "message": "Detected a useless comparison operation `n == n` or `n != n`. This \noperation is always true.\nIf testing for floating point NaN, use `math.isnan`, or\n`cmath.isnan` if the number is complex.\n",
+        "metavars": {
+          "$X": {
+            "start": {
+              "line": 6,
+              "col": 8078,
+              "offset": 8528
+            },
+            "end": {
+              "line": 6,
+              "col": 8079,
+              "offset": 8529
+            },
+            "abstract_content": "n",
+            "unique_id": {
+              "type": "id",
+              "value": "n",
+              "kind": "Param",
+              "sid": 293
+            }
+          }
+        },
+        "metadata": {},
+        "severity": "ERROR",
+        "lines": "var n=\"object\"==typeof self&&self.self===self&&self||\"object\"==typeof global&&global.global===global&&global||Function(\"return this\")()||{},e=Array.prototype,i=Object.prototype,p=\"undefined\"!=typeof Symbol?Symbol.prototype:null,u=e.push,f=e.slice,s=i.toString,o=i.hasOwnProperty,r=Array.isArray,a=Object.keys,t=Object.create,c=n.isNaN,l=n.isFinite,v=function(){};function h(n){return n instanceof h?n:this instanceof h?void(this._wrapped=n):new h(n)}var g=h.VERSION=\"1.10.2\";function y(u,o,n){if(void 0===o)return u;switch(null==n?3:n){case 1:return function(n){return u.call(o,n)};case 3:return function(n,r,t){return u.call(o,n,r,t)};case 4:return function(n,r,t,e){return u.call(o,n,r,t,e)}}return function(){return u.apply(o,arguments)}}function d(n,r,t){return null==n?ur:Cn(n)?y(n,r,t):Ln(n)&&!Kn(n)?ir(n):or(n)}function m(n,r){return d(n,r,1/0)}function b(n,r,t){return h.iteratee!==m?h.iteratee(n,r):d(n,r,t)}function j(u,o){return o=null==o?u.length-1:+o,function(){for(var n=Math.max(arguments.length-o,0),r=Array(n),t=0;t<n;t++)r[t]=arguments[t+o];switch(o){case 0:return u.call(this,r);case 1:return u.call(this,arguments[0],r);case 2:return u.call(this,arguments[0],arguments[1],r)}var e=Array(o+1);for(t=0;t<o;t++)e[t]=arguments[t];return e[o]=r,u.apply(this,e)}}function _(n){if(!Ln(n))return{};if(t)return t(n);v.prototype=n;var r=new v;return v.prototype=null,r}function w(r){return function(n){return null==n?void 0:n[r]}}function x(n,r){return null!=n&&o.call(n,r)}function S(n,r){for(var t=r.length,e=0;e<t;e++){if(null==n)return;n=n[r[e]]}return t?n:void 0}h.iteratee=m;var A=Math.pow(2,53)-1,O=w(\"length\");function M(n){var r=O(n);return\"number\"==typeof r&&0<=r&&r<=A}function E(n,r,t){var e,u;if(r=y(r,t),M(n))for(e=0,u=n.length;e<u;e++)r(n[e],e,n);else{var o=Sn(n);for(e=0,u=o.length;e<u;e++)r(n[o[e]],o[e],n)}return n}function N(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=Array(u),i=0;i<u;i++){var a=e?e[i]:i;o[i]=r(n[a],a,n)}return o}function k(f){return function(n,r,t,e){var u=3<=arguments.length;return function(n,r,t,e){var u=!M(n)&&Sn(n),o=(u||n).length,i=0<f?0:o-1;for(e||(t=n[u?u[i]:i],i+=f);0<=i&&i<o;i+=f){var a=u?u[i]:i;t=r(t,n[a],a,n)}return t}(n,y(r,e,4),t,u)}}var I=k(1),T=k(-1);function B(n,r,t){var e=(M(n)?on:Tn)(n,r,t);if(void 0!==e&&-1!==e)return n[e]}function R(n,e,r){var u=[];return e=b(e,r),E(n,function(n,r,t){e(n,r,t)&&u.push(n)}),u}function F(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=0;o<u;o++){var i=e?e[o]:o;if(!r(n[i],i,n))return!1}return!0}function q(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=0;o<u;o++){var i=e?e[o]:o;if(r(n[i],i,n))return!0}return!1}function D(n,r,t,e){return M(n)||(n=On(n)),(\"number\"!=typeof t||e)&&(t=0),0<=ln(n,r,t)}var W=j(function(n,t,e){var u,o;return Cn(t)?o=t:Kn(t)&&(u=t.slice(0,-1),t=t[t.length-1]),N(n,function(n){var r=o;if(!r){if(u&&u.length&&(n=S(n,u)),null==n)return;r=n[t]}return null==r?r:r.apply(n,e)})});function z(n,r){return N(n,or(r))}function P(n,e,r){var t,u,o=-1/0,i=-1/0;if(null==e||\"number\"==typeof e&&\"object\"!=typeof n[0]&&null!=n)for(var a=0,f=(n=M(n)?n:On(n)).length;a<f;a++)null!=(t=n[a])&&o<t&&(o=t);else e=b(e,r),E(n,function(n,r,t){u=e(n,r,t),(i<u||u===-1/0&&o===-1/0)&&(o=n,i=u)});return o}function K(n,r,t){if(null==r||t)return M(n)||(n=On(n)),n[ar(n.length-1)];var e=M(n)?Dn(n):On(n),u=O(e);r=Math.max(Math.min(r,u),0);for(var o=u-1,i=0;i<r;i++){var a=ar(i,o),f=e[i];e[i]=e[a],e[a]=f}return e.slice(0,r)}function L(i,r){return function(e,u,n){var o=r?[[],[]]:{};return u=b(u,n),E(e,function(n,r){var t=u(n,r,e);i(o,n,t)}),o}}var V=L(function(n,r,t){x(n,t)?n[t].push(r):n[t]=[r]}),C=L(function(n,r,t){n[t]=r}),J=L(function(n,r,t){x(n,t)?n[t]++:n[t]=1}),U=/[^\\ud800-\\udfff]|[\\ud800-\\udbff][\\udc00-\\udfff]|[\\ud800-\\udfff]/g;var $=L(function(n,r,t){n[t?0:1].push(r)},!0);function G(n,r,t){return null==n||n.length<1?null==r?void 0:[]:null==r||t?n[0]:H(n,n.length-r)}function H(n,r,t){return f.call(n,0,Math.max(0,n.length-(null==r||t?1:r)))}function Q(n,r,t){return f.call(n,null==r||t?1:r)}function X(n,r,t,e){for(var u=(e=e||[]).length,o=0,i=O(n);o<i;o++){var a=n[o];if(M(a)&&(Kn(a)||Vn(a)))if(r)for(var f=0,c=a.length;f<c;)e[u++]=a[f++];else X(a,r,t,e),u=e.length;else t||(e[u++]=a)}return e}var Y=j(function(n,r){return rn(n,r)});function Z(n,r,t,e){er(r)||(e=t,t=r,r=!1),null!=t&&(t=b(t,e));for(var u=[],o=[],i=0,a=O(n);i<a;i++){var f=n[i],c=t?t(f,i,n):f;r&&!t?(i&&o===c||u.push(f),o=c):t?D(o,c)||(o.push(c),u.push(f)):D(u,f)||u.push(f)}return u}var nn=j(function(n){return Z(X(n,!0,!0))});var rn=j(function(n,r){return r=X(r,!0,!0),R(n,function(n){return!D(r,n)})});function tn(n){for(var r=n&&P(n,O).length||0,t=Array(r),e=0;e<r;e++)t[e]=z(n,e);return t}var en=j(tn);function un(o){return function(n,r,t){r=b(r,t);for(var e=O(n),u=0<o?0:e-1;0<=u&&u<e;u+=o)if(r(n[u],u,n))return u;return-1}}var on=un(1),an=un(-1);function fn(n,r,t,e){for(var u=(t=b(t,e,1))(r),o=0,i=O(n);o<i;){var a=Math.floor((o+i)/2);t(n[a])<u?o=a+1:i=a}return o}function cn(o,i,a){return function(n,r,t){var e=0,u=O(n);if(\"number\"==typeof t)0<o?e=0<=t?t:Math.max(t+u,e):u=0<=t?Math.min(t+1,u):t+u+1;else if(a&&t&&u)return n[t=a(n,r)]===r?t:-1;if(r!=r)return 0<=(t=i(f.call(n,e,u),tr))?t+e:-1;for(t=0<o?e:u-1;0<=t&&t<u;t+=o)if(n[t]===r)return t;return-1}}var ln=cn(1,on,fn),pn=cn(-1,an);function sn(n,r,t,e,u){if(!(e instanceof r))return n.apply(t,u);var o=_(n.prototype),i=n.apply(o,u);return Ln(i)?i:o}var vn=j(function(r,t,e){if(!Cn(r))throw new TypeError(\"Bind must be called on a function\");var u=j(function(n){return sn(r,u,t,this,e.concat(n))});return u}),hn=j(function(u,o){var i=hn.placeholder,a=function(){for(var n=0,r=o.length,t=Array(r),e=0;e<r;e++)t[e]=o[e]===i?arguments[n++]:o[e];for(;n<arguments.length;)t.push(arguments[n++]);return sn(u,a,this,this,t)};return a});hn.placeholder=h;var gn=j(function(n,r){var t=(r=X(r,!1,!1)).length;if(t<1)throw new Error(\"bindAll must be passed function names\");for(;t--;){var e=r[t];n[e]=vn(n[e],n)}});var yn=j(function(n,r,t){return setTimeout(function(){return n.apply(null,t)},r)}),dn=hn(yn,h,1);function mn(n){return function(){return!n.apply(this,arguments)}}function bn(n,r){var t;return function(){return 0<--n&&(t=r.apply(this,arguments)),n<=1&&(r=null),t}}var jn=hn(bn,2),_n=!{toString:null}.propertyIsEnumerable(\"toString\"),wn=[\"valueOf\",\"isPrototypeOf\",\"toString\",\"propertyIsEnumerable\",\"hasOwnProperty\",\"toLocaleString\"];function xn(n,r){var t=wn.length,e=n.constructor,u=Cn(e)&&e.prototype||i,o=\"constructor\";for(x(n,o)&&!D(r,o)&&r.push(o);t--;)(o=wn[t])in n&&n[o]!==u[o]&&!D(r,o)&&r.push(o)}function Sn(n){if(!Ln(n))return[];if(a)return a(n);var r=[];for(var t in n)x(n,t)&&r.push(t);return _n&&xn(n,r),r}function An(n){if(!Ln(n))return[];var r=[];for(var t in n)r.push(t);return _n&&xn(n,r),r}function On(n){for(var r=Sn(n),t=r.length,e=Array(t),u=0;u<t;u++)e[u]=n[r[u]];return e}function Mn(n){for(var r={},t=Sn(n),e=0,u=t.length;e<u;e++)r[n[t[e]]]=t[e];return r}function En(n){var r=[];for(var t in n)Cn(n[t])&&r.push(t);return r.sort()}function Nn(f,c){return function(n){var r=arguments.length;if(c&&(n=Object(n)),r<2||null==n)return n;for(var t=1;t<r;t++)for(var e=arguments[t],u=f(e),o=u.length,i=0;i<o;i++){var a=u[i];c&&void 0!==n[a]||(n[a]=e[a])}return n}}var kn=Nn(An),In=Nn(Sn);function Tn(n,r,t){r=b(r,t);for(var e,u=Sn(n),o=0,i=u.length;o<i;o++)if(r(n[e=u[o]],e,n))return e}function Bn(n,r,t){return r in t}var Rn=j(function(n,r){var t={},e=r[0];if(null==n)return t;Cn(e)?(1<r.length&&(e=y(e,r[1])),r=An(n)):(e=Bn,r=X(r,!1,!1),n=Object(n));for(var u=0,o=r.length;u<o;u++){var i=r[u],a=n[i];e(a,i,n)&&(t[i]=a)}return t}),Fn=j(function(n,t){var r,e=t[0];return Cn(e)?(e=mn(e),1<t.length&&(r=t[1])):(t=N(X(t,!1,!1),String),e=function(n,r){return!D(t,r)}),Rn(n,e,r)}),qn=Nn(An,!0);function Dn(n){return Ln(n)?Kn(n)?n.slice():kn({},n):n}function Wn(n,r){var t=Sn(r),e=t.length;if(null==n)return!e;for(var u=Object(n),o=0;o<e;o++){var i=t[o];if(r[i]!==u[i]||!(i in u))return!1}return!0}function zn(n,r,t,e){if(n===r)return 0!==n||1/n==1/r;if(null==n||null==r)return!1;if(n!=n)return r!=r;var u=typeof n;return(\"function\"===u||\"object\"===u||\"object\"==typeof r)&&function(n,r,t,e){n instanceof h&&(n=n._wrapped);r instanceof h&&(r=r._wrapped);var u=s.call(n);if(u!==s.call(r))return!1;switch(u){case\"[object RegExp]\":case\"[object String]\":return\"\"+n==\"\"+r;case\"[object Number]\":return+n!=+n?+r!=+r:0==+n?1/+n==1/r:+n==+r;case\"[object Date]\":case\"[object Boolean]\":return+n==+r;case\"[object Symbol]\":return p.valueOf.call(n)===p.valueOf.call(r)}var o=\"[object Array]\"===u;if(!o){if(\"object\"!=typeof n||\"object\"!=typeof r)return!1;var i=n.constructor,a=r.constructor;if(i!==a&&!(Cn(i)&&i instanceof i&&Cn(a)&&a instanceof a)&&\"constructor\"in n&&\"constructor\"in r)return!1}e=e||[];var f=(t=t||[]).length;for(;f--;)if(t[f]===n)return e[f]===r;if(t.push(n),e.push(r),o){if((f=n.length)!==r.length)return!1;for(;f--;)if(!zn(n[f],r[f],t,e))return!1}else{var c,l=Sn(n);if(f=l.length,Sn(r).length!==f)return!1;for(;f--;)if(c=l[f],!x(r,c)||!zn(n[c],r[c],t,e))return!1}return t.pop(),e.pop(),!0}(n,r,t,e)}function Pn(r){return function(n){return s.call(n)===\"[object \"+r+\"]\"}}var Kn=r||Pn(\"Array\");function Ln(n){var r=typeof n;return\"function\"===r||\"object\"===r&&!!n}var Vn=Pn(\"Arguments\"),Cn=Pn(\"Function\"),Jn=Pn(\"String\"),Un=Pn(\"Number\"),$n=Pn(\"Date\"),Gn=Pn(\"RegExp\"),Hn=Pn(\"Error\"),Qn=Pn(\"Symbol\"),Xn=Pn(\"Map\"),Yn=Pn(\"WeakMap\"),Zn=Pn(\"Set\"),nr=Pn(\"WeakSet\");!function(){Vn(arguments)||(Vn=function(n){return x(n,\"callee\")})}();var rr=n.document&&n.document.childNodes;function tr(n){return Un(n)&&c(n)}function er(n){return!0===n||!1===n||\"[object Boolean]\"===s.call(n)}function ur(n){return n}function or(r){return Kn(r)?function(n){return S(n,r)}:w(r)}function ir(r){return r=In({},r),function(n){return Wn(n,r)}}function ar(n,r){return null==r&&(r=n,n=0),n+Math.floor(Math.random()*(r-n+1))}\"function\"!=typeof/./&&\"object\"!=typeof Int8Array&&\"function\"!=typeof rr&&(Cn=function(n){return\"function\"==typeof n||!1});var fr=Date.now||function(){return(new Date).getTime()},cr={\"&\":\"&amp;\",\"<\":\"&lt;\",\">\":\"&gt;\",'\"':\"&quot;\",\"'\":\"&#x27;\",\"`\":\"&#x60;\"},lr=Mn(cr);function pr(r){var t=function(n){return r[n]},n=\"(?:\"+Sn(r).join(\"|\")+\")\",e=RegExp(n),u=RegExp(n,\"g\");return function(n){return n=null==n?\"\":\"\"+n,e.test(n)?n.replace(u,t):n}}var sr=pr(cr),vr=pr(lr);var hr=0;var gr=h.templateSettings={evaluate:/<%([\\s\\S]+?)%>/g,interpolate:/<%=([\\s\\S]+?)%>/g,escape:/<%-([\\s\\S]+?)%>/g},yr=/(.)^/,dr={\"'\":\"'\",\"\\\\\":\"\\\\\",\"\\r\":\"r\",\"\\n\":\"n\",\"\\u2028\":\"u2028\",\"\\u2029\":\"u2029\"},mr=/\\\\|'|\\r|\\n|\\u2028|\\u2029/g,br=function(n){return\"\\\\\"+dr[n]};function jr(n,r){return n._chain?h(r).chain():r}function _r(t){return E(En(t),function(n){var r=h[n]=t[n];h.prototype[n]=function(){var n=[this._wrapped];return u.apply(n,arguments),jr(this,r.apply(h,n))}}),h}E([\"pop\",\"push\",\"reverse\",\"shift\",\"sort\",\"splice\",\"unshift\"],function(r){var t=e[r];h.prototype[r]=function(){var n=this._wrapped;return t.apply(n,arguments),\"shift\"!==r&&\"splice\"!==r||0!==n.length||delete n[0],jr(this,n)}}),E([\"concat\",\"join\",\"slice\"],function(n){var r=e[n];h.prototype[n]=function(){return jr(this,r.apply(this._wrapped,arguments))}}),h.prototype.valueOf=h.prototype.toJSON=h.prototype.value=function(){return this._wrapped},h.prototype.toString=function(){return String(this._wrapped)};var wr=_r({default:h,VERSION:g,iteratee:m,restArguments:j,each:E,forEach:E,map:N,collect:N,reduce:I,foldl:I,inject:I,reduceRight:T,foldr:T,find:B,detect:B,filter:R,select:R,reject:function(n,r,t){return R(n,mn(b(r)),t)},every:F,all:F,some:q,any:q,contains:D,includes:D,include:D,invoke:W,pluck:z,where:function(n,r){return R(n,ir(r))},findWhere:function(n,r){return B(n,ir(r))},max:P,min:function(n,e,r){var t,u,o=1/0,i=1/0;if(null==e||\"number\"==typeof e&&\"object\"!=typeof n[0]&&null!=n)for(var a=0,f=(n=M(n)?n:On(n)).length;a<f;a++)null!=(t=n[a])&&t<o&&(o=t);else e=b(e,r),E(n,function(n,r,t){((u=e(n,r,t))<i||u===1/0&&o===1/0)&&(o=n,i=u)});return o},shuffle:function(n){return K(n,1/0)},sample:K,sortBy:function(n,e,r){var u=0;return e=b(e,r),z(N(n,function(n,r,t){return{value:n,index:u++,criteria:e(n,r,t)}}).sort(function(n,r){var t=n.criteria,e=r.criteria;if(t!==e){if(e<t||void 0===t)return 1;if(t<e||void 0===e)return-1}return n.index-r.index}),\"value\")},groupBy:V,indexBy:C,countBy:J,toArray:function(n){return n?Kn(n)?f.call(n):Jn(n)?n.match(U):M(n)?N(n,ur):On(n):[]},size:function(n){return null==n?0:M(n)?n.length:Sn(n).length},partition:$,first:G,head:G,take:G,initial:H,last:function(n,r,t){return null==n||n.length<1?null==r?void 0:[]:null==r||t?n[n.length-1]:Q(n,Math.max(0,n.length-r))},rest:Q,tail:Q,drop:Q,compact:function(n){return R(n,Boolean)},flatten:function(n,r){return X(n,r,!1)},without:Y,uniq:Z,unique:Z,union:nn,intersection:function(n){for(var r=[],t=arguments.length,e=0,u=O(n);e<u;e++){var o=n[e];if(!D(r,o)){var i;for(i=1;i<t&&D(arguments[i],o);i++);i===t&&r.push(o)}}return r},difference:rn,unzip:tn,zip:en,object:function(n,r){for(var t={},e=0,u=O(n);e<u;e++)r?t[n[e]]=r[e]:t[n[e][0]]=n[e][1];return t},findIndex:on,findLastIndex:an,sortedIndex:fn,indexOf:ln,lastIndexOf:pn,range:function(n,r,t){null==r&&(r=n||0,n=0),t||(t=r<n?-1:1);for(var e=Math.max(Math.ceil((r-n)/t),0),u=Array(e),o=0;o<e;o++,n+=t)u[o]=n;return u},chunk:function(n,r){if(null==r||r<1)return[];for(var t=[],e=0,u=n.length;e<u;)t.push(f.call(n,e,e+=r));return t},bind:vn,partial:hn,bindAll:gn,memoize:function(e,u){var o=function(n){var r=o.cache,t=\"\"+(u?u.apply(this,arguments):n);return x(r,t)||(r[t]=e.apply(this,arguments)),r[t]};return o.cache={},o},delay:yn,defer:dn,throttle:function(t,e,u){var o,i,a,f,c=0;u||(u={});var l=function(){c=!1===u.leading?0:fr(),o=null,f=t.apply(i,a),o||(i=a=null)},n=function(){var n=fr();c||!1!==u.leading||(c=n);var r=e-(n-c);return i=this,a=arguments,r<=0||e<r?(o&&(clearTimeout(o),o=null),c=n,f=t.apply(i,a),o||(i=a=null)):o||!1===u.trailing||(o=setTimeout(l,r)),f};return n.cancel=function(){clearTimeout(o),c=0,o=i=a=null},n},debounce:function(t,e,u){var o,i,a=function(n,r){o=null,r&&(i=t.apply(n,r))},n=j(function(n){if(o&&clearTimeout(o),u){var r=!o;o=setTimeout(a,e),r&&(i=t.apply(this,n))}else o=yn(a,e,this,n);return i});return n.cancel=function(){clearTimeout(o),o=null},n},wrap:function(n,r){return hn(r,n)},negate:mn,compose:function(){var t=arguments,e=t.length-1;return function(){for(var n=e,r=t[e].apply(this,arguments);n--;)r=t[n].call(this,r);return r}},after:function(n,r){return function(){if(--n<1)return r.apply(this,arguments)}},before:bn,once:jn,keys:Sn,allKeys:An,values:On,mapObject:function(n,r,t){r=b(r,t);for(var e=Sn(n),u=e.length,o={},i=0;i<u;i++){var a=e[i];o[a]=r(n[a],a,n)}return o},pairs:function(n){for(var r=Sn(n),t=r.length,e=Array(t),u=0;u<t;u++)e[u]=[r[u],n[r[u]]];return e},invert:Mn,functions:En,methods:En,extend:kn,extendOwn:In,assign:In,findKey:Tn,pick:Rn,omit:Fn,defaults:qn,create:function(n,r){var t=_(n);return r&&In(t,r),t},clone:Dn,tap:function(n,r){return r(n),n},isMatch:Wn,isEqual:function(n,r){return zn(n,r)},isEmpty:function(n){return null==n||(M(n)&&(Kn(n)||Jn(n)||Vn(n))?0===n.length:0===Sn(n).length)},isElement:function(n){return!(!n||1!==n.nodeType)},isArray:Kn,isObject:Ln,isArguments:Vn,isFunction:Cn,isString:Jn,isNumber:Un,isDate:$n,isRegExp:Gn,isError:Hn,isSymbol:Qn,isMap:Xn,isWeakMap:Yn,isSet:Zn,isWeakSet:nr,isFinite:function(n){return!Qn(n)&&l(n)&&!c(parseFloat(n))},isNaN:tr,isBoolean:er,isNull:function(n){return null===n},isUndefined:function(n){return void 0===n},has:function(n,r){if(!Kn(r))return x(n,r);for(var t=r.length,e=0;e<t;e++){var u=r[e];if(null==n||!o.call(n,u))return!1;n=n[u]}return!!t},identity:ur,constant:function(n){return function(){return n}},noop:function(){},property:or,propertyOf:function(r){return null==r?function(){}:function(n){return Kn(n)?S(r,n):r[n]}},matcher:ir,matches:ir,times:function(n,r,t){var e=Array(Math.max(0,n));r=y(r,t,1);for(var u=0;u<n;u++)e[u]=r(u);return e},random:ar,now:fr,escape:sr,unescape:vr,result:function(n,r,t){Kn(r)||(r=[r]);var e=r.length;if(!e)return Cn(t)?t.call(n):t;for(var u=0;u<e;u++){var o=null==n?void 0:n[r[u]];void 0===o&&(o=t,u=e),n=Cn(o)?o.call(n):o}return n},uniqueId:function(n){var r=++hr+\"\";return n?n+r:r},templateSettings:gr,template:function(o,n,r){!n&&r&&(n=r),n=qn({},n,h.templateSettings);var t,e=RegExp([(n.escape||yr).source,(n.interpolate||yr).source,(n.evaluate||yr).source].join(\"|\")+\"|$\",\"g\"),i=0,a=\"__p+='\";o.replace(e,function(n,r,t,e,u){return a+=o.slice(i,u).replace(mr,br),i=u+n.length,r?a+=\"'+\\n((__t=(\"+r+\"))==null?'':_.escape(__t))+\\n'\":t?a+=\"'+\\n((__t=(\"+t+\"))==null?'':__t)+\\n'\":e&&(a+=\"';\\n\"+e+\"\\n__p+='\"),n}),a+=\"';\\n\",n.variable||(a=\"with(obj||{}){\\n\"+a+\"}\\n\"),a=\"var __t,__p='',__j=Array.prototype.join,\"+\"print=function(){__p+=__j.call(arguments,'');};\\n\"+a+\"return __p;\\n\";try{t=new Function(n.variable||\"obj\",\"_\",a)}catch(n){throw n.source=a,n}var u=function(n){return t.call(this,n,h)},f=n.variable||\"obj\";return u.source=\"function(\"+f+\"){\\n\"+a+\"}\",u},chain:function(n){var r=h(n);return r._chain=!0,r},mixin:_r});return wr._=wr});"
+      }
+    },
+    {
+      "check_id": "javascript.lang.correctness.useless-eqeq.eqeq-is-bad",
+      "path": "webgoat-container/src/main/resources/static/js/libs/underscore-min.js",
+      "start": {
+        "line": 6,
+        "col": 8090
+      },
+      "end": {
+        "line": 6,
+        "col": 8094
+      },
+      "extra": {
+        "message": "Detected a useless comparison operation `r == r` or `r != r`. This \noperation is always true.\nIf testing for floating point NaN, use `math.isnan`, or\n`cmath.isnan` if the number is complex.\n",
+        "metavars": {
+          "$X": {
+            "start": {
+              "line": 6,
+              "col": 8090,
+              "offset": 8540
+            },
+            "end": {
+              "line": 6,
+              "col": 8091,
+              "offset": 8541
+            },
+            "abstract_content": "r",
+            "unique_id": {
+              "type": "id",
+              "value": "r",
+              "kind": "Param",
+              "sid": 294
+            }
+          }
+        },
+        "metadata": {},
+        "severity": "ERROR",
+        "lines": "var n=\"object\"==typeof self&&self.self===self&&self||\"object\"==typeof global&&global.global===global&&global||Function(\"return this\")()||{},e=Array.prototype,i=Object.prototype,p=\"undefined\"!=typeof Symbol?Symbol.prototype:null,u=e.push,f=e.slice,s=i.toString,o=i.hasOwnProperty,r=Array.isArray,a=Object.keys,t=Object.create,c=n.isNaN,l=n.isFinite,v=function(){};function h(n){return n instanceof h?n:this instanceof h?void(this._wrapped=n):new h(n)}var g=h.VERSION=\"1.10.2\";function y(u,o,n){if(void 0===o)return u;switch(null==n?3:n){case 1:return function(n){return u.call(o,n)};case 3:return function(n,r,t){return u.call(o,n,r,t)};case 4:return function(n,r,t,e){return u.call(o,n,r,t,e)}}return function(){return u.apply(o,arguments)}}function d(n,r,t){return null==n?ur:Cn(n)?y(n,r,t):Ln(n)&&!Kn(n)?ir(n):or(n)}function m(n,r){return d(n,r,1/0)}function b(n,r,t){return h.iteratee!==m?h.iteratee(n,r):d(n,r,t)}function j(u,o){return o=null==o?u.length-1:+o,function(){for(var n=Math.max(arguments.length-o,0),r=Array(n),t=0;t<n;t++)r[t]=arguments[t+o];switch(o){case 0:return u.call(this,r);case 1:return u.call(this,arguments[0],r);case 2:return u.call(this,arguments[0],arguments[1],r)}var e=Array(o+1);for(t=0;t<o;t++)e[t]=arguments[t];return e[o]=r,u.apply(this,e)}}function _(n){if(!Ln(n))return{};if(t)return t(n);v.prototype=n;var r=new v;return v.prototype=null,r}function w(r){return function(n){return null==n?void 0:n[r]}}function x(n,r){return null!=n&&o.call(n,r)}function S(n,r){for(var t=r.length,e=0;e<t;e++){if(null==n)return;n=n[r[e]]}return t?n:void 0}h.iteratee=m;var A=Math.pow(2,53)-1,O=w(\"length\");function M(n){var r=O(n);return\"number\"==typeof r&&0<=r&&r<=A}function E(n,r,t){var e,u;if(r=y(r,t),M(n))for(e=0,u=n.length;e<u;e++)r(n[e],e,n);else{var o=Sn(n);for(e=0,u=o.length;e<u;e++)r(n[o[e]],o[e],n)}return n}function N(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=Array(u),i=0;i<u;i++){var a=e?e[i]:i;o[i]=r(n[a],a,n)}return o}function k(f){return function(n,r,t,e){var u=3<=arguments.length;return function(n,r,t,e){var u=!M(n)&&Sn(n),o=(u||n).length,i=0<f?0:o-1;for(e||(t=n[u?u[i]:i],i+=f);0<=i&&i<o;i+=f){var a=u?u[i]:i;t=r(t,n[a],a,n)}return t}(n,y(r,e,4),t,u)}}var I=k(1),T=k(-1);function B(n,r,t){var e=(M(n)?on:Tn)(n,r,t);if(void 0!==e&&-1!==e)return n[e]}function R(n,e,r){var u=[];return e=b(e,r),E(n,function(n,r,t){e(n,r,t)&&u.push(n)}),u}function F(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=0;o<u;o++){var i=e?e[o]:o;if(!r(n[i],i,n))return!1}return!0}function q(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=0;o<u;o++){var i=e?e[o]:o;if(r(n[i],i,n))return!0}return!1}function D(n,r,t,e){return M(n)||(n=On(n)),(\"number\"!=typeof t||e)&&(t=0),0<=ln(n,r,t)}var W=j(function(n,t,e){var u,o;return Cn(t)?o=t:Kn(t)&&(u=t.slice(0,-1),t=t[t.length-1]),N(n,function(n){var r=o;if(!r){if(u&&u.length&&(n=S(n,u)),null==n)return;r=n[t]}return null==r?r:r.apply(n,e)})});function z(n,r){return N(n,or(r))}function P(n,e,r){var t,u,o=-1/0,i=-1/0;if(null==e||\"number\"==typeof e&&\"object\"!=typeof n[0]&&null!=n)for(var a=0,f=(n=M(n)?n:On(n)).length;a<f;a++)null!=(t=n[a])&&o<t&&(o=t);else e=b(e,r),E(n,function(n,r,t){u=e(n,r,t),(i<u||u===-1/0&&o===-1/0)&&(o=n,i=u)});return o}function K(n,r,t){if(null==r||t)return M(n)||(n=On(n)),n[ar(n.length-1)];var e=M(n)?Dn(n):On(n),u=O(e);r=Math.max(Math.min(r,u),0);for(var o=u-1,i=0;i<r;i++){var a=ar(i,o),f=e[i];e[i]=e[a],e[a]=f}return e.slice(0,r)}function L(i,r){return function(e,u,n){var o=r?[[],[]]:{};return u=b(u,n),E(e,function(n,r){var t=u(n,r,e);i(o,n,t)}),o}}var V=L(function(n,r,t){x(n,t)?n[t].push(r):n[t]=[r]}),C=L(function(n,r,t){n[t]=r}),J=L(function(n,r,t){x(n,t)?n[t]++:n[t]=1}),U=/[^\\ud800-\\udfff]|[\\ud800-\\udbff][\\udc00-\\udfff]|[\\ud800-\\udfff]/g;var $=L(function(n,r,t){n[t?0:1].push(r)},!0);function G(n,r,t){return null==n||n.length<1?null==r?void 0:[]:null==r||t?n[0]:H(n,n.length-r)}function H(n,r,t){return f.call(n,0,Math.max(0,n.length-(null==r||t?1:r)))}function Q(n,r,t){return f.call(n,null==r||t?1:r)}function X(n,r,t,e){for(var u=(e=e||[]).length,o=0,i=O(n);o<i;o++){var a=n[o];if(M(a)&&(Kn(a)||Vn(a)))if(r)for(var f=0,c=a.length;f<c;)e[u++]=a[f++];else X(a,r,t,e),u=e.length;else t||(e[u++]=a)}return e}var Y=j(function(n,r){return rn(n,r)});function Z(n,r,t,e){er(r)||(e=t,t=r,r=!1),null!=t&&(t=b(t,e));for(var u=[],o=[],i=0,a=O(n);i<a;i++){var f=n[i],c=t?t(f,i,n):f;r&&!t?(i&&o===c||u.push(f),o=c):t?D(o,c)||(o.push(c),u.push(f)):D(u,f)||u.push(f)}return u}var nn=j(function(n){return Z(X(n,!0,!0))});var rn=j(function(n,r){return r=X(r,!0,!0),R(n,function(n){return!D(r,n)})});function tn(n){for(var r=n&&P(n,O).length||0,t=Array(r),e=0;e<r;e++)t[e]=z(n,e);return t}var en=j(tn);function un(o){return function(n,r,t){r=b(r,t);for(var e=O(n),u=0<o?0:e-1;0<=u&&u<e;u+=o)if(r(n[u],u,n))return u;return-1}}var on=un(1),an=un(-1);function fn(n,r,t,e){for(var u=(t=b(t,e,1))(r),o=0,i=O(n);o<i;){var a=Math.floor((o+i)/2);t(n[a])<u?o=a+1:i=a}return o}function cn(o,i,a){return function(n,r,t){var e=0,u=O(n);if(\"number\"==typeof t)0<o?e=0<=t?t:Math.max(t+u,e):u=0<=t?Math.min(t+1,u):t+u+1;else if(a&&t&&u)return n[t=a(n,r)]===r?t:-1;if(r!=r)return 0<=(t=i(f.call(n,e,u),tr))?t+e:-1;for(t=0<o?e:u-1;0<=t&&t<u;t+=o)if(n[t]===r)return t;return-1}}var ln=cn(1,on,fn),pn=cn(-1,an);function sn(n,r,t,e,u){if(!(e instanceof r))return n.apply(t,u);var o=_(n.prototype),i=n.apply(o,u);return Ln(i)?i:o}var vn=j(function(r,t,e){if(!Cn(r))throw new TypeError(\"Bind must be called on a function\");var u=j(function(n){return sn(r,u,t,this,e.concat(n))});return u}),hn=j(function(u,o){var i=hn.placeholder,a=function(){for(var n=0,r=o.length,t=Array(r),e=0;e<r;e++)t[e]=o[e]===i?arguments[n++]:o[e];for(;n<arguments.length;)t.push(arguments[n++]);return sn(u,a,this,this,t)};return a});hn.placeholder=h;var gn=j(function(n,r){var t=(r=X(r,!1,!1)).length;if(t<1)throw new Error(\"bindAll must be passed function names\");for(;t--;){var e=r[t];n[e]=vn(n[e],n)}});var yn=j(function(n,r,t){return setTimeout(function(){return n.apply(null,t)},r)}),dn=hn(yn,h,1);function mn(n){return function(){return!n.apply(this,arguments)}}function bn(n,r){var t;return function(){return 0<--n&&(t=r.apply(this,arguments)),n<=1&&(r=null),t}}var jn=hn(bn,2),_n=!{toString:null}.propertyIsEnumerable(\"toString\"),wn=[\"valueOf\",\"isPrototypeOf\",\"toString\",\"propertyIsEnumerable\",\"hasOwnProperty\",\"toLocaleString\"];function xn(n,r){var t=wn.length,e=n.constructor,u=Cn(e)&&e.prototype||i,o=\"constructor\";for(x(n,o)&&!D(r,o)&&r.push(o);t--;)(o=wn[t])in n&&n[o]!==u[o]&&!D(r,o)&&r.push(o)}function Sn(n){if(!Ln(n))return[];if(a)return a(n);var r=[];for(var t in n)x(n,t)&&r.push(t);return _n&&xn(n,r),r}function An(n){if(!Ln(n))return[];var r=[];for(var t in n)r.push(t);return _n&&xn(n,r),r}function On(n){for(var r=Sn(n),t=r.length,e=Array(t),u=0;u<t;u++)e[u]=n[r[u]];return e}function Mn(n){for(var r={},t=Sn(n),e=0,u=t.length;e<u;e++)r[n[t[e]]]=t[e];return r}function En(n){var r=[];for(var t in n)Cn(n[t])&&r.push(t);return r.sort()}function Nn(f,c){return function(n){var r=arguments.length;if(c&&(n=Object(n)),r<2||null==n)return n;for(var t=1;t<r;t++)for(var e=arguments[t],u=f(e),o=u.length,i=0;i<o;i++){var a=u[i];c&&void 0!==n[a]||(n[a]=e[a])}return n}}var kn=Nn(An),In=Nn(Sn);function Tn(n,r,t){r=b(r,t);for(var e,u=Sn(n),o=0,i=u.length;o<i;o++)if(r(n[e=u[o]],e,n))return e}function Bn(n,r,t){return r in t}var Rn=j(function(n,r){var t={},e=r[0];if(null==n)return t;Cn(e)?(1<r.length&&(e=y(e,r[1])),r=An(n)):(e=Bn,r=X(r,!1,!1),n=Object(n));for(var u=0,o=r.length;u<o;u++){var i=r[u],a=n[i];e(a,i,n)&&(t[i]=a)}return t}),Fn=j(function(n,t){var r,e=t[0];return Cn(e)?(e=mn(e),1<t.length&&(r=t[1])):(t=N(X(t,!1,!1),String),e=function(n,r){return!D(t,r)}),Rn(n,e,r)}),qn=Nn(An,!0);function Dn(n){return Ln(n)?Kn(n)?n.slice():kn({},n):n}function Wn(n,r){var t=Sn(r),e=t.length;if(null==n)return!e;for(var u=Object(n),o=0;o<e;o++){var i=t[o];if(r[i]!==u[i]||!(i in u))return!1}return!0}function zn(n,r,t,e){if(n===r)return 0!==n||1/n==1/r;if(null==n||null==r)return!1;if(n!=n)return r!=r;var u=typeof n;return(\"function\"===u||\"object\"===u||\"object\"==typeof r)&&function(n,r,t,e){n instanceof h&&(n=n._wrapped);r instanceof h&&(r=r._wrapped);var u=s.call(n);if(u!==s.call(r))return!1;switch(u){case\"[object RegExp]\":case\"[object String]\":return\"\"+n==\"\"+r;case\"[object Number]\":return+n!=+n?+r!=+r:0==+n?1/+n==1/r:+n==+r;case\"[object Date]\":case\"[object Boolean]\":return+n==+r;case\"[object Symbol]\":return p.valueOf.call(n)===p.valueOf.call(r)}var o=\"[object Array]\"===u;if(!o){if(\"object\"!=typeof n||\"object\"!=typeof r)return!1;var i=n.constructor,a=r.constructor;if(i!==a&&!(Cn(i)&&i instanceof i&&Cn(a)&&a instanceof a)&&\"constructor\"in n&&\"constructor\"in r)return!1}e=e||[];var f=(t=t||[]).length;for(;f--;)if(t[f]===n)return e[f]===r;if(t.push(n),e.push(r),o){if((f=n.length)!==r.length)return!1;for(;f--;)if(!zn(n[f],r[f],t,e))return!1}else{var c,l=Sn(n);if(f=l.length,Sn(r).length!==f)return!1;for(;f--;)if(c=l[f],!x(r,c)||!zn(n[c],r[c],t,e))return!1}return t.pop(),e.pop(),!0}(n,r,t,e)}function Pn(r){return function(n){return s.call(n)===\"[object \"+r+\"]\"}}var Kn=r||Pn(\"Array\");function Ln(n){var r=typeof n;return\"function\"===r||\"object\"===r&&!!n}var Vn=Pn(\"Arguments\"),Cn=Pn(\"Function\"),Jn=Pn(\"String\"),Un=Pn(\"Number\"),$n=Pn(\"Date\"),Gn=Pn(\"RegExp\"),Hn=Pn(\"Error\"),Qn=Pn(\"Symbol\"),Xn=Pn(\"Map\"),Yn=Pn(\"WeakMap\"),Zn=Pn(\"Set\"),nr=Pn(\"WeakSet\");!function(){Vn(arguments)||(Vn=function(n){return x(n,\"callee\")})}();var rr=n.document&&n.document.childNodes;function tr(n){return Un(n)&&c(n)}function er(n){return!0===n||!1===n||\"[object Boolean]\"===s.call(n)}function ur(n){return n}function or(r){return Kn(r)?function(n){return S(n,r)}:w(r)}function ir(r){return r=In({},r),function(n){return Wn(n,r)}}function ar(n,r){return null==r&&(r=n,n=0),n+Math.floor(Math.random()*(r-n+1))}\"function\"!=typeof/./&&\"object\"!=typeof Int8Array&&\"function\"!=typeof rr&&(Cn=function(n){return\"function\"==typeof n||!1});var fr=Date.now||function(){return(new Date).getTime()},cr={\"&\":\"&amp;\",\"<\":\"&lt;\",\">\":\"&gt;\",'\"':\"&quot;\",\"'\":\"&#x27;\",\"`\":\"&#x60;\"},lr=Mn(cr);function pr(r){var t=function(n){return r[n]},n=\"(?:\"+Sn(r).join(\"|\")+\")\",e=RegExp(n),u=RegExp(n,\"g\");return function(n){return n=null==n?\"\":\"\"+n,e.test(n)?n.replace(u,t):n}}var sr=pr(cr),vr=pr(lr);var hr=0;var gr=h.templateSettings={evaluate:/<%([\\s\\S]+?)%>/g,interpolate:/<%=([\\s\\S]+?)%>/g,escape:/<%-([\\s\\S]+?)%>/g},yr=/(.)^/,dr={\"'\":\"'\",\"\\\\\":\"\\\\\",\"\\r\":\"r\",\"\\n\":\"n\",\"\\u2028\":\"u2028\",\"\\u2029\":\"u2029\"},mr=/\\\\|'|\\r|\\n|\\u2028|\\u2029/g,br=function(n){return\"\\\\\"+dr[n]};function jr(n,r){return n._chain?h(r).chain():r}function _r(t){return E(En(t),function(n){var r=h[n]=t[n];h.prototype[n]=function(){var n=[this._wrapped];return u.apply(n,arguments),jr(this,r.apply(h,n))}}),h}E([\"pop\",\"push\",\"reverse\",\"shift\",\"sort\",\"splice\",\"unshift\"],function(r){var t=e[r];h.prototype[r]=function(){var n=this._wrapped;return t.apply(n,arguments),\"shift\"!==r&&\"splice\"!==r||0!==n.length||delete n[0],jr(this,n)}}),E([\"concat\",\"join\",\"slice\"],function(n){var r=e[n];h.prototype[n]=function(){return jr(this,r.apply(this._wrapped,arguments))}}),h.prototype.valueOf=h.prototype.toJSON=h.prototype.value=function(){return this._wrapped},h.prototype.toString=function(){return String(this._wrapped)};var wr=_r({default:h,VERSION:g,iteratee:m,restArguments:j,each:E,forEach:E,map:N,collect:N,reduce:I,foldl:I,inject:I,reduceRight:T,foldr:T,find:B,detect:B,filter:R,select:R,reject:function(n,r,t){return R(n,mn(b(r)),t)},every:F,all:F,some:q,any:q,contains:D,includes:D,include:D,invoke:W,pluck:z,where:function(n,r){return R(n,ir(r))},findWhere:function(n,r){return B(n,ir(r))},max:P,min:function(n,e,r){var t,u,o=1/0,i=1/0;if(null==e||\"number\"==typeof e&&\"object\"!=typeof n[0]&&null!=n)for(var a=0,f=(n=M(n)?n:On(n)).length;a<f;a++)null!=(t=n[a])&&t<o&&(o=t);else e=b(e,r),E(n,function(n,r,t){((u=e(n,r,t))<i||u===1/0&&o===1/0)&&(o=n,i=u)});return o},shuffle:function(n){return K(n,1/0)},sample:K,sortBy:function(n,e,r){var u=0;return e=b(e,r),z(N(n,function(n,r,t){return{value:n,index:u++,criteria:e(n,r,t)}}).sort(function(n,r){var t=n.criteria,e=r.criteria;if(t!==e){if(e<t||void 0===t)return 1;if(t<e||void 0===e)return-1}return n.index-r.index}),\"value\")},groupBy:V,indexBy:C,countBy:J,toArray:function(n){return n?Kn(n)?f.call(n):Jn(n)?n.match(U):M(n)?N(n,ur):On(n):[]},size:function(n){return null==n?0:M(n)?n.length:Sn(n).length},partition:$,first:G,head:G,take:G,initial:H,last:function(n,r,t){return null==n||n.length<1?null==r?void 0:[]:null==r||t?n[n.length-1]:Q(n,Math.max(0,n.length-r))},rest:Q,tail:Q,drop:Q,compact:function(n){return R(n,Boolean)},flatten:function(n,r){return X(n,r,!1)},without:Y,uniq:Z,unique:Z,union:nn,intersection:function(n){for(var r=[],t=arguments.length,e=0,u=O(n);e<u;e++){var o=n[e];if(!D(r,o)){var i;for(i=1;i<t&&D(arguments[i],o);i++);i===t&&r.push(o)}}return r},difference:rn,unzip:tn,zip:en,object:function(n,r){for(var t={},e=0,u=O(n);e<u;e++)r?t[n[e]]=r[e]:t[n[e][0]]=n[e][1];return t},findIndex:on,findLastIndex:an,sortedIndex:fn,indexOf:ln,lastIndexOf:pn,range:function(n,r,t){null==r&&(r=n||0,n=0),t||(t=r<n?-1:1);for(var e=Math.max(Math.ceil((r-n)/t),0),u=Array(e),o=0;o<e;o++,n+=t)u[o]=n;return u},chunk:function(n,r){if(null==r||r<1)return[];for(var t=[],e=0,u=n.length;e<u;)t.push(f.call(n,e,e+=r));return t},bind:vn,partial:hn,bindAll:gn,memoize:function(e,u){var o=function(n){var r=o.cache,t=\"\"+(u?u.apply(this,arguments):n);return x(r,t)||(r[t]=e.apply(this,arguments)),r[t]};return o.cache={},o},delay:yn,defer:dn,throttle:function(t,e,u){var o,i,a,f,c=0;u||(u={});var l=function(){c=!1===u.leading?0:fr(),o=null,f=t.apply(i,a),o||(i=a=null)},n=function(){var n=fr();c||!1!==u.leading||(c=n);var r=e-(n-c);return i=this,a=arguments,r<=0||e<r?(o&&(clearTimeout(o),o=null),c=n,f=t.apply(i,a),o||(i=a=null)):o||!1===u.trailing||(o=setTimeout(l,r)),f};return n.cancel=function(){clearTimeout(o),c=0,o=i=a=null},n},debounce:function(t,e,u){var o,i,a=function(n,r){o=null,r&&(i=t.apply(n,r))},n=j(function(n){if(o&&clearTimeout(o),u){var r=!o;o=setTimeout(a,e),r&&(i=t.apply(this,n))}else o=yn(a,e,this,n);return i});return n.cancel=function(){clearTimeout(o),o=null},n},wrap:function(n,r){return hn(r,n)},negate:mn,compose:function(){var t=arguments,e=t.length-1;return function(){for(var n=e,r=t[e].apply(this,arguments);n--;)r=t[n].call(this,r);return r}},after:function(n,r){return function(){if(--n<1)return r.apply(this,arguments)}},before:bn,once:jn,keys:Sn,allKeys:An,values:On,mapObject:function(n,r,t){r=b(r,t);for(var e=Sn(n),u=e.length,o={},i=0;i<u;i++){var a=e[i];o[a]=r(n[a],a,n)}return o},pairs:function(n){for(var r=Sn(n),t=r.length,e=Array(t),u=0;u<t;u++)e[u]=[r[u],n[r[u]]];return e},invert:Mn,functions:En,methods:En,extend:kn,extendOwn:In,assign:In,findKey:Tn,pick:Rn,omit:Fn,defaults:qn,create:function(n,r){var t=_(n);return r&&In(t,r),t},clone:Dn,tap:function(n,r){return r(n),n},isMatch:Wn,isEqual:function(n,r){return zn(n,r)},isEmpty:function(n){return null==n||(M(n)&&(Kn(n)||Jn(n)||Vn(n))?0===n.length:0===Sn(n).length)},isElement:function(n){return!(!n||1!==n.nodeType)},isArray:Kn,isObject:Ln,isArguments:Vn,isFunction:Cn,isString:Jn,isNumber:Un,isDate:$n,isRegExp:Gn,isError:Hn,isSymbol:Qn,isMap:Xn,isWeakMap:Yn,isSet:Zn,isWeakSet:nr,isFinite:function(n){return!Qn(n)&&l(n)&&!c(parseFloat(n))},isNaN:tr,isBoolean:er,isNull:function(n){return null===n},isUndefined:function(n){return void 0===n},has:function(n,r){if(!Kn(r))return x(n,r);for(var t=r.length,e=0;e<t;e++){var u=r[e];if(null==n||!o.call(n,u))return!1;n=n[u]}return!!t},identity:ur,constant:function(n){return function(){return n}},noop:function(){},property:or,propertyOf:function(r){return null==r?function(){}:function(n){return Kn(n)?S(r,n):r[n]}},matcher:ir,matches:ir,times:function(n,r,t){var e=Array(Math.max(0,n));r=y(r,t,1);for(var u=0;u<n;u++)e[u]=r(u);return e},random:ar,now:fr,escape:sr,unescape:vr,result:function(n,r,t){Kn(r)||(r=[r]);var e=r.length;if(!e)return Cn(t)?t.call(n):t;for(var u=0;u<e;u++){var o=null==n?void 0:n[r[u]];void 0===o&&(o=t,u=e),n=Cn(o)?o.call(n):o}return n},uniqueId:function(n){var r=++hr+\"\";return n?n+r:r},templateSettings:gr,template:function(o,n,r){!n&&r&&(n=r),n=qn({},n,h.templateSettings);var t,e=RegExp([(n.escape||yr).source,(n.interpolate||yr).source,(n.evaluate||yr).source].join(\"|\")+\"|$\",\"g\"),i=0,a=\"__p+='\";o.replace(e,function(n,r,t,e,u){return a+=o.slice(i,u).replace(mr,br),i=u+n.length,r?a+=\"'+\\n((__t=(\"+r+\"))==null?'':_.escape(__t))+\\n'\":t?a+=\"'+\\n((__t=(\"+t+\"))==null?'':__t)+\\n'\":e&&(a+=\"';\\n\"+e+\"\\n__p+='\"),n}),a+=\"';\\n\",n.variable||(a=\"with(obj||{}){\\n\"+a+\"}\\n\"),a=\"var __t,__p='',__j=Array.prototype.join,\"+\"print=function(){__p+=__j.call(arguments,'');};\\n\"+a+\"return __p;\\n\";try{t=new Function(n.variable||\"obj\",\"_\",a)}catch(n){throw n.source=a,n}var u=function(n){return t.call(this,n,h)},f=n.variable||\"obj\";return u.source=\"function(\"+f+\"){\\n\"+a+\"}\",u},chain:function(n){var r=h(n);return r._chain=!0,r},mixin:_r});return wr._=wr});"
+      }
+    },
+    {
+      "check_id": "javascript.lang.correctness.useless-eqeq.eqeq-is-bad",
+      "path": "webgoat-container/src/main/resources/static/js/libs/underscore-min.js",
+      "start": {
+        "line": 6,
+        "col": 8389
+      },
+      "end": {
+        "line": 6,
+        "col": 8395
+      },
+      "extra": {
+        "message": "Detected a useless comparison operation `+n == +n` or `+n != +n`. This \noperation is always true.\nIf testing for floating point NaN, use `math.isnan`, or\n`cmath.isnan` if the number is complex.\n",
+        "metavars": {
+          "$X": {
+            "start": {
+              "line": 6,
+              "col": 8389,
+              "offset": 8839
+            },
+            "end": {
+              "line": 6,
+              "col": 8391,
+              "offset": 8841
+            },
+            "abstract_content": "+n",
+            "unique_id": {
+              "type": "AST",
+              "md5sum": "f12ba1bd6bfc4c377937364c3a5f4dc3"
+            }
+          }
+        },
+        "metadata": {},
+        "severity": "ERROR",
+        "lines": "var n=\"object\"==typeof self&&self.self===self&&self||\"object\"==typeof global&&global.global===global&&global||Function(\"return this\")()||{},e=Array.prototype,i=Object.prototype,p=\"undefined\"!=typeof Symbol?Symbol.prototype:null,u=e.push,f=e.slice,s=i.toString,o=i.hasOwnProperty,r=Array.isArray,a=Object.keys,t=Object.create,c=n.isNaN,l=n.isFinite,v=function(){};function h(n){return n instanceof h?n:this instanceof h?void(this._wrapped=n):new h(n)}var g=h.VERSION=\"1.10.2\";function y(u,o,n){if(void 0===o)return u;switch(null==n?3:n){case 1:return function(n){return u.call(o,n)};case 3:return function(n,r,t){return u.call(o,n,r,t)};case 4:return function(n,r,t,e){return u.call(o,n,r,t,e)}}return function(){return u.apply(o,arguments)}}function d(n,r,t){return null==n?ur:Cn(n)?y(n,r,t):Ln(n)&&!Kn(n)?ir(n):or(n)}function m(n,r){return d(n,r,1/0)}function b(n,r,t){return h.iteratee!==m?h.iteratee(n,r):d(n,r,t)}function j(u,o){return o=null==o?u.length-1:+o,function(){for(var n=Math.max(arguments.length-o,0),r=Array(n),t=0;t<n;t++)r[t]=arguments[t+o];switch(o){case 0:return u.call(this,r);case 1:return u.call(this,arguments[0],r);case 2:return u.call(this,arguments[0],arguments[1],r)}var e=Array(o+1);for(t=0;t<o;t++)e[t]=arguments[t];return e[o]=r,u.apply(this,e)}}function _(n){if(!Ln(n))return{};if(t)return t(n);v.prototype=n;var r=new v;return v.prototype=null,r}function w(r){return function(n){return null==n?void 0:n[r]}}function x(n,r){return null!=n&&o.call(n,r)}function S(n,r){for(var t=r.length,e=0;e<t;e++){if(null==n)return;n=n[r[e]]}return t?n:void 0}h.iteratee=m;var A=Math.pow(2,53)-1,O=w(\"length\");function M(n){var r=O(n);return\"number\"==typeof r&&0<=r&&r<=A}function E(n,r,t){var e,u;if(r=y(r,t),M(n))for(e=0,u=n.length;e<u;e++)r(n[e],e,n);else{var o=Sn(n);for(e=0,u=o.length;e<u;e++)r(n[o[e]],o[e],n)}return n}function N(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=Array(u),i=0;i<u;i++){var a=e?e[i]:i;o[i]=r(n[a],a,n)}return o}function k(f){return function(n,r,t,e){var u=3<=arguments.length;return function(n,r,t,e){var u=!M(n)&&Sn(n),o=(u||n).length,i=0<f?0:o-1;for(e||(t=n[u?u[i]:i],i+=f);0<=i&&i<o;i+=f){var a=u?u[i]:i;t=r(t,n[a],a,n)}return t}(n,y(r,e,4),t,u)}}var I=k(1),T=k(-1);function B(n,r,t){var e=(M(n)?on:Tn)(n,r,t);if(void 0!==e&&-1!==e)return n[e]}function R(n,e,r){var u=[];return e=b(e,r),E(n,function(n,r,t){e(n,r,t)&&u.push(n)}),u}function F(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=0;o<u;o++){var i=e?e[o]:o;if(!r(n[i],i,n))return!1}return!0}function q(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=0;o<u;o++){var i=e?e[o]:o;if(r(n[i],i,n))return!0}return!1}function D(n,r,t,e){return M(n)||(n=On(n)),(\"number\"!=typeof t||e)&&(t=0),0<=ln(n,r,t)}var W=j(function(n,t,e){var u,o;return Cn(t)?o=t:Kn(t)&&(u=t.slice(0,-1),t=t[t.length-1]),N(n,function(n){var r=o;if(!r){if(u&&u.length&&(n=S(n,u)),null==n)return;r=n[t]}return null==r?r:r.apply(n,e)})});function z(n,r){return N(n,or(r))}function P(n,e,r){var t,u,o=-1/0,i=-1/0;if(null==e||\"number\"==typeof e&&\"object\"!=typeof n[0]&&null!=n)for(var a=0,f=(n=M(n)?n:On(n)).length;a<f;a++)null!=(t=n[a])&&o<t&&(o=t);else e=b(e,r),E(n,function(n,r,t){u=e(n,r,t),(i<u||u===-1/0&&o===-1/0)&&(o=n,i=u)});return o}function K(n,r,t){if(null==r||t)return M(n)||(n=On(n)),n[ar(n.length-1)];var e=M(n)?Dn(n):On(n),u=O(e);r=Math.max(Math.min(r,u),0);for(var o=u-1,i=0;i<r;i++){var a=ar(i,o),f=e[i];e[i]=e[a],e[a]=f}return e.slice(0,r)}function L(i,r){return function(e,u,n){var o=r?[[],[]]:{};return u=b(u,n),E(e,function(n,r){var t=u(n,r,e);i(o,n,t)}),o}}var V=L(function(n,r,t){x(n,t)?n[t].push(r):n[t]=[r]}),C=L(function(n,r,t){n[t]=r}),J=L(function(n,r,t){x(n,t)?n[t]++:n[t]=1}),U=/[^\\ud800-\\udfff]|[\\ud800-\\udbff][\\udc00-\\udfff]|[\\ud800-\\udfff]/g;var $=L(function(n,r,t){n[t?0:1].push(r)},!0);function G(n,r,t){return null==n||n.length<1?null==r?void 0:[]:null==r||t?n[0]:H(n,n.length-r)}function H(n,r,t){return f.call(n,0,Math.max(0,n.length-(null==r||t?1:r)))}function Q(n,r,t){return f.call(n,null==r||t?1:r)}function X(n,r,t,e){for(var u=(e=e||[]).length,o=0,i=O(n);o<i;o++){var a=n[o];if(M(a)&&(Kn(a)||Vn(a)))if(r)for(var f=0,c=a.length;f<c;)e[u++]=a[f++];else X(a,r,t,e),u=e.length;else t||(e[u++]=a)}return e}var Y=j(function(n,r){return rn(n,r)});function Z(n,r,t,e){er(r)||(e=t,t=r,r=!1),null!=t&&(t=b(t,e));for(var u=[],o=[],i=0,a=O(n);i<a;i++){var f=n[i],c=t?t(f,i,n):f;r&&!t?(i&&o===c||u.push(f),o=c):t?D(o,c)||(o.push(c),u.push(f)):D(u,f)||u.push(f)}return u}var nn=j(function(n){return Z(X(n,!0,!0))});var rn=j(function(n,r){return r=X(r,!0,!0),R(n,function(n){return!D(r,n)})});function tn(n){for(var r=n&&P(n,O).length||0,t=Array(r),e=0;e<r;e++)t[e]=z(n,e);return t}var en=j(tn);function un(o){return function(n,r,t){r=b(r,t);for(var e=O(n),u=0<o?0:e-1;0<=u&&u<e;u+=o)if(r(n[u],u,n))return u;return-1}}var on=un(1),an=un(-1);function fn(n,r,t,e){for(var u=(t=b(t,e,1))(r),o=0,i=O(n);o<i;){var a=Math.floor((o+i)/2);t(n[a])<u?o=a+1:i=a}return o}function cn(o,i,a){return function(n,r,t){var e=0,u=O(n);if(\"number\"==typeof t)0<o?e=0<=t?t:Math.max(t+u,e):u=0<=t?Math.min(t+1,u):t+u+1;else if(a&&t&&u)return n[t=a(n,r)]===r?t:-1;if(r!=r)return 0<=(t=i(f.call(n,e,u),tr))?t+e:-1;for(t=0<o?e:u-1;0<=t&&t<u;t+=o)if(n[t]===r)return t;return-1}}var ln=cn(1,on,fn),pn=cn(-1,an);function sn(n,r,t,e,u){if(!(e instanceof r))return n.apply(t,u);var o=_(n.prototype),i=n.apply(o,u);return Ln(i)?i:o}var vn=j(function(r,t,e){if(!Cn(r))throw new TypeError(\"Bind must be called on a function\");var u=j(function(n){return sn(r,u,t,this,e.concat(n))});return u}),hn=j(function(u,o){var i=hn.placeholder,a=function(){for(var n=0,r=o.length,t=Array(r),e=0;e<r;e++)t[e]=o[e]===i?arguments[n++]:o[e];for(;n<arguments.length;)t.push(arguments[n++]);return sn(u,a,this,this,t)};return a});hn.placeholder=h;var gn=j(function(n,r){var t=(r=X(r,!1,!1)).length;if(t<1)throw new Error(\"bindAll must be passed function names\");for(;t--;){var e=r[t];n[e]=vn(n[e],n)}});var yn=j(function(n,r,t){return setTimeout(function(){return n.apply(null,t)},r)}),dn=hn(yn,h,1);function mn(n){return function(){return!n.apply(this,arguments)}}function bn(n,r){var t;return function(){return 0<--n&&(t=r.apply(this,arguments)),n<=1&&(r=null),t}}var jn=hn(bn,2),_n=!{toString:null}.propertyIsEnumerable(\"toString\"),wn=[\"valueOf\",\"isPrototypeOf\",\"toString\",\"propertyIsEnumerable\",\"hasOwnProperty\",\"toLocaleString\"];function xn(n,r){var t=wn.length,e=n.constructor,u=Cn(e)&&e.prototype||i,o=\"constructor\";for(x(n,o)&&!D(r,o)&&r.push(o);t--;)(o=wn[t])in n&&n[o]!==u[o]&&!D(r,o)&&r.push(o)}function Sn(n){if(!Ln(n))return[];if(a)return a(n);var r=[];for(var t in n)x(n,t)&&r.push(t);return _n&&xn(n,r),r}function An(n){if(!Ln(n))return[];var r=[];for(var t in n)r.push(t);return _n&&xn(n,r),r}function On(n){for(var r=Sn(n),t=r.length,e=Array(t),u=0;u<t;u++)e[u]=n[r[u]];return e}function Mn(n){for(var r={},t=Sn(n),e=0,u=t.length;e<u;e++)r[n[t[e]]]=t[e];return r}function En(n){var r=[];for(var t in n)Cn(n[t])&&r.push(t);return r.sort()}function Nn(f,c){return function(n){var r=arguments.length;if(c&&(n=Object(n)),r<2||null==n)return n;for(var t=1;t<r;t++)for(var e=arguments[t],u=f(e),o=u.length,i=0;i<o;i++){var a=u[i];c&&void 0!==n[a]||(n[a]=e[a])}return n}}var kn=Nn(An),In=Nn(Sn);function Tn(n,r,t){r=b(r,t);for(var e,u=Sn(n),o=0,i=u.length;o<i;o++)if(r(n[e=u[o]],e,n))return e}function Bn(n,r,t){return r in t}var Rn=j(function(n,r){var t={},e=r[0];if(null==n)return t;Cn(e)?(1<r.length&&(e=y(e,r[1])),r=An(n)):(e=Bn,r=X(r,!1,!1),n=Object(n));for(var u=0,o=r.length;u<o;u++){var i=r[u],a=n[i];e(a,i,n)&&(t[i]=a)}return t}),Fn=j(function(n,t){var r,e=t[0];return Cn(e)?(e=mn(e),1<t.length&&(r=t[1])):(t=N(X(t,!1,!1),String),e=function(n,r){return!D(t,r)}),Rn(n,e,r)}),qn=Nn(An,!0);function Dn(n){return Ln(n)?Kn(n)?n.slice():kn({},n):n}function Wn(n,r){var t=Sn(r),e=t.length;if(null==n)return!e;for(var u=Object(n),o=0;o<e;o++){var i=t[o];if(r[i]!==u[i]||!(i in u))return!1}return!0}function zn(n,r,t,e){if(n===r)return 0!==n||1/n==1/r;if(null==n||null==r)return!1;if(n!=n)return r!=r;var u=typeof n;return(\"function\"===u||\"object\"===u||\"object\"==typeof r)&&function(n,r,t,e){n instanceof h&&(n=n._wrapped);r instanceof h&&(r=r._wrapped);var u=s.call(n);if(u!==s.call(r))return!1;switch(u){case\"[object RegExp]\":case\"[object String]\":return\"\"+n==\"\"+r;case\"[object Number]\":return+n!=+n?+r!=+r:0==+n?1/+n==1/r:+n==+r;case\"[object Date]\":case\"[object Boolean]\":return+n==+r;case\"[object Symbol]\":return p.valueOf.call(n)===p.valueOf.call(r)}var o=\"[object Array]\"===u;if(!o){if(\"object\"!=typeof n||\"object\"!=typeof r)return!1;var i=n.constructor,a=r.constructor;if(i!==a&&!(Cn(i)&&i instanceof i&&Cn(a)&&a instanceof a)&&\"constructor\"in n&&\"constructor\"in r)return!1}e=e||[];var f=(t=t||[]).length;for(;f--;)if(t[f]===n)return e[f]===r;if(t.push(n),e.push(r),o){if((f=n.length)!==r.length)return!1;for(;f--;)if(!zn(n[f],r[f],t,e))return!1}else{var c,l=Sn(n);if(f=l.length,Sn(r).length!==f)return!1;for(;f--;)if(c=l[f],!x(r,c)||!zn(n[c],r[c],t,e))return!1}return t.pop(),e.pop(),!0}(n,r,t,e)}function Pn(r){return function(n){return s.call(n)===\"[object \"+r+\"]\"}}var Kn=r||Pn(\"Array\");function Ln(n){var r=typeof n;return\"function\"===r||\"object\"===r&&!!n}var Vn=Pn(\"Arguments\"),Cn=Pn(\"Function\"),Jn=Pn(\"String\"),Un=Pn(\"Number\"),$n=Pn(\"Date\"),Gn=Pn(\"RegExp\"),Hn=Pn(\"Error\"),Qn=Pn(\"Symbol\"),Xn=Pn(\"Map\"),Yn=Pn(\"WeakMap\"),Zn=Pn(\"Set\"),nr=Pn(\"WeakSet\");!function(){Vn(arguments)||(Vn=function(n){return x(n,\"callee\")})}();var rr=n.document&&n.document.childNodes;function tr(n){return Un(n)&&c(n)}function er(n){return!0===n||!1===n||\"[object Boolean]\"===s.call(n)}function ur(n){return n}function or(r){return Kn(r)?function(n){return S(n,r)}:w(r)}function ir(r){return r=In({},r),function(n){return Wn(n,r)}}function ar(n,r){return null==r&&(r=n,n=0),n+Math.floor(Math.random()*(r-n+1))}\"function\"!=typeof/./&&\"object\"!=typeof Int8Array&&\"function\"!=typeof rr&&(Cn=function(n){return\"function\"==typeof n||!1});var fr=Date.now||function(){return(new Date).getTime()},cr={\"&\":\"&amp;\",\"<\":\"&lt;\",\">\":\"&gt;\",'\"':\"&quot;\",\"'\":\"&#x27;\",\"`\":\"&#x60;\"},lr=Mn(cr);function pr(r){var t=function(n){return r[n]},n=\"(?:\"+Sn(r).join(\"|\")+\")\",e=RegExp(n),u=RegExp(n,\"g\");return function(n){return n=null==n?\"\":\"\"+n,e.test(n)?n.replace(u,t):n}}var sr=pr(cr),vr=pr(lr);var hr=0;var gr=h.templateSettings={evaluate:/<%([\\s\\S]+?)%>/g,interpolate:/<%=([\\s\\S]+?)%>/g,escape:/<%-([\\s\\S]+?)%>/g},yr=/(.)^/,dr={\"'\":\"'\",\"\\\\\":\"\\\\\",\"\\r\":\"r\",\"\\n\":\"n\",\"\\u2028\":\"u2028\",\"\\u2029\":\"u2029\"},mr=/\\\\|'|\\r|\\n|\\u2028|\\u2029/g,br=function(n){return\"\\\\\"+dr[n]};function jr(n,r){return n._chain?h(r).chain():r}function _r(t){return E(En(t),function(n){var r=h[n]=t[n];h.prototype[n]=function(){var n=[this._wrapped];return u.apply(n,arguments),jr(this,r.apply(h,n))}}),h}E([\"pop\",\"push\",\"reverse\",\"shift\",\"sort\",\"splice\",\"unshift\"],function(r){var t=e[r];h.prototype[r]=function(){var n=this._wrapped;return t.apply(n,arguments),\"shift\"!==r&&\"splice\"!==r||0!==n.length||delete n[0],jr(this,n)}}),E([\"concat\",\"join\",\"slice\"],function(n){var r=e[n];h.prototype[n]=function(){return jr(this,r.apply(this._wrapped,arguments))}}),h.prototype.valueOf=h.prototype.toJSON=h.prototype.value=function(){return this._wrapped},h.prototype.toString=function(){return String(this._wrapped)};var wr=_r({default:h,VERSION:g,iteratee:m,restArguments:j,each:E,forEach:E,map:N,collect:N,reduce:I,foldl:I,inject:I,reduceRight:T,foldr:T,find:B,detect:B,filter:R,select:R,reject:function(n,r,t){return R(n,mn(b(r)),t)},every:F,all:F,some:q,any:q,contains:D,includes:D,include:D,invoke:W,pluck:z,where:function(n,r){return R(n,ir(r))},findWhere:function(n,r){return B(n,ir(r))},max:P,min:function(n,e,r){var t,u,o=1/0,i=1/0;if(null==e||\"number\"==typeof e&&\"object\"!=typeof n[0]&&null!=n)for(var a=0,f=(n=M(n)?n:On(n)).length;a<f;a++)null!=(t=n[a])&&t<o&&(o=t);else e=b(e,r),E(n,function(n,r,t){((u=e(n,r,t))<i||u===1/0&&o===1/0)&&(o=n,i=u)});return o},shuffle:function(n){return K(n,1/0)},sample:K,sortBy:function(n,e,r){var u=0;return e=b(e,r),z(N(n,function(n,r,t){return{value:n,index:u++,criteria:e(n,r,t)}}).sort(function(n,r){var t=n.criteria,e=r.criteria;if(t!==e){if(e<t||void 0===t)return 1;if(t<e||void 0===e)return-1}return n.index-r.index}),\"value\")},groupBy:V,indexBy:C,countBy:J,toArray:function(n){return n?Kn(n)?f.call(n):Jn(n)?n.match(U):M(n)?N(n,ur):On(n):[]},size:function(n){return null==n?0:M(n)?n.length:Sn(n).length},partition:$,first:G,head:G,take:G,initial:H,last:function(n,r,t){return null==n||n.length<1?null==r?void 0:[]:null==r||t?n[n.length-1]:Q(n,Math.max(0,n.length-r))},rest:Q,tail:Q,drop:Q,compact:function(n){return R(n,Boolean)},flatten:function(n,r){return X(n,r,!1)},without:Y,uniq:Z,unique:Z,union:nn,intersection:function(n){for(var r=[],t=arguments.length,e=0,u=O(n);e<u;e++){var o=n[e];if(!D(r,o)){var i;for(i=1;i<t&&D(arguments[i],o);i++);i===t&&r.push(o)}}return r},difference:rn,unzip:tn,zip:en,object:function(n,r){for(var t={},e=0,u=O(n);e<u;e++)r?t[n[e]]=r[e]:t[n[e][0]]=n[e][1];return t},findIndex:on,findLastIndex:an,sortedIndex:fn,indexOf:ln,lastIndexOf:pn,range:function(n,r,t){null==r&&(r=n||0,n=0),t||(t=r<n?-1:1);for(var e=Math.max(Math.ceil((r-n)/t),0),u=Array(e),o=0;o<e;o++,n+=t)u[o]=n;return u},chunk:function(n,r){if(null==r||r<1)return[];for(var t=[],e=0,u=n.length;e<u;)t.push(f.call(n,e,e+=r));return t},bind:vn,partial:hn,bindAll:gn,memoize:function(e,u){var o=function(n){var r=o.cache,t=\"\"+(u?u.apply(this,arguments):n);return x(r,t)||(r[t]=e.apply(this,arguments)),r[t]};return o.cache={},o},delay:yn,defer:dn,throttle:function(t,e,u){var o,i,a,f,c=0;u||(u={});var l=function(){c=!1===u.leading?0:fr(),o=null,f=t.apply(i,a),o||(i=a=null)},n=function(){var n=fr();c||!1!==u.leading||(c=n);var r=e-(n-c);return i=this,a=arguments,r<=0||e<r?(o&&(clearTimeout(o),o=null),c=n,f=t.apply(i,a),o||(i=a=null)):o||!1===u.trailing||(o=setTimeout(l,r)),f};return n.cancel=function(){clearTimeout(o),c=0,o=i=a=null},n},debounce:function(t,e,u){var o,i,a=function(n,r){o=null,r&&(i=t.apply(n,r))},n=j(function(n){if(o&&clearTimeout(o),u){var r=!o;o=setTimeout(a,e),r&&(i=t.apply(this,n))}else o=yn(a,e,this,n);return i});return n.cancel=function(){clearTimeout(o),o=null},n},wrap:function(n,r){return hn(r,n)},negate:mn,compose:function(){var t=arguments,e=t.length-1;return function(){for(var n=e,r=t[e].apply(this,arguments);n--;)r=t[n].call(this,r);return r}},after:function(n,r){return function(){if(--n<1)return r.apply(this,arguments)}},before:bn,once:jn,keys:Sn,allKeys:An,values:On,mapObject:function(n,r,t){r=b(r,t);for(var e=Sn(n),u=e.length,o={},i=0;i<u;i++){var a=e[i];o[a]=r(n[a],a,n)}return o},pairs:function(n){for(var r=Sn(n),t=r.length,e=Array(t),u=0;u<t;u++)e[u]=[r[u],n[r[u]]];return e},invert:Mn,functions:En,methods:En,extend:kn,extendOwn:In,assign:In,findKey:Tn,pick:Rn,omit:Fn,defaults:qn,create:function(n,r){var t=_(n);return r&&In(t,r),t},clone:Dn,tap:function(n,r){return r(n),n},isMatch:Wn,isEqual:function(n,r){return zn(n,r)},isEmpty:function(n){return null==n||(M(n)&&(Kn(n)||Jn(n)||Vn(n))?0===n.length:0===Sn(n).length)},isElement:function(n){return!(!n||1!==n.nodeType)},isArray:Kn,isObject:Ln,isArguments:Vn,isFunction:Cn,isString:Jn,isNumber:Un,isDate:$n,isRegExp:Gn,isError:Hn,isSymbol:Qn,isMap:Xn,isWeakMap:Yn,isSet:Zn,isWeakSet:nr,isFinite:function(n){return!Qn(n)&&l(n)&&!c(parseFloat(n))},isNaN:tr,isBoolean:er,isNull:function(n){return null===n},isUndefined:function(n){return void 0===n},has:function(n,r){if(!Kn(r))return x(n,r);for(var t=r.length,e=0;e<t;e++){var u=r[e];if(null==n||!o.call(n,u))return!1;n=n[u]}return!!t},identity:ur,constant:function(n){return function(){return n}},noop:function(){},property:or,propertyOf:function(r){return null==r?function(){}:function(n){return Kn(n)?S(r,n):r[n]}},matcher:ir,matches:ir,times:function(n,r,t){var e=Array(Math.max(0,n));r=y(r,t,1);for(var u=0;u<n;u++)e[u]=r(u);return e},random:ar,now:fr,escape:sr,unescape:vr,result:function(n,r,t){Kn(r)||(r=[r]);var e=r.length;if(!e)return Cn(t)?t.call(n):t;for(var u=0;u<e;u++){var o=null==n?void 0:n[r[u]];void 0===o&&(o=t,u=e),n=Cn(o)?o.call(n):o}return n},uniqueId:function(n){var r=++hr+\"\";return n?n+r:r},templateSettings:gr,template:function(o,n,r){!n&&r&&(n=r),n=qn({},n,h.templateSettings);var t,e=RegExp([(n.escape||yr).source,(n.interpolate||yr).source,(n.evaluate||yr).source].join(\"|\")+\"|$\",\"g\"),i=0,a=\"__p+='\";o.replace(e,function(n,r,t,e,u){return a+=o.slice(i,u).replace(mr,br),i=u+n.length,r?a+=\"'+\\n((__t=(\"+r+\"))==null?'':_.escape(__t))+\\n'\":t?a+=\"'+\\n((__t=(\"+t+\"))==null?'':__t)+\\n'\":e&&(a+=\"';\\n\"+e+\"\\n__p+='\"),n}),a+=\"';\\n\",n.variable||(a=\"with(obj||{}){\\n\"+a+\"}\\n\"),a=\"var __t,__p='',__j=Array.prototype.join,\"+\"print=function(){__p+=__j.call(arguments,'');};\\n\"+a+\"return __p;\\n\";try{t=new Function(n.variable||\"obj\",\"_\",a)}catch(n){throw n.source=a,n}var u=function(n){return t.call(this,n,h)},f=n.variable||\"obj\";return u.source=\"function(\"+f+\"){\\n\"+a+\"}\",u},chain:function(n){var r=h(n);return r._chain=!0,r},mixin:_r});return wr._=wr});"
+      }
+    },
+    {
+      "check_id": "javascript.lang.correctness.useless-eqeq.eqeq-is-bad",
+      "path": "webgoat-container/src/main/resources/static/js/libs/underscore-min.js",
+      "start": {
+        "line": 6,
+        "col": 8396
+      },
+      "end": {
+        "line": 6,
+        "col": 8402
+      },
+      "extra": {
+        "message": "Detected a useless comparison operation `+r == +r` or `+r != +r`. This \noperation is always true.\nIf testing for floating point NaN, use `math.isnan`, or\n`cmath.isnan` if the number is complex.\n",
+        "metavars": {
+          "$X": {
+            "start": {
+              "line": 6,
+              "col": 8396,
+              "offset": 8846
+            },
+            "end": {
+              "line": 6,
+              "col": 8398,
+              "offset": 8848
+            },
+            "abstract_content": "+r",
+            "unique_id": {
+              "type": "AST",
+              "md5sum": "182bd948364d781eb2b0bc28bf6268bb"
+            }
+          }
+        },
+        "metadata": {},
+        "severity": "ERROR",
+        "lines": "var n=\"object\"==typeof self&&self.self===self&&self||\"object\"==typeof global&&global.global===global&&global||Function(\"return this\")()||{},e=Array.prototype,i=Object.prototype,p=\"undefined\"!=typeof Symbol?Symbol.prototype:null,u=e.push,f=e.slice,s=i.toString,o=i.hasOwnProperty,r=Array.isArray,a=Object.keys,t=Object.create,c=n.isNaN,l=n.isFinite,v=function(){};function h(n){return n instanceof h?n:this instanceof h?void(this._wrapped=n):new h(n)}var g=h.VERSION=\"1.10.2\";function y(u,o,n){if(void 0===o)return u;switch(null==n?3:n){case 1:return function(n){return u.call(o,n)};case 3:return function(n,r,t){return u.call(o,n,r,t)};case 4:return function(n,r,t,e){return u.call(o,n,r,t,e)}}return function(){return u.apply(o,arguments)}}function d(n,r,t){return null==n?ur:Cn(n)?y(n,r,t):Ln(n)&&!Kn(n)?ir(n):or(n)}function m(n,r){return d(n,r,1/0)}function b(n,r,t){return h.iteratee!==m?h.iteratee(n,r):d(n,r,t)}function j(u,o){return o=null==o?u.length-1:+o,function(){for(var n=Math.max(arguments.length-o,0),r=Array(n),t=0;t<n;t++)r[t]=arguments[t+o];switch(o){case 0:return u.call(this,r);case 1:return u.call(this,arguments[0],r);case 2:return u.call(this,arguments[0],arguments[1],r)}var e=Array(o+1);for(t=0;t<o;t++)e[t]=arguments[t];return e[o]=r,u.apply(this,e)}}function _(n){if(!Ln(n))return{};if(t)return t(n);v.prototype=n;var r=new v;return v.prototype=null,r}function w(r){return function(n){return null==n?void 0:n[r]}}function x(n,r){return null!=n&&o.call(n,r)}function S(n,r){for(var t=r.length,e=0;e<t;e++){if(null==n)return;n=n[r[e]]}return t?n:void 0}h.iteratee=m;var A=Math.pow(2,53)-1,O=w(\"length\");function M(n){var r=O(n);return\"number\"==typeof r&&0<=r&&r<=A}function E(n,r,t){var e,u;if(r=y(r,t),M(n))for(e=0,u=n.length;e<u;e++)r(n[e],e,n);else{var o=Sn(n);for(e=0,u=o.length;e<u;e++)r(n[o[e]],o[e],n)}return n}function N(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=Array(u),i=0;i<u;i++){var a=e?e[i]:i;o[i]=r(n[a],a,n)}return o}function k(f){return function(n,r,t,e){var u=3<=arguments.length;return function(n,r,t,e){var u=!M(n)&&Sn(n),o=(u||n).length,i=0<f?0:o-1;for(e||(t=n[u?u[i]:i],i+=f);0<=i&&i<o;i+=f){var a=u?u[i]:i;t=r(t,n[a],a,n)}return t}(n,y(r,e,4),t,u)}}var I=k(1),T=k(-1);function B(n,r,t){var e=(M(n)?on:Tn)(n,r,t);if(void 0!==e&&-1!==e)return n[e]}function R(n,e,r){var u=[];return e=b(e,r),E(n,function(n,r,t){e(n,r,t)&&u.push(n)}),u}function F(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=0;o<u;o++){var i=e?e[o]:o;if(!r(n[i],i,n))return!1}return!0}function q(n,r,t){r=b(r,t);for(var e=!M(n)&&Sn(n),u=(e||n).length,o=0;o<u;o++){var i=e?e[o]:o;if(r(n[i],i,n))return!0}return!1}function D(n,r,t,e){return M(n)||(n=On(n)),(\"number\"!=typeof t||e)&&(t=0),0<=ln(n,r,t)}var W=j(function(n,t,e){var u,o;return Cn(t)?o=t:Kn(t)&&(u=t.slice(0,-1),t=t[t.length-1]),N(n,function(n){var r=o;if(!r){if(u&&u.length&&(n=S(n,u)),null==n)return;r=n[t]}return null==r?r:r.apply(n,e)})});function z(n,r){return N(n,or(r))}function P(n,e,r){var t,u,o=-1/0,i=-1/0;if(null==e||\"number\"==typeof e&&\"object\"!=typeof n[0]&&null!=n)for(var a=0,f=(n=M(n)?n:On(n)).length;a<f;a++)null!=(t=n[a])&&o<t&&(o=t);else e=b(e,r),E(n,function(n,r,t){u=e(n,r,t),(i<u||u===-1/0&&o===-1/0)&&(o=n,i=u)});return o}function K(n,r,t){if(null==r||t)return M(n)||(n=On(n)),n[ar(n.length-1)];var e=M(n)?Dn(n):On(n),u=O(e);r=Math.max(Math.min(r,u),0);for(var o=u-1,i=0;i<r;i++){var a=ar(i,o),f=e[i];e[i]=e[a],e[a]=f}return e.slice(0,r)}function L(i,r){return function(e,u,n){var o=r?[[],[]]:{};return u=b(u,n),E(e,function(n,r){var t=u(n,r,e);i(o,n,t)}),o}}var V=L(function(n,r,t){x(n,t)?n[t].push(r):n[t]=[r]}),C=L(function(n,r,t){n[t]=r}),J=L(function(n,r,t){x(n,t)?n[t]++:n[t]=1}),U=/[^\\ud800-\\udfff]|[\\ud800-\\udbff][\\udc00-\\udfff]|[\\ud800-\\udfff]/g;var $=L(function(n,r,t){n[t?0:1].push(r)},!0);function G(n,r,t){return null==n||n.length<1?null==r?void 0:[]:null==r||t?n[0]:H(n,n.length-r)}function H(n,r,t){return f.call(n,0,Math.max(0,n.length-(null==r||t?1:r)))}function Q(n,r,t){return f.call(n,null==r||t?1:r)}function X(n,r,t,e){for(var u=(e=e||[]).length,o=0,i=O(n);o<i;o++){var a=n[o];if(M(a)&&(Kn(a)||Vn(a)))if(r)for(var f=0,c=a.length;f<c;)e[u++]=a[f++];else X(a,r,t,e),u=e.length;else t||(e[u++]=a)}return e}var Y=j(function(n,r){return rn(n,r)});function Z(n,r,t,e){er(r)||(e=t,t=r,r=!1),null!=t&&(t=b(t,e));for(var u=[],o=[],i=0,a=O(n);i<a;i++){var f=n[i],c=t?t(f,i,n):f;r&&!t?(i&&o===c||u.push(f),o=c):t?D(o,c)||(o.push(c),u.push(f)):D(u,f)||u.push(f)}return u}var nn=j(function(n){return Z(X(n,!0,!0))});var rn=j(function(n,r){return r=X(r,!0,!0),R(n,function(n){return!D(r,n)})});function tn(n){for(var r=n&&P(n,O).length||0,t=Array(r),e=0;e<r;e++)t[e]=z(n,e);return t}var en=j(tn);function un(o){return function(n,r,t){r=b(r,t);for(var e=O(n),u=0<o?0:e-1;0<=u&&u<e;u+=o)if(r(n[u],u,n))return u;return-1}}var on=un(1),an=un(-1);function fn(n,r,t,e){for(var u=(t=b(t,e,1))(r),o=0,i=O(n);o<i;){var a=Math.floor((o+i)/2);t(n[a])<u?o=a+1:i=a}return o}function cn(o,i,a){return function(n,r,t){var e=0,u=O(n);if(\"number\"==typeof t)0<o?e=0<=t?t:Math.max(t+u,e):u=0<=t?Math.min(t+1,u):t+u+1;else if(a&&t&&u)return n[t=a(n,r)]===r?t:-1;if(r!=r)return 0<=(t=i(f.call(n,e,u),tr))?t+e:-1;for(t=0<o?e:u-1;0<=t&&t<u;t+=o)if(n[t]===r)return t;return-1}}var ln=cn(1,on,fn),pn=cn(-1,an);function sn(n,r,t,e,u){if(!(e instanceof r))return n.apply(t,u);var o=_(n.prototype),i=n.apply(o,u);return Ln(i)?i:o}var vn=j(function(r,t,e){if(!Cn(r))throw new TypeError(\"Bind must be called on a function\");var u=j(function(n){return sn(r,u,t,this,e.concat(n))});return u}),hn=j(function(u,o){var i=hn.placeholder,a=function(){for(var n=0,r=o.length,t=Array(r),e=0;e<r;e++)t[e]=o[e]===i?arguments[n++]:o[e];for(;n<arguments.length;)t.push(arguments[n++]);return sn(u,a,this,this,t)};return a});hn.placeholder=h;var gn=j(function(n,r){var t=(r=X(r,!1,!1)).length;if(t<1)throw new Error(\"bindAll must be passed function names\");for(;t--;){var e=r[t];n[e]=vn(n[e],n)}});var yn=j(function(n,r,t){return setTimeout(function(){return n.apply(null,t)},r)}),dn=hn(yn,h,1);function mn(n){return function(){return!n.apply(this,arguments)}}function bn(n,r){var t;return function(){return 0<--n&&(t=r.apply(this,arguments)),n<=1&&(r=null),t}}var jn=hn(bn,2),_n=!{toString:null}.propertyIsEnumerable(\"toString\"),wn=[\"valueOf\",\"isPrototypeOf\",\"toString\",\"propertyIsEnumerable\",\"hasOwnProperty\",\"toLocaleString\"];function xn(n,r){var t=wn.length,e=n.constructor,u=Cn(e)&&e.prototype||i,o=\"constructor\";for(x(n,o)&&!D(r,o)&&r.push(o);t--;)(o=wn[t])in n&&n[o]!==u[o]&&!D(r,o)&&r.push(o)}function Sn(n){if(!Ln(n))return[];if(a)return a(n);var r=[];for(var t in n)x(n,t)&&r.push(t);return _n&&xn(n,r),r}function An(n){if(!Ln(n))return[];var r=[];for(var t in n)r.push(t);return _n&&xn(n,r),r}function On(n){for(var r=Sn(n),t=r.length,e=Array(t),u=0;u<t;u++)e[u]=n[r[u]];return e}function Mn(n){for(var r={},t=Sn(n),e=0,u=t.length;e<u;e++)r[n[t[e]]]=t[e];return r}function En(n){var r=[];for(var t in n)Cn(n[t])&&r.push(t);return r.sort()}function Nn(f,c){return function(n){var r=arguments.length;if(c&&(n=Object(n)),r<2||null==n)return n;for(var t=1;t<r;t++)for(var e=arguments[t],u=f(e),o=u.length,i=0;i<o;i++){var a=u[i];c&&void 0!==n[a]||(n[a]=e[a])}return n}}var kn=Nn(An),In=Nn(Sn);function Tn(n,r,t){r=b(r,t);for(var e,u=Sn(n),o=0,i=u.length;o<i;o++)if(r(n[e=u[o]],e,n))return e}function Bn(n,r,t){return r in t}var Rn=j(function(n,r){var t={},e=r[0];if(null==n)return t;Cn(e)?(1<r.length&&(e=y(e,r[1])),r=An(n)):(e=Bn,r=X(r,!1,!1),n=Object(n));for(var u=0,o=r.length;u<o;u++){var i=r[u],a=n[i];e(a,i,n)&&(t[i]=a)}return t}),Fn=j(function(n,t){var r,e=t[0];return Cn(e)?(e=mn(e),1<t.length&&(r=t[1])):(t=N(X(t,!1,!1),String),e=function(n,r){return!D(t,r)}),Rn(n,e,r)}),qn=Nn(An,!0);function Dn(n){return Ln(n)?Kn(n)?n.slice():kn({},n):n}function Wn(n,r){var t=Sn(r),e=t.length;if(null==n)return!e;for(var u=Object(n),o=0;o<e;o++){var i=t[o];if(r[i]!==u[i]||!(i in u))return!1}return!0}function zn(n,r,t,e){if(n===r)return 0!==n||1/n==1/r;if(null==n||null==r)return!1;if(n!=n)return r!=r;var u=typeof n;return(\"function\"===u||\"object\"===u||\"object\"==typeof r)&&function(n,r,t,e){n instanceof h&&(n=n._wrapped);r instanceof h&&(r=r._wrapped);var u=s.call(n);if(u!==s.call(r))return!1;switch(u){case\"[object RegExp]\":case\"[object String]\":return\"\"+n==\"\"+r;case\"[object Number]\":return+n!=+n?+r!=+r:0==+n?1/+n==1/r:+n==+r;case\"[object Date]\":case\"[object Boolean]\":return+n==+r;case\"[object Symbol]\":return p.valueOf.call(n)===p.valueOf.call(r)}var o=\"[object Array]\"===u;if(!o){if(\"object\"!=typeof n||\"object\"!=typeof r)return!1;var i=n.constructor,a=r.constructor;if(i!==a&&!(Cn(i)&&i instanceof i&&Cn(a)&&a instanceof a)&&\"constructor\"in n&&\"constructor\"in r)return!1}e=e||[];var f=(t=t||[]).length;for(;f--;)if(t[f]===n)return e[f]===r;if(t.push(n),e.push(r),o){if((f=n.length)!==r.length)return!1;for(;f--;)if(!zn(n[f],r[f],t,e))return!1}else{var c,l=Sn(n);if(f=l.length,Sn(r).length!==f)return!1;for(;f--;)if(c=l[f],!x(r,c)||!zn(n[c],r[c],t,e))return!1}return t.pop(),e.pop(),!0}(n,r,t,e)}function Pn(r){return function(n){return s.call(n)===\"[object \"+r+\"]\"}}var Kn=r||Pn(\"Array\");function Ln(n){var r=typeof n;return\"function\"===r||\"object\"===r&&!!n}var Vn=Pn(\"Arguments\"),Cn=Pn(\"Function\"),Jn=Pn(\"String\"),Un=Pn(\"Number\"),$n=Pn(\"Date\"),Gn=Pn(\"RegExp\"),Hn=Pn(\"Error\"),Qn=Pn(\"Symbol\"),Xn=Pn(\"Map\"),Yn=Pn(\"WeakMap\"),Zn=Pn(\"Set\"),nr=Pn(\"WeakSet\");!function(){Vn(arguments)||(Vn=function(n){return x(n,\"callee\")})}();var rr=n.document&&n.document.childNodes;function tr(n){return Un(n)&&c(n)}function er(n){return!0===n||!1===n||\"[object Boolean]\"===s.call(n)}function ur(n){return n}function or(r){return Kn(r)?function(n){return S(n,r)}:w(r)}function ir(r){return r=In({},r),function(n){return Wn(n,r)}}function ar(n,r){return null==r&&(r=n,n=0),n+Math.floor(Math.random()*(r-n+1))}\"function\"!=typeof/./&&\"object\"!=typeof Int8Array&&\"function\"!=typeof rr&&(Cn=function(n){return\"function\"==typeof n||!1});var fr=Date.now||function(){return(new Date).getTime()},cr={\"&\":\"&amp;\",\"<\":\"&lt;\",\">\":\"&gt;\",'\"':\"&quot;\",\"'\":\"&#x27;\",\"`\":\"&#x60;\"},lr=Mn(cr);function pr(r){var t=function(n){return r[n]},n=\"(?:\"+Sn(r).join(\"|\")+\")\",e=RegExp(n),u=RegExp(n,\"g\");return function(n){return n=null==n?\"\":\"\"+n,e.test(n)?n.replace(u,t):n}}var sr=pr(cr),vr=pr(lr);var hr=0;var gr=h.templateSettings={evaluate:/<%([\\s\\S]+?)%>/g,interpolate:/<%=([\\s\\S]+?)%>/g,escape:/<%-([\\s\\S]+?)%>/g},yr=/(.)^/,dr={\"'\":\"'\",\"\\\\\":\"\\\\\",\"\\r\":\"r\",\"\\n\":\"n\",\"\\u2028\":\"u2028\",\"\\u2029\":\"u2029\"},mr=/\\\\|'|\\r|\\n|\\u2028|\\u2029/g,br=function(n){return\"\\\\\"+dr[n]};function jr(n,r){return n._chain?h(r).chain():r}function _r(t){return E(En(t),function(n){var r=h[n]=t[n];h.prototype[n]=function(){var n=[this._wrapped];return u.apply(n,arguments),jr(this,r.apply(h,n))}}),h}E([\"pop\",\"push\",\"reverse\",\"shift\",\"sort\",\"splice\",\"unshift\"],function(r){var t=e[r];h.prototype[r]=function(){var n=this._wrapped;return t.apply(n,arguments),\"shift\"!==r&&\"splice\"!==r||0!==n.length||delete n[0],jr(this,n)}}),E([\"concat\",\"join\",\"slice\"],function(n){var r=e[n];h.prototype[n]=function(){return jr(this,r.apply(this._wrapped,arguments))}}),h.prototype.valueOf=h.prototype.toJSON=h.prototype.value=function(){return this._wrapped},h.prototype.toString=function(){return String(this._wrapped)};var wr=_r({default:h,VERSION:g,iteratee:m,restArguments:j,each:E,forEach:E,map:N,collect:N,reduce:I,foldl:I,inject:I,reduceRight:T,foldr:T,find:B,detect:B,filter:R,select:R,reject:function(n,r,t){return R(n,mn(b(r)),t)},every:F,all:F,some:q,any:q,contains:D,includes:D,include:D,invoke:W,pluck:z,where:function(n,r){return R(n,ir(r))},findWhere:function(n,r){return B(n,ir(r))},max:P,min:function(n,e,r){var t,u,o=1/0,i=1/0;if(null==e||\"number\"==typeof e&&\"object\"!=typeof n[0]&&null!=n)for(var a=0,f=(n=M(n)?n:On(n)).length;a<f;a++)null!=(t=n[a])&&t<o&&(o=t);else e=b(e,r),E(n,function(n,r,t){((u=e(n,r,t))<i||u===1/0&&o===1/0)&&(o=n,i=u)});return o},shuffle:function(n){return K(n,1/0)},sample:K,sortBy:function(n,e,r){var u=0;return e=b(e,r),z(N(n,function(n,r,t){return{value:n,index:u++,criteria:e(n,r,t)}}).sort(function(n,r){var t=n.criteria,e=r.criteria;if(t!==e){if(e<t||void 0===t)return 1;if(t<e||void 0===e)return-1}return n.index-r.index}),\"value\")},groupBy:V,indexBy:C,countBy:J,toArray:function(n){return n?Kn(n)?f.call(n):Jn(n)?n.match(U):M(n)?N(n,ur):On(n):[]},size:function(n){return null==n?0:M(n)?n.length:Sn(n).length},partition:$,first:G,head:G,take:G,initial:H,last:function(n,r,t){return null==n||n.length<1?null==r?void 0:[]:null==r||t?n[n.length-1]:Q(n,Math.max(0,n.length-r))},rest:Q,tail:Q,drop:Q,compact:function(n){return R(n,Boolean)},flatten:function(n,r){return X(n,r,!1)},without:Y,uniq:Z,unique:Z,union:nn,intersection:function(n){for(var r=[],t=arguments.length,e=0,u=O(n);e<u;e++){var o=n[e];if(!D(r,o)){var i;for(i=1;i<t&&D(arguments[i],o);i++);i===t&&r.push(o)}}return r},difference:rn,unzip:tn,zip:en,object:function(n,r){for(var t={},e=0,u=O(n);e<u;e++)r?t[n[e]]=r[e]:t[n[e][0]]=n[e][1];return t},findIndex:on,findLastIndex:an,sortedIndex:fn,indexOf:ln,lastIndexOf:pn,range:function(n,r,t){null==r&&(r=n||0,n=0),t||(t=r<n?-1:1);for(var e=Math.max(Math.ceil((r-n)/t),0),u=Array(e),o=0;o<e;o++,n+=t)u[o]=n;return u},chunk:function(n,r){if(null==r||r<1)return[];for(var t=[],e=0,u=n.length;e<u;)t.push(f.call(n,e,e+=r));return t},bind:vn,partial:hn,bindAll:gn,memoize:function(e,u){var o=function(n){var r=o.cache,t=\"\"+(u?u.apply(this,arguments):n);return x(r,t)||(r[t]=e.apply(this,arguments)),r[t]};return o.cache={},o},delay:yn,defer:dn,throttle:function(t,e,u){var o,i,a,f,c=0;u||(u={});var l=function(){c=!1===u.leading?0:fr(),o=null,f=t.apply(i,a),o||(i=a=null)},n=function(){var n=fr();c||!1!==u.leading||(c=n);var r=e-(n-c);return i=this,a=arguments,r<=0||e<r?(o&&(clearTimeout(o),o=null),c=n,f=t.apply(i,a),o||(i=a=null)):o||!1===u.trailing||(o=setTimeout(l,r)),f};return n.cancel=function(){clearTimeout(o),c=0,o=i=a=null},n},debounce:function(t,e,u){var o,i,a=function(n,r){o=null,r&&(i=t.apply(n,r))},n=j(function(n){if(o&&clearTimeout(o),u){var r=!o;o=setTimeout(a,e),r&&(i=t.apply(this,n))}else o=yn(a,e,this,n);return i});return n.cancel=function(){clearTimeout(o),o=null},n},wrap:function(n,r){return hn(r,n)},negate:mn,compose:function(){var t=arguments,e=t.length-1;return function(){for(var n=e,r=t[e].apply(this,arguments);n--;)r=t[n].call(this,r);return r}},after:function(n,r){return function(){if(--n<1)return r.apply(this,arguments)}},before:bn,once:jn,keys:Sn,allKeys:An,values:On,mapObject:function(n,r,t){r=b(r,t);for(var e=Sn(n),u=e.length,o={},i=0;i<u;i++){var a=e[i];o[a]=r(n[a],a,n)}return o},pairs:function(n){for(var r=Sn(n),t=r.length,e=Array(t),u=0;u<t;u++)e[u]=[r[u],n[r[u]]];return e},invert:Mn,functions:En,methods:En,extend:kn,extendOwn:In,assign:In,findKey:Tn,pick:Rn,omit:Fn,defaults:qn,create:function(n,r){var t=_(n);return r&&In(t,r),t},clone:Dn,tap:function(n,r){return r(n),n},isMatch:Wn,isEqual:function(n,r){return zn(n,r)},isEmpty:function(n){return null==n||(M(n)&&(Kn(n)||Jn(n)||Vn(n))?0===n.length:0===Sn(n).length)},isElement:function(n){return!(!n||1!==n.nodeType)},isArray:Kn,isObject:Ln,isArguments:Vn,isFunction:Cn,isString:Jn,isNumber:Un,isDate:$n,isRegExp:Gn,isError:Hn,isSymbol:Qn,isMap:Xn,isWeakMap:Yn,isSet:Zn,isWeakSet:nr,isFinite:function(n){return!Qn(n)&&l(n)&&!c(parseFloat(n))},isNaN:tr,isBoolean:er,isNull:function(n){return null===n},isUndefined:function(n){return void 0===n},has:function(n,r){if(!Kn(r))return x(n,r);for(var t=r.length,e=0;e<t;e++){var u=r[e];if(null==n||!o.call(n,u))return!1;n=n[u]}return!!t},identity:ur,constant:function(n){return function(){return n}},noop:function(){},property:or,propertyOf:function(r){return null==r?function(){}:function(n){return Kn(n)?S(r,n):r[n]}},matcher:ir,matches:ir,times:function(n,r,t){var e=Array(Math.max(0,n));r=y(r,t,1);for(var u=0;u<n;u++)e[u]=r(u);return e},random:ar,now:fr,escape:sr,unescape:vr,result:function(n,r,t){Kn(r)||(r=[r]);var e=r.length;if(!e)return Cn(t)?t.call(n):t;for(var u=0;u<e;u++){var o=null==n?void 0:n[r[u]];void 0===o&&(o=t,u=e),n=Cn(o)?o.call(n):o}return n},uniqueId:function(n){var r=++hr+\"\";return n?n+r:r},templateSettings:gr,template:function(o,n,r){!n&&r&&(n=r),n=qn({},n,h.templateSettings);var t,e=RegExp([(n.escape||yr).source,(n.interpolate||yr).source,(n.evaluate||yr).source].join(\"|\")+\"|$\",\"g\"),i=0,a=\"__p+='\";o.replace(e,function(n,r,t,e,u){return a+=o.slice(i,u).replace(mr,br),i=u+n.length,r?a+=\"'+\\n((__t=(\"+r+\"))==null?'':_.escape(__t))+\\n'\":t?a+=\"'+\\n((__t=(\"+t+\"))==null?'':__t)+\\n'\":e&&(a+=\"';\\n\"+e+\"\\n__p+='\"),n}),a+=\"';\\n\",n.variable||(a=\"with(obj||{}){\\n\"+a+\"}\\n\"),a=\"var __t,__p='',__j=Array.prototype.join,\"+\"print=function(){__p+=__j.call(arguments,'');};\\n\"+a+\"return __p;\\n\";try{t=new Function(n.variable||\"obj\",\"_\",a)}catch(n){throw n.source=a,n}var u=function(n){return t.call(this,n,h)},f=n.variable||\"obj\";return u.source=\"function(\"+f+\"){\\n\"+a+\"}\",u},chain:function(n){var r=h(n);return r._chain=!0,r},mixin:_r});return wr._=wr});"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.formatted-sql-string.formatted-sql-string",
+      "path": "webgoat-lessons/sql-injection/src/main/java/org/owasp/webgoat/sql_injection/advanced/SqlInjectionChallenge.java",
+      "start": {
+        "line": 63,
+        "col": 17
+      },
+      "end": {
+        "line": 65,
+        "col": 77
+      },
+      "extra": {
+        "message": "Detected a formatted string in a SQL statement. This could lead to SQL\ninjection if variables in the SQL statement are not properly sanitized.\nUse a prepared statements (java.sql.PreparedStatement) instead. You\ncan obtain a PreparedStatement using 'connection.prepareStatement'.\n",
+        "metavars": {
+          "$W": {
+            "start": {
+              "line": 65,
+              "col": 39,
+              "offset": 2759
+            },
+            "end": {
+              "line": 65,
+              "col": 48,
+              "offset": 2768
+            },
+            "abstract_content": "statement",
+            "unique_id": {
+              "type": "id",
+              "value": "statement",
+              "kind": "Local",
+              "sid": 18
+            }
+          },
+          "$Y": {
+            "start": {
+              "line": 63,
+              "col": 116,
+              "offset": 2648
+            },
+            "end": {
+              "line": 63,
+              "col": 119,
+              "offset": 2651
+            },
+            "abstract_content": "\"'\"",
+            "unique_id": {
+              "type": "AST",
+              "md5sum": "a49ef1cc4c90797113e4bfc4fea284c2"
+            }
+          },
+          "$X": {
+            "start": {
+              "line": 63,
+              "col": 41,
+              "offset": 2573
+            },
+            "end": {
+              "line": 63,
+              "col": 113,
+              "offset": 2645
+            },
+            "abstract_content": "\"select userid from sql_challenge_users where userid = '\"+username_reg",
+            "unique_id": {
+              "type": "AST",
+              "md5sum": "fc07181b96fbecc6ac115cce671d1804"
+            }
+          },
+          "$SQL": {
+            "start": {
+              "line": 63,
+              "col": 24,
+              "offset": 2556
+            },
+            "end": {
+              "line": 63,
+              "col": 38,
+              "offset": 2570
+            },
+            "abstract_content": "checkUserQuery",
+            "unique_id": {
+              "type": "id",
+              "value": "checkUserQuery",
+              "kind": "Local",
+              "sid": 17
+            }
+          }
+        },
+        "metadata": {
+          "cwe": "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+          "owasp": "A1: Injection",
+          "source-rule-url": "https://find-sec-bugs.github.io/bugs.htm#SQL_INJECTION",
+          "references": [
+            "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+            "https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html#create_ps",
+            "https://software-security.sans.org/developer-how-to/fix-sql-injection-in-java-using-prepared-callable-statement"
+          ]
+        },
+        "severity": "WARNING",
+        "lines": "                String checkUserQuery = \"select userid from sql_challenge_users where userid = '\" + username_reg + \"'\";\n\n                Statement statement = connection.createStatement();\n\n                ResultSet resultSet = statement.executeQuery(checkUserQuery);"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.formatted-sql-string.formatted-sql-string",
+      "path": "webgoat-lessons/sql-injection/src/main/java/org/owasp/webgoat/sql_injection/introduction/SqlInjectionLesson10.java",
+      "start": {
+        "line": 58,
+        "col": 9
+      },
+      "end": {
+        "line": 86,
+        "col": 10
+      },
+      "extra": {
+        "message": "Detected a formatted string in a SQL statement. This could lead to SQL\ninjection if variables in the SQL statement are not properly sanitized.\nUse a prepared statements (java.sql.PreparedStatement) instead. You\ncan obtain a PreparedStatement using 'connection.prepareStatement'.\n",
+        "metavars": {
+          "$W": {
+            "start": {
+              "line": 63,
+              "col": 37,
+              "offset": 2759
+            },
+            "end": {
+              "line": 63,
+              "col": 46,
+              "offset": 2768
+            },
+            "abstract_content": "statement",
+            "unique_id": {
+              "type": "id",
+              "value": "statement",
+              "kind": "Local",
+              "sid": 19
+            }
+          },
+          "$Y": {
+            "start": {
+              "line": 58,
+              "col": 83,
+              "offset": 2502
+            },
+            "end": {
+              "line": 58,
+              "col": 87,
+              "offset": 2506
+            },
+            "abstract_content": "\"%'\"",
+            "unique_id": {
+              "type": "AST",
+              "md5sum": "712142a917e78f97e48ee7d9869fed84"
+            }
+          },
+          "$X": {
+            "start": {
+              "line": 58,
+              "col": 24,
+              "offset": 2443
+            },
+            "end": {
+              "line": 58,
+              "col": 80,
+              "offset": 2499
+            },
+            "abstract_content": "\"SELECT * FROM access_log WHERE action LIKE '%\"+action",
+            "unique_id": {
+              "type": "AST",
+              "md5sum": "dcc41ef7e221d5fb803741e460b5b2bf"
+            }
+          },
+          "$SQL": {
+            "start": {
+              "line": 58,
+              "col": 16,
+              "offset": 2435
+            },
+            "end": {
+              "line": 58,
+              "col": 21,
+              "offset": 2440
+            },
+            "abstract_content": "query",
+            "unique_id": {
+              "type": "id",
+              "value": "query",
+              "kind": "Local",
+              "sid": 18
+            }
+          }
+        },
+        "metadata": {
+          "cwe": "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+          "owasp": "A1: Injection",
+          "source-rule-url": "https://find-sec-bugs.github.io/bugs.htm#SQL_INJECTION",
+          "references": [
+            "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+            "https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html#create_ps",
+            "https://software-security.sans.org/developer-how-to/fix-sql-injection-in-java-using-prepared-callable-statement"
+          ]
+        },
+        "severity": "WARNING",
+        "lines": "        String query = \"SELECT * FROM access_log WHERE action LIKE '%\" + action + \"%'\";\n\n\n\n        try (Connection connection = dataSource.getConnection()) {\n\n            try {\n\n                Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);\n\n                ResultSet results = statement.executeQuery(query);\n\n\n\n                if (results.getStatement() != null) {\n\n                    results.first();\n\n                    output.append(SqlInjectionLesson8.generateTable(results));\n\n                    return failed(this).feedback(\"sql-injection.10.entries\").output(output.toString()).build();\n\n                } else {\n\n                    if (tableExists(connection)) {\n\n                        return failed(this).feedback(\"sql-injection.10.entries\").output(output.toString()).build();\n\n                    } else {\n\n                        return success(this).feedback(\"sql-injection.10.success\").build();\n\n                    }\n\n                }\n\n            } catch (SQLException e) {\n\n                if (tableExists(connection)) {\n\n                    return failed(this).feedback(\"sql-injection.error\").output(\"<span class='feedback-negative'>\" + e.getMessage() + \"</span><br>\" + output.toString()).build();\n\n                } else {\n\n                    return success(this).feedback(\"sql-injection.10.success\").build();\n\n                }\n\n            }\n\n\n\n        } catch (Exception e) {\n\n            return failed(this).output(\"<span class='feedback-negative'>\" + e.getMessage() + \"</span>\").build();\n\n        }"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.formatted-sql-string.formatted-sql-string",
+      "path": "webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/jwt/JWTFinalEndpoint.java",
+      "start": {
+        "line": 167,
+        "col": 29
+      },
+      "end": {
+        "line": 167,
+        "col": 138
+      },
+      "extra": {
+        "message": "Detected a formatted string in a SQL statement. This could lead to SQL\ninjection if variables in the SQL statement are not properly sanitized.\nUse a prepared statements (java.sql.PreparedStatement) instead. You\ncan obtain a PreparedStatement using 'connection.prepareStatement'.\n",
+        "metavars": {
+          "$Y": {
+            "start": {
+              "line": 167,
+              "col": 134,
+              "offset": 6708
+            },
+            "end": {
+              "line": 167,
+              "col": 137,
+              "offset": 6711
+            },
+            "abstract_content": "\"'\"",
+            "unique_id": {
+              "type": "AST",
+              "md5sum": "a49ef1cc4c90797113e4bfc4fea284c2"
+            }
+          },
+          "$X": {
+            "start": {
+              "line": 167,
+              "col": 86,
+              "offset": 6660
+            },
+            "end": {
+              "line": 167,
+              "col": 131,
+              "offset": 6705
+            },
+            "abstract_content": "\"SELECT key FROM jwt_keys WHERE id = '\"+kid",
+            "unique_id": {
+              "type": "AST",
+              "md5sum": "99cd97384db2972340bc7725fbdafdb4"
+            }
+          },
+          "$W": {
+            "start": {
+              "line": 167,
+              "col": 44,
+              "offset": 6618
+            },
+            "end": {
+              "line": 167,
+              "col": 72,
+              "offset": 6646
+            },
+            "abstract_content": "connection createStatement()",
+            "unique_id": {
+              "type": "AST",
+              "md5sum": "240e3a29977fa2e080fd39453e9e5cdc"
+            }
+          }
+        },
+        "metadata": {
+          "cwe": "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+          "owasp": "A1: Injection",
+          "source-rule-url": "https://find-sec-bugs.github.io/bugs.htm#SQL_INJECTION",
+          "references": [
+            "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+            "https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html#create_ps",
+            "https://software-security.sans.org/developer-how-to/fix-sql-injection-in-java-using-prepared-callable-statement"
+          ]
+        },
+        "severity": "WARNING",
+        "lines": "                            ResultSet rs = connection.createStatement().executeQuery(\"SELECT key FROM jwt_keys WHERE id = '\" + kid + \"'\");"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.formatted-sql-string.formatted-sql-string",
+      "path": "webgoat-lessons/sql-injection/src/main/java/org/owasp/webgoat/sql_injection/introduction/SqlInjectionLesson8.java",
+      "start": {
+        "line": 59,
+        "col": 9
+      },
+      "end": {
+        "line": 93,
+        "col": 10
+      },
+      "extra": {
+        "message": "Detected a formatted string in a SQL statement. This could lead to SQL\ninjection if variables in the SQL statement are not properly sanitized.\nUse a prepared statements (java.sql.PreparedStatement) instead. You\ncan obtain a PreparedStatement using 'connection.prepareStatement'.\n",
+        "metavars": {
+          "$W": {
+            "start": {
+              "line": 65,
+              "col": 37,
+              "offset": 2839
+            },
+            "end": {
+              "line": 65,
+              "col": 46,
+              "offset": 2848
+            },
+            "abstract_content": "statement",
+            "unique_id": {
+              "type": "id",
+              "value": "statement",
+              "kind": "Local",
+              "sid": 19
+            }
+          },
+          "$Y": {
+            "start": {
+              "line": 59,
+              "col": 113,
+              "offset": 2543
+            },
+            "end": {
+              "line": 59,
+              "col": 116,
+              "offset": 2546
+            },
+            "abstract_content": "\"'\"",
+            "unique_id": {
+              "type": "AST",
+              "md5sum": "a49ef1cc4c90797113e4bfc4fea284c2"
+            }
+          },
+          "$X": {
+            "start": {
+              "line": 59,
+              "col": 24,
+              "offset": 2454
+            },
+            "end": {
+              "line": 59,
+              "col": 110,
+              "offset": 2540
+            },
+            "abstract_content": "\"SELECT * FROM employees WHERE last_name = '\"+name+\"' AND auth_tan = '\"+auth_tan",
+            "unique_id": {
+              "type": "AST",
+              "md5sum": "69628a4b978e7f327339a4c5a2c414a0"
+            }
+          },
+          "$SQL": {
+            "start": {
+              "line": 59,
+              "col": 16,
+              "offset": 2446
+            },
+            "end": {
+              "line": 59,
+              "col": 21,
+              "offset": 2451
+            },
+            "abstract_content": "query",
+            "unique_id": {
+              "type": "id",
+              "value": "query",
+              "kind": "Local",
+              "sid": 18
+            }
+          }
+        },
+        "metadata": {
+          "cwe": "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+          "owasp": "A1: Injection",
+          "source-rule-url": "https://find-sec-bugs.github.io/bugs.htm#SQL_INJECTION",
+          "references": [
+            "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+            "https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html#create_ps",
+            "https://software-security.sans.org/developer-how-to/fix-sql-injection-in-java-using-prepared-callable-statement"
+          ]
+        },
+        "severity": "WARNING",
+        "lines": "        String query = \"SELECT * FROM employees WHERE last_name = '\" + name + \"' AND auth_tan = '\" + auth_tan + \"'\";\n\n\n\n        try (Connection connection = dataSource.getConnection()) {\n\n            try {\n\n                Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);\n\n                log(connection, query);\n\n                ResultSet results = statement.executeQuery(query);\n\n\n\n                if (results.getStatement() != null) {\n\n                    if (results.first()) {\n\n                        output.append(generateTable(results));\n\n                        results.last();\n\n\n\n                        if (results.getRow() > 1) {\n\n                            // more than one record, the user succeeded\n\n                            return success(this).feedback(\"sql-injection.8.success\").output(output.toString()).build();\n\n                        } else {\n\n                            // only one record\n\n                            return failed(this).feedback(\"sql-injection.8.one\").output(output.toString()).build();\n\n                        }\n\n\n\n                    } else {\n\n                        // no results\n\n                        return failed(this).feedback(\"sql-injection.8.no.results\").build();\n\n                    }\n\n                } else {\n\n                    return failed(this).feedback(\"sql-injection.error\").build();\n\n                }\n\n            } catch (SQLException e) {\n\n                return failed(this).feedback(\"sql-injection.error\").output(\"<br><span class='feedback-negative'>\" + e.getMessage() + \"</span>\").build();\n\n            }\n\n\n\n        } catch (Exception e) {\n\n            return failed(this).feedback(\"sql-injection.error\").output(\"<br><span class='feedback-negative'>\" + e.getMessage() + \"</span>\").build();\n\n        }"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.formatted-sql-string.formatted-sql-string",
+      "path": "webgoat-lessons/sql-injection/src/main/java/org/owasp/webgoat/sql_injection/introduction/SqlInjectionLesson9.java",
+      "start": {
+        "line": 61,
+        "col": 9
+      },
+      "end": {
+        "line": 86,
+        "col": 10
+      },
+      "extra": {
+        "message": "Detected a formatted string in a SQL statement. This could lead to SQL\ninjection if variables in the SQL statement are not properly sanitized.\nUse a prepared statements (java.sql.PreparedStatement) instead. You\ncan obtain a PreparedStatement using 'connection.prepareStatement'.\n",
+        "metavars": {
+          "$W": {
+            "start": {
+              "line": 66,
+              "col": 37,
+              "offset": 2948
+            },
+            "end": {
+              "line": 66,
+              "col": 46,
+              "offset": 2957
+            },
+            "abstract_content": "statement",
+            "unique_id": {
+              "type": "id",
+              "value": "statement",
+              "kind": "Local",
+              "sid": 23
+            }
+          },
+          "$Y": {
+            "start": {
+              "line": 61,
+              "col": 113,
+              "offset": 2655
+            },
+            "end": {
+              "line": 61,
+              "col": 116,
+              "offset": 2658
+            },
+            "abstract_content": "\"'\"",
+            "unique_id": {
+              "type": "AST",
+              "md5sum": "a49ef1cc4c90797113e4bfc4fea284c2"
+            }
+          },
+          "$X": {
+            "start": {
+              "line": 61,
+              "col": 24,
+              "offset": 2566
+            },
+            "end": {
+              "line": 61,
+              "col": 110,
+              "offset": 2652
+            },
+            "abstract_content": "\"SELECT * FROM employees WHERE last_name = '\"+name+\"' AND auth_tan = '\"+auth_tan",
+            "unique_id": {
+              "type": "AST",
+              "md5sum": "8b0c988bc25bc05cd2dc8aeb7e895349"
+            }
+          },
+          "$SQL": {
+            "start": {
+              "line": 61,
+              "col": 16,
+              "offset": 2558
+            },
+            "end": {
+              "line": 61,
+              "col": 21,
+              "offset": 2563
+            },
+            "abstract_content": "query",
+            "unique_id": {
+              "type": "id",
+              "value": "query",
+              "kind": "Local",
+              "sid": 22
+            }
+          }
+        },
+        "metadata": {
+          "cwe": "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+          "owasp": "A1: Injection",
+          "source-rule-url": "https://find-sec-bugs.github.io/bugs.htm#SQL_INJECTION",
+          "references": [
+            "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+            "https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html#create_ps",
+            "https://software-security.sans.org/developer-how-to/fix-sql-injection-in-java-using-prepared-callable-statement"
+          ]
+        },
+        "severity": "WARNING",
+        "lines": "        String query = \"SELECT * FROM employees WHERE last_name = '\" + name + \"' AND auth_tan = '\" + auth_tan + \"'\";\n\n        try (Connection connection = dataSource.getConnection()) {\n\n            try {\n\n                Statement statement = connection.createStatement(TYPE_SCROLL_SENSITIVE, CONCUR_UPDATABLE);\n\n                SqlInjectionLesson8.log(connection, query);\n\n                ResultSet results = statement.executeQuery(query);\n\n                var test = results.getRow() != 0;\n\n                if (results.getStatement() != null) {\n\n                    if (results.first()) {\n\n                        output.append(SqlInjectionLesson8.generateTable(results));\n\n                    } else {\n\n                        // no results\n\n                        return failed(this).feedback(\"sql-injection.8.no.results\").build();\n\n                    }\n\n                }\n\n            } catch (SQLException e) {\n\n                System.err.println(e.getMessage());\n\n                return failed(this).feedback(\"sql-injection.error\").output(\"<br><span class='feedback-negative'>\" + e.getMessage() + \"</span>\").build();\n\n            }\n\n\n\n            return checkSalaryRanking(connection, output);\n\n\n\n        } catch (Exception e) {\n\n            System.err.println(e.getMessage());\n\n            return failed(this).feedback(\"sql-injection.error\").output(\"<br><span class='feedback-negative'>\" + e.getMessage() + \"</span>\").build();\n\n        }"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.object-deserialization.object-deserialization",
+      "path": "webgoat-lessons/insecure-deserialization/src/main/java/org/owasp/webgoat/deserialization/SerializationHelper.java",
+      "start": {
+        "line": 19,
+        "col": 9
+      },
+      "end": {
+        "line": 20,
+        "col": 48
+      },
+      "extra": {
+        "message": "Found object deserialization using ObjectInputStream. Deserializing entire\nJava objects is dangerous because malicious actors can create Java object\nstreams with unintended consequences. Ensure that the objects being deserialized\nare not user-controlled. If this must be done, consider using HMACs to sign\nthe data stream to make sure it is not tampered with, or consider only\ntransmitting object fields and populating a new object.\n",
+        "metavars": {},
+        "metadata": {
+          "cwe": "CWE-502: Deserialization of Untrusted Data",
+          "owasp": "A8: Insecure Deserialization",
+          "source-rule-url": "https://find-sec-bugs.github.io/bugs.htm#OBJECT_DESERIALIZATION",
+          "references": [
+            "https://www.owasp.org/index.php/Deserialization_of_untrusted_data"
+          ]
+        },
+        "severity": "WARNING",
+        "lines": "        ObjectInputStream ois = new ObjectInputStream(\n\n                new ByteArrayInputStream(data));"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.cookie-missing-httponly.cookie-missing-httponly",
+      "path": "webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/jwt/JWTVotesEndpoint.java",
+      "start": {
+        "line": 99,
+        "col": 13
+      },
+      "end": {
+        "line": 99,
+        "col": 40
+      },
+      "extra": {
+        "message": "A cookie was detected without setting the 'HttpOnly' flag. The 'HttpOnly' flag\nfor cookies instructs the browser to forbid client-side scripts from reading the\ncookie. Set the 'HttpOnly' flag by calling 'cookie.setHttpOnly(true);'\n",
+        "metavars": {
+          "$COOKIE": {
+            "start": {
+              "line": 99,
+              "col": 32,
+              "offset": 4442
+            },
+            "end": {
+              "line": 99,
+              "col": 38,
+              "offset": 4448
+            },
+            "abstract_content": "cookie",
+            "unique_id": {
+              "type": "id",
+              "value": "cookie",
+              "kind": "Local",
+              "sid": 35
+            }
+          },
+          "$RESPONSE": {
+            "start": {
+              "line": 99,
+              "col": 13,
+              "offset": 4423
+            },
+            "end": {
+              "line": 99,
+              "col": 21,
+              "offset": 4431
+            },
+            "abstract_content": "response",
+            "unique_id": {
+              "type": "id",
+              "value": "response",
+              "kind": "Param",
+              "sid": 32
+            }
+          }
+        },
+        "metadata": {
+          "cwe": "CWE-1004: Sensitive Cookie Without 'HttpOnly' Flag",
+          "owasp": "A3: Sensitive Data Exposure",
+          "source-rule-url": "https://find-sec-bugs.github.io/bugs.htm#INSECURE_COOKIE"
+        },
+        "severity": "WARNING",
+        "lines": "            response.addCookie(cookie);"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.cookie-missing-httponly.cookie-missing-httponly",
+      "path": "webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/jwt/JWTVotesEndpoint.java",
+      "start": {
+        "line": 104,
+        "col": 13
+      },
+      "end": {
+        "line": 104,
+        "col": 40
+      },
+      "extra": {
+        "message": "A cookie was detected without setting the 'HttpOnly' flag. The 'HttpOnly' flag\nfor cookies instructs the browser to forbid client-side scripts from reading the\ncookie. Set the 'HttpOnly' flag by calling 'cookie.setHttpOnly(true);'\n",
+        "metavars": {
+          "$COOKIE": {
+            "start": {
+              "line": 104,
+              "col": 32,
+              "offset": 4685
+            },
+            "end": {
+              "line": 104,
+              "col": 38,
+              "offset": 4691
+            },
+            "abstract_content": "cookie",
+            "unique_id": {
+              "type": "id",
+              "value": "cookie",
+              "kind": "Local",
+              "sid": 36
+            }
+          },
+          "$RESPONSE": {
+            "start": {
+              "line": 104,
+              "col": 13,
+              "offset": 4666
+            },
+            "end": {
+              "line": 104,
+              "col": 21,
+              "offset": 4674
+            },
+            "abstract_content": "response",
+            "unique_id": {
+              "type": "id",
+              "value": "response",
+              "kind": "Param",
+              "sid": 32
+            }
+          }
+        },
+        "metadata": {
+          "cwe": "CWE-1004: Sensitive Cookie Without 'HttpOnly' Flag",
+          "owasp": "A3: Sensitive Data Exposure",
+          "source-rule-url": "https://find-sec-bugs.github.io/bugs.htm#INSECURE_COOKIE"
+        },
+        "severity": "WARNING",
+        "lines": "            response.addCookie(cookie);"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.cookie-missing-samesite.cookie-missing-samesite",
+      "path": "webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/jwt/JWTVotesEndpoint.java",
+      "start": {
+        "line": 99,
+        "col": 13
+      },
+      "end": {
+        "line": 99,
+        "col": 40
+      },
+      "extra": {
+        "message": "Detected cookie without the SameSite attribute.\n",
+        "metavars": {
+          "$RESP": {
+            "start": {
+              "line": 99,
+              "col": 13,
+              "offset": 4423
+            },
+            "end": {
+              "line": 99,
+              "col": 21,
+              "offset": 4431
+            },
+            "abstract_content": "response",
+            "unique_id": {
+              "type": "id",
+              "value": "response",
+              "kind": "Param",
+              "sid": 32
+            }
+          }
+        },
+        "metadata": {
+          "cwe": "CWE-352: Cross-Site Request Forgery (CSRF)",
+          "owasp": "A6: Security Misconfiguration",
+          "references": [
+            "https://stackoverflow.com/questions/42717210/samesite-cookie-in-java-application"
+          ]
+        },
+        "severity": "WARNING",
+        "lines": "            response.addCookie(cookie);"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.cookie-missing-samesite.cookie-missing-samesite",
+      "path": "webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/jwt/JWTVotesEndpoint.java",
+      "start": {
+        "line": 104,
+        "col": 13
+      },
+      "end": {
+        "line": 104,
+        "col": 40
+      },
+      "extra": {
+        "message": "Detected cookie without the SameSite attribute.\n",
+        "metavars": {
+          "$RESP": {
+            "start": {
+              "line": 104,
+              "col": 13,
+              "offset": 4666
+            },
+            "end": {
+              "line": 104,
+              "col": 21,
+              "offset": 4674
+            },
+            "abstract_content": "response",
+            "unique_id": {
+              "type": "id",
+              "value": "response",
+              "kind": "Param",
+              "sid": 32
+            }
+          }
+        },
+        "metadata": {
+          "cwe": "CWE-352: Cross-Site Request Forgery (CSRF)",
+          "owasp": "A6: Security Misconfiguration",
+          "references": [
+            "https://stackoverflow.com/questions/42717210/samesite-cookie-in-java-application"
+          ]
+        },
+        "severity": "WARNING",
+        "lines": "            response.addCookie(cookie);"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.cookie-missing-secure-flag.cookie-missing-secure-flag",
+      "path": "webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/jwt/JWTVotesEndpoint.java",
+      "start": {
+        "line": 99,
+        "col": 13
+      },
+      "end": {
+        "line": 99,
+        "col": 40
+      },
+      "extra": {
+        "message": "A cookie was detected without setting the 'secure' flag. The 'secure' flag\nfor cookies prevents the client from transmitting the cookie over insecure\nchannels such as HTTP. Set the 'secure' flag by calling 'cookie.setSecure(true);'\n",
+        "metavars": {
+          "$COOKIE": {
+            "start": {
+              "line": 99,
+              "col": 32,
+              "offset": 4442
+            },
+            "end": {
+              "line": 99,
+              "col": 38,
+              "offset": 4448
+            },
+            "abstract_content": "cookie",
+            "unique_id": {
+              "type": "id",
+              "value": "cookie",
+              "kind": "Local",
+              "sid": 35
+            }
+          },
+          "$RESPONSE": {
+            "start": {
+              "line": 99,
+              "col": 13,
+              "offset": 4423
+            },
+            "end": {
+              "line": 99,
+              "col": 21,
+              "offset": 4431
+            },
+            "abstract_content": "response",
+            "unique_id": {
+              "type": "id",
+              "value": "response",
+              "kind": "Param",
+              "sid": 32
+            }
+          }
+        },
+        "metadata": {
+          "cwe": "CWE-614: Sensitive Cookie in HTTPS Session Without 'Secure' Attribute",
+          "owasp": "A3: Sensitive Data Exposure",
+          "source-rule-url": "https://find-sec-bugs.github.io/bugs.htm#INSECURE_COOKIE"
+        },
+        "severity": "WARNING",
+        "lines": "            response.addCookie(cookie);"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.cookie-missing-secure-flag.cookie-missing-secure-flag",
+      "path": "webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/jwt/JWTVotesEndpoint.java",
+      "start": {
+        "line": 104,
+        "col": 13
+      },
+      "end": {
+        "line": 104,
+        "col": 40
+      },
+      "extra": {
+        "message": "A cookie was detected without setting the 'secure' flag. The 'secure' flag\nfor cookies prevents the client from transmitting the cookie over insecure\nchannels such as HTTP. Set the 'secure' flag by calling 'cookie.setSecure(true);'\n",
+        "metavars": {
+          "$COOKIE": {
+            "start": {
+              "line": 104,
+              "col": 32,
+              "offset": 4685
+            },
+            "end": {
+              "line": 104,
+              "col": 38,
+              "offset": 4691
+            },
+            "abstract_content": "cookie",
+            "unique_id": {
+              "type": "id",
+              "value": "cookie",
+              "kind": "Local",
+              "sid": 36
+            }
+          },
+          "$RESPONSE": {
+            "start": {
+              "line": 104,
+              "col": 13,
+              "offset": 4666
+            },
+            "end": {
+              "line": 104,
+              "col": 21,
+              "offset": 4674
+            },
+            "abstract_content": "response",
+            "unique_id": {
+              "type": "id",
+              "value": "response",
+              "kind": "Param",
+              "sid": 32
+            }
+          }
+        },
+        "metadata": {
+          "cwe": "CWE-614: Sensitive Cookie in HTTPS Session Without 'Secure' Attribute",
+          "owasp": "A3: Sensitive Data Exposure",
+          "source-rule-url": "https://find-sec-bugs.github.io/bugs.htm#INSECURE_COOKIE"
+        },
+        "severity": "WARNING",
+        "lines": "            response.addCookie(cookie);"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.crypto.weak-hash.use-of-md5",
+      "path": "webgoat-lessons/crypto/src/main/java/org/owasp/webgoat/crypto/HashingAssignment.java",
+      "start": {
+        "line": 57,
+        "col": 7
+      },
+      "end": {
+        "line": 57,
+        "col": 58
+      },
+      "extra": {
+        "message": "Detected MD5 hash algorithm which is considered insecure. MD5 is not \ncollision resistant and is therefore not suitable as a cryptographic\nsignature. Use SHA256 or SHA3 instead.\n",
+        "metavars": {
+          "$MD": {
+            "start": {
+              "line": 25,
+              "col": 8,
+              "offset": 1098
+            },
+            "end": {
+              "line": 25,
+              "col": 35,
+              "offset": 1125
+            },
+            "abstract_content": "java security MessageDigest",
+            "unique_id": {
+              "type": "AST",
+              "md5sum": "aec04c797c4423601086184244e7fd2b"
+            }
+          },
+          "$VAR": {
+            "start": {
+              "line": 57,
+              "col": 21,
+              "offset": 2432
+            },
+            "end": {
+              "line": 57,
+              "col": 23,
+              "offset": 2434
+            },
+            "abstract_content": "md",
+            "unique_id": {
+              "type": "id",
+              "value": "md",
+              "kind": "Local",
+              "sid": 19
+            }
+          }
+        },
+        "metadata": {
+          "owasp": "A9: Using Components with Known Vulnerabilities",
+          "cwe": "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+          "source-rule-url": "https://find-sec-bugs.github.io/bugs.htm#WEAK_MESSAGE_DIGEST_MD5"
+        },
+        "severity": "WARNING",
+        "lines": "\t\t    MessageDigest md = MessageDigest.getInstance(\"MD5\");"
+      }
+    }
+  ],
+  "errors": [
+    {
+      "type": "SourceParseError",
+      "code": 3,
+      "short_msg": "parse error",
+      "long_msg": "Could not parse jquery.min.js as javascript",
+      "level": "warn",
+      "spans": [
+        {
+          "start": {
+            "line": 1,
+            "col": 1
+          },
+          "end": {
+            "line": 1,
+            "col": 1
+          },
+          "source_hash": "160a426ff2894252cd7cebbdd6d6b7da8fcd319c65b70468f10b6690c45d02ef",
+          "file": "jquery.min.js",
+          "context_start": null,
+          "context_end": null
+        }
+      ],
+      "help": "If the code appears to be valid, this may be a semgrep bug."
+    },
+    {
+      "type": "SourceParseError",
+      "code": 3,
+      "short_msg": "parse error",
+      "long_msg": "Could not parse jquery-ui.min.js as javascript",
+      "level": "warn",
+      "spans": [
+        {
+          "start": {
+            "line": 1,
+            "col": 1
+          },
+          "end": {
+            "line": 1,
+            "col": 1
+          },
+          "source_hash": "28ce75d953678c4942df47a11707a15e3c756021cf89090e3e6aa7ad6b6971c3",
+          "file": "jquery-ui.min.js",
+          "context_start": null,
+          "context_end": null
+        }
+      ],
+      "help": "If the code appears to be valid, this may be a semgrep bug."
+    },
+    {
+      "type": "SourceParseError",
+      "code": 3,
+      "short_msg": "parse error",
+      "long_msg": "Could not parse jquery.min.js as javascript",
+      "level": "warn",
+      "spans": [
+        {
+          "start": {
+            "line": 1,
+            "col": 1
+          },
+          "end": {
+            "line": 1,
+            "col": 1
+          },
+          "source_hash": "4c24dfd28784ad2befb3dafaac6bf1ed4e7cd58cce713d9a0b228d426e812baf",
+          "file": "jquery.min.js",
+          "context_start": null,
+          "context_end": null
+        }
+      ],
+      "help": "If the code appears to be valid, this may be a semgrep bug."
+    },
+    {
+      "type": "SourceParseError",
+      "code": 3,
+      "short_msg": "parse error",
+      "long_msg": "Could not parse jquery-1.10.2.min.js as javascript",
+      "level": "warn",
+      "spans": [
+        {
+          "start": {
+            "line": 1,
+            "col": 1
+          },
+          "end": {
+            "line": 1,
+            "col": 1
+          },
+          "source_hash": "0ba081f546084bd5097aa8a73c75931d5aa1fc4d6e846e53c21f98e6a1509988",
+          "file": "jquery-1.10.2.min.js",
+          "context_start": null,
+          "context_end": null
+        }
+      ],
+      "help": "If the code appears to be valid, this may be a semgrep bug."
+    },
+    {
+      "type": "SourceParseError",
+      "code": 3,
+      "short_msg": "parse error",
+      "long_msg": "Could not parse jquery-2.1.4.min.js as javascript",
+      "level": "warn",
+      "spans": [
+        {
+          "start": {
+            "line": 1,
+            "col": 1
+          },
+          "end": {
+            "line": 1,
+            "col": 1
+          },
+          "source_hash": "f16ab224bb962910558715c82f58c10c3ed20f153ddfaa199029f141b5b0255c",
+          "file": "jquery-2.1.4.min.js",
+          "context_start": null,
+          "context_end": null
+        }
+      ],
+      "help": "If the code appears to be valid, this may be a semgrep bug."
+    }
+  ]
+}

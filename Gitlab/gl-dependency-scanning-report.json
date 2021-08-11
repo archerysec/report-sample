@@ -1,0 +1,442 @@
+{
+  "version": "2.3",
+  "vulnerabilities": [
+    {
+      "category": "dependency_scanning",
+      "name": "Improper Input Validation",
+      "message": "Improper Input Validation in pip",
+      "description": "An issue was discovered in pip (all versions) because it installs the version with the highest version number, even if the user had intended to obtain a private package from a private index. This only affects use of the `--extra-index-url` option, and exploitation requires that the package does not already exist in the public index (and thus the attacker can put the package there with an arbitrary version number).",
+      "cve": "requirements.txt:pip:gemnasium:f42440cc-317f-449c-87c3-016bee39ecbe",
+      "severity": "High",
+      "solution": "Unfortunately, there is no solution available yet.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "requirements.txt",
+        "dependency": {
+          "package": {
+            "name": "pip"
+          },
+          "version": "20.2.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-f42440cc-317f-449c-87c3-016bee39ecbe",
+          "value": "f42440cc-317f-449c-87c3-016bee39ecbe",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/master/pypi/pip/CVE-2018-20225.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2018-20225",
+          "value": "CVE-2018-20225",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20225"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-20225"
+        },
+        {
+          "url": "https://pip.pypa.io/en/stable/news/"
+        }
+      ]
+    }
+  ],
+  "remediations": [],
+  "dependency_files": [
+    {
+      "path": "requirements.txt",
+      "package_manager": "pip",
+      "dependencies": [
+        {
+          "package": {
+            "name": "Bottleneck"
+          },
+          "version": "1.3.2"
+        },
+        {
+          "package": {
+            "name": "Flask"
+          },
+          "version": "1.0.2"
+        },
+        {
+          "package": {
+            "name": "Jinja2"
+          },
+          "version": "2.11.2"
+        },
+        {
+          "package": {
+            "name": "MarkupSafe"
+          },
+          "version": "1.1.1"
+        },
+        {
+          "package": {
+            "name": "Pillow"
+          },
+          "version": "7.2.0"
+        },
+        {
+          "package": {
+            "name": "PyYAML"
+          },
+          "version": "5.3.1"
+        },
+        {
+          "package": {
+            "name": "Werkzeug"
+          },
+          "version": "1.0.1"
+        },
+        {
+          "package": {
+            "name": "appdirs"
+          },
+          "version": "1.4.3"
+        },
+        {
+          "package": {
+            "name": "attrs"
+          },
+          "version": "19.3.0"
+        },
+        {
+          "package": {
+            "name": "beautifulsoup4"
+          },
+          "version": "4.9.1"
+        },
+        {
+          "package": {
+            "name": "blis"
+          },
+          "version": "0.4.1"
+        },
+        {
+          "package": {
+            "name": "catalogue"
+          },
+          "version": "1.0.0"
+        },
+        {
+          "package": {
+            "name": "certifi"
+          },
+          "version": "2019.11.28"
+        },
+        {
+          "package": {
+            "name": "chardet"
+          },
+          "version": "3.0.4"
+        },
+        {
+          "package": {
+            "name": "click"
+          },
+          "version": "7.1.2"
+        },
+        {
+          "package": {
+            "name": "cycler"
+          },
+          "version": "0.10.0"
+        },
+        {
+          "package": {
+            "name": "cymem"
+          },
+          "version": "2.0.3"
+        },
+        {
+          "package": {
+            "name": "dataclasses"
+          },
+          "version": "0.7"
+        },
+        {
+          "package": {
+            "name": "distlib"
+          },
+          "version": "0.3.0"
+        },
+        {
+          "package": {
+            "name": "fastai"
+          },
+          "version": "1.0.42"
+        },
+        {
+          "package": {
+            "name": "fastprogress"
+          },
+          "version": "1.0.0"
+        },
+        {
+          "package": {
+            "name": "filelock"
+          },
+          "version": "3.0.12"
+        },
+        {
+          "package": {
+            "name": "idna"
+          },
+          "version": "2.10"
+        },
+        {
+          "package": {
+            "name": "ijson"
+          },
+          "version": "2.5.1"
+        },
+        {
+          "package": {
+            "name": "importlib-metadata"
+          },
+          "version": "1.5.0"
+        },
+        {
+          "package": {
+            "name": "importlib-resources"
+          },
+          "version": "1.4.0"
+        },
+        {
+          "package": {
+            "name": "isort"
+          },
+          "version": "4.3.21"
+        },
+        {
+          "package": {
+            "name": "itsdangerous"
+          },
+          "version": "1.1.0"
+        },
+        {
+          "package": {
+            "name": "jsonschema"
+          },
+          "version": "3.1.1"
+        },
+        {
+          "package": {
+            "name": "kiwisolver"
+          },
+          "version": "1.2.0"
+        },
+        {
+          "package": {
+            "name": "matplotlib"
+          },
+          "version": "3.3.2"
+        },
+        {
+          "package": {
+            "name": "murmurhash"
+          },
+          "version": "1.0.2"
+        },
+        {
+          "package": {
+            "name": "numexpr"
+          },
+          "version": "2.7.1"
+        },
+        {
+          "package": {
+            "name": "numpy"
+          },
+          "version": "1.19.2"
+        },
+        {
+          "package": {
+            "name": "nvidia-ml-py3"
+          },
+          "version": "7.352.0"
+        },
+        {
+          "package": {
+            "name": "packaging"
+          },
+          "version": "19.2"
+        },
+        {
+          "package": {
+            "name": "pandas"
+          },
+          "version": "1.1.2"
+        },
+        {
+          "package": {
+            "name": "pip"
+          },
+          "version": "20.2.2"
+        },
+        {
+          "package": {
+            "name": "pipdeptree"
+          },
+          "version": "0.13.2"
+        },
+        {
+          "package": {
+            "name": "pipenv"
+          },
+          "version": "2018.11.26"
+        },
+        {
+          "package": {
+            "name": "plac"
+          },
+          "version": "1.1.3"
+        },
+        {
+          "package": {
+            "name": "preshed"
+          },
+          "version": "3.0.2"
+        },
+        {
+          "package": {
+            "name": "pyparsing"
+          },
+          "version": "2.4.6"
+        },
+        {
+          "package": {
+            "name": "pyrsistent"
+          },
+          "version": "0.15.7"
+        },
+        {
+          "package": {
+            "name": "python-dateutil"
+          },
+          "version": "2.8.1"
+        },
+        {
+          "package": {
+            "name": "pytz"
+          },
+          "version": "2020.1"
+        },
+        {
+          "package": {
+            "name": "requests"
+          },
+          "version": "2.24.0"
+        },
+        {
+          "package": {
+            "name": "scipy"
+          },
+          "version": "1.5.2"
+        },
+        {
+          "package": {
+            "name": "setuptools"
+          },
+          "version": "49.6.0"
+        },
+        {
+          "package": {
+            "name": "six"
+          },
+          "version": "1.14.0"
+        },
+        {
+          "package": {
+            "name": "soupsieve"
+          },
+          "version": "2.0.1"
+        },
+        {
+          "package": {
+            "name": "spacy"
+          },
+          "version": "2.3.2"
+        },
+        {
+          "package": {
+            "name": "srsly"
+          },
+          "version": "1.0.2"
+        },
+        {
+          "package": {
+            "name": "thinc"
+          },
+          "version": "7.4.1"
+        },
+        {
+          "package": {
+            "name": "torch"
+          },
+          "version": "1.0.0"
+        },
+        {
+          "package": {
+            "name": "torchvision"
+          },
+          "version": "0.2.1"
+        },
+        {
+          "package": {
+            "name": "tqdm"
+          },
+          "version": "4.49.0"
+        },
+        {
+          "package": {
+            "name": "typing"
+          },
+          "version": "3.7.4.3"
+        },
+        {
+          "package": {
+            "name": "urllib3"
+          },
+          "version": "1.25.10"
+        },
+        {
+          "package": {
+            "name": "virtualenv"
+          },
+          "version": "20.0.13"
+        },
+        {
+          "package": {
+            "name": "virtualenv-clone"
+          },
+          "version": "0.5.3"
+        },
+        {
+          "package": {
+            "name": "wasabi"
+          },
+          "version": "0.8.0"
+        },
+        {
+          "package": {
+            "name": "wheel"
+          },
+          "version": "0.35.1"
+        },
+        {
+          "package": {
+            "name": "zipp"
+          },
+          "version": "3.1.0"
+        }
+      ]
+    }
+  ]
+}

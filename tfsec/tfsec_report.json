@@ -1,0 +1,158 @@
+{
+	"results": [
+		{
+			"rule_id": "AWS009",
+			"link": "https://github.com/liamg/tfsec/wiki/AWS009",
+			"location": {
+				"filename": "/aws-devsecops-work/codecommit/aws-devsecops-nodejs-codecommit/infrastructure/terraform_code/vm/archerysec_rds_db.tf",
+				"start_line": 12,
+				"end_line": 12
+			},
+			"description": "Resource 'aws_security_group.archerysec-sg' defines a fully open egress security group.",
+			"severity": "WARNING"
+		},
+		{
+			"rule_id": "AWS009",
+			"link": "https://github.com/liamg/tfsec/wiki/AWS009",
+			"location": {
+				"filename": "/aws-devsecops-work/codecommit/aws-devsecops-nodejs-codecommit/infrastructure/terraform_code/vm/archerysec_rds_db.tf",
+				"start_line": 35,
+				"end_line": 35
+			},
+			"description": "Resource 'aws_security_group.archerysecdb-sg' defines a fully open egress security group.",
+			"severity": "WARNING"
+		},
+		{
+			"rule_id": "GEN003",
+			"link": "https://github.com/liamg/tfsec/wiki/GEN003",
+			"location": {
+				"filename": "/aws-devsecops-work/codecommit/aws-devsecops-nodejs-codecommit/infrastructure/terraform_code/vm/archerysec_rds_db.tf",
+				"start_line": 45,
+				"end_line": 45
+			},
+			"description": "Block 'aws_db_instance.archerysec-db' includes a potentially sensitive attribute which is defined within the project.",
+			"severity": "WARNING"
+		},
+		{
+			"rule_id": "GEN001",
+			"link": "https://github.com/liamg/tfsec/wiki/GEN001",
+			"location": {
+				"filename": "/aws-devsecops-work/codecommit/aws-devsecops-nodejs-codecommit/infrastructure/terraform_code/vm/vars.tf",
+				"start_line": 12,
+				"end_line": 12
+			},
+			"description": "Variable 'variable.PATH_TO_PRIVATE_KEY' includes a potentially sensitive default value.",
+			"severity": "WARNING"
+		},
+		{
+			"rule_id": "AWS004",
+			"link": "https://github.com/liamg/tfsec/wiki/AWS004",
+			"location": {
+				"filename": "/aws-devsecops-work/codecommit/aws-devsecops-nodejs-codecommit/infrastructure/terraform_code/ecs/main.tf",
+				"start_line": 36,
+				"end_line": 36
+			},
+			"description": "Resource 'aws_lb_listener.stg_alb_80' uses plain HTTP instead of HTTPS.",
+			"severity": "ERROR"
+		},
+		{
+			"rule_id": "AWS018",
+			"link": "https://github.com/liamg/tfsec/wiki/AWS018",
+			"location": {
+				"filename": "/aws-devsecops-work/codecommit/aws-devsecops-nodejs-codecommit/infrastructure/terraform_code/ecs/main.tf",
+				"start_line": 47,
+				"end_line": 55
+			},
+			"description": "Resource 'aws_security_group_rule.tss_fargate_stg_alb_ingress_80' should include a description for auditing purposes.",
+			"severity": "ERROR"
+		},
+		{
+			"rule_id": "AWS006",
+			"link": "https://github.com/liamg/tfsec/wiki/AWS006",
+			"location": {
+				"filename": "/aws-devsecops-work/codecommit/aws-devsecops-nodejs-codecommit/infrastructure/terraform_code/ecs/main.tf",
+				"start_line": 53,
+				"end_line": 53
+			},
+			"description": "Resource 'aws_security_group_rule.tss_fargate_stg_alb_ingress_80' defines a fully open ingress security group rule.",
+			"severity": "WARNING"
+		},
+		{
+			"rule_id": "AWS018",
+			"link": "https://github.com/liamg/tfsec/wiki/AWS018",
+			"location": {
+				"filename": "/aws-devsecops-work/codecommit/aws-devsecops-nodejs-codecommit/infrastructure/terraform_code/ecs/main.tf",
+				"start_line": 57,
+				"end_line": 64
+			},
+			"description": "Resource 'aws_security_group_rule.tss_fargate_stg_task_ingress_5000' should include a description for auditing purposes.",
+			"severity": "ERROR"
+		},
+		{
+			"rule_id": "AWS004",
+			"link": "https://github.com/liamg/tfsec/wiki/AWS004",
+			"location": {
+				"filename": "/aws-devsecops-work/codecommit/aws-devsecops-nodejs-codecommit/infrastructure/terraform_code/ecs/main.tf",
+				"start_line": 114,
+				"end_line": 114
+			},
+			"description": "Resource 'aws_lb_listener.prod_alb_80' uses plain HTTP instead of HTTPS.",
+			"severity": "ERROR"
+		},
+		{
+			"rule_id": "AWS018",
+			"link": "https://github.com/liamg/tfsec/wiki/AWS018",
+			"location": {
+				"filename": "/aws-devsecops-work/codecommit/aws-devsecops-nodejs-codecommit/infrastructure/terraform_code/ecs/main.tf",
+				"start_line": 125,
+				"end_line": 133
+			},
+			"description": "Resource 'aws_security_group_rule.tss_fargate_prod_alb_ingress_80' should include a description for auditing purposes.",
+			"severity": "ERROR"
+		},
+		{
+			"rule_id": "AWS006",
+			"link": "https://github.com/liamg/tfsec/wiki/AWS006",
+			"location": {
+				"filename": "/aws-devsecops-work/codecommit/aws-devsecops-nodejs-codecommit/infrastructure/terraform_code/ecs/main.tf",
+				"start_line": 131,
+				"end_line": 131
+			},
+			"description": "Resource 'aws_security_group_rule.tss_fargate_prod_alb_ingress_80' defines a fully open ingress security group rule.",
+			"severity": "WARNING"
+		},
+		{
+			"rule_id": "AWS018",
+			"link": "https://github.com/liamg/tfsec/wiki/AWS018",
+			"location": {
+				"filename": "/aws-devsecops-work/codecommit/aws-devsecops-nodejs-codecommit/infrastructure/terraform_code/ecs/main.tf",
+				"start_line": 135,
+				"end_line": 142
+			},
+			"description": "Resource 'aws_security_group_rule.tss_fargate_prod_task_ingress_5000' should include a description for auditing purposes.",
+			"severity": "ERROR"
+		},
+		{
+			"rule_id": "AWS002",
+			"link": "https://github.com/liamg/tfsec/wiki/AWS002",
+			"location": {
+				"filename": "/aws-devsecops-work/codecommit/aws-devsecops-nodejs-codecommit/infrastructure/terraform_code/roles/s3_bucket.tf",
+				"start_line": 1,
+				"end_line": 10
+			},
+			"description": "Resource 'aws_s3_bucket.tss-workshop-34454934839' does not have logging enabled.",
+			"severity": "ERROR"
+		},
+		{
+			"rule_id": "AWS017",
+			"link": "https://github.com/liamg/tfsec/wiki/AWS017",
+			"location": {
+				"filename": "/aws-devsecops-work/codecommit/aws-devsecops-nodejs-codecommit/infrastructure/terraform_code/roles/s3_bucket.tf",
+				"start_line": 1,
+				"end_line": 10
+			},
+			"description": "Resource 'aws_s3_bucket.tss-workshop-34454934839' defines an unencrypted S3 bucket (missing server_side_encryption_configuration block).",
+			"severity": "ERROR"
+		}
+	]
+}

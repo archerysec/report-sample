@@ -1,0 +1,1916 @@
+[
+  {
+    "Target": "knqyf263/vuln-image:1.2.3 (alpine 3.7.1)",
+    "Vulnerabilities": [
+      {
+        "VulnerabilityID": "CVE-2018-6543",
+        "PkgName": "binutils",
+        "InstalledVersion": "2.30-r1",
+        "FixedVersion": "2.30-r2",
+        "Title": "binutils:  integer overflow in load_specific_debug_section function in objdump.c",
+        "Description": "In GNU Binutils 2.30, there's an integer overflow in the function load_specific_debug_section() in objdump.c, which results in `malloc()` with 0 size. A crafted ELF file allows remote attackers to cause a denial of service (application crash) or possibly have unspecified other impact.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00072.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00008.html",
+          "http://www.securityfocus.com/bid/102985",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-6543",
+          "https://security.gentoo.org/glsa/201811-17",
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22769"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-6759",
+        "PkgName": "binutils",
+        "InstalledVersion": "2.30-r1",
+        "FixedVersion": "2.30-r2",
+        "Title": "binutils: Unchecked strnlen in opncls.c:bfd_get_debug_link_info_1() can allow lead to denial of service",
+        "Description": "The bfd_get_debug_link_info_1 function in opncls.c in the Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.30, has an unchecked strnlen operation. Remote attackers could leverage this vulnerability to cause a denial of service (segmentation fault) via a crafted ELF file.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00072.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00008.html",
+          "http://www.securityfocus.com/bid/103030",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-6759",
+          "https://security.gentoo.org/glsa/201811-17",
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22794"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-6872",
+        "PkgName": "binutils",
+        "InstalledVersion": "2.30-r1",
+        "FixedVersion": "2.30-r2",
+        "Title": "binutils: out of bounds read in elf_parse_notes function in elf.c file in libbfd library",
+        "Description": "The elf_parse_notes function in elf.c in the Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.30, allows remote attackers to cause a denial of service (out-of-bounds read and segmentation violation) via a note with a large alignment.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00072.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00008.html",
+          "http://www.securityfocus.com/bid/103103",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-6872",
+          "https://security.gentoo.org/glsa/201811-17",
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22788",
+          "https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git;a=commit;h=ef135d4314fd4c2d7da66b9d7b59af4a85b0f7e6"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-7208",
+        "PkgName": "binutils",
+        "InstalledVersion": "2.30-r1",
+        "FixedVersion": "2.30-r2",
+        "Title": "binutils: Improper bounds check in coffgen.c:coff_pointerize_aux() allows for denial of service when parsing a crafted COFF file",
+        "Description": "In the coff_pointerize_aux function in coffgen.c in the Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.30, an index is not validated, which allows remote attackers to cause a denial of service (segmentation fault) or possibly have unspecified other impact via a crafted file, as demonstrated by objcopy of a COFF object.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-7208.html",
+          "http://linux.oracle.com/errata/ELSA-2018-3032.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00072.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00008.html",
+          "http://www.securityfocus.com/bid/103077",
+          "https://access.redhat.com/errata/RHBA-2019:0327",
+          "https://access.redhat.com/errata/RHSA-2018:3032",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7208",
+          "https://security.gentoo.org/glsa/201811-17",
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22741"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-7568",
+        "PkgName": "binutils",
+        "InstalledVersion": "2.30-r1",
+        "FixedVersion": "2.30-r2",
+        "Title": "binutils: integer overflow via an ELF file with corrupt dwarf1 debug information in libbfd library",
+        "Description": "The parse_die function in dwarf1.c in the Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.30, allows remote attackers to cause a denial of service (integer overflow and application crash) via an ELF file with corrupt dwarf1 debug information, as demonstrated by nm.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-7568.html",
+          "http://linux.oracle.com/errata/ELSA-2018-3032.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00072.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00008.html",
+          "https://access.redhat.com/errata/RHBA-2019:0327",
+          "https://access.redhat.com/errata/RHSA-2018:3032",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7568",
+          "https://security.gentoo.org/glsa/201811-17",
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22894"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-7569",
+        "PkgName": "binutils",
+        "InstalledVersion": "2.30-r1",
+        "FixedVersion": "2.30-r2",
+        "Title": "binutils: integer underflow or overflow via an ELF file with a corrupt DWARF FORM block in libbfd library",
+        "Description": "dwarf2.c in the Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.30, allows remote attackers to cause a denial of service (integer underflow or overflow, and application crash) via an ELF file with a corrupt DWARF FORM block, as demonstrated by nm.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-7569.html",
+          "http://linux.oracle.com/errata/ELSA-2018-3032.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00072.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00008.html",
+          "https://access.redhat.com/errata/RHBA-2019:0327",
+          "https://access.redhat.com/errata/RHSA-2018:3032",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7569",
+          "https://security.gentoo.org/glsa/201811-17",
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22895"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-7570",
+        "PkgName": "binutils",
+        "InstalledVersion": "2.30-r1",
+        "FixedVersion": "2.30-r2",
+        "Title": "binutils: NULL pointer dereference the assign_file_positions_for_non_load_sections function in libbfd library",
+        "Description": "The assign_file_positions_for_non_load_sections function in elf.c in the Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.30, allows remote attackers to cause a denial of service (NULL pointer dereference and application crash) via an ELF file with a RELRO segment that lacks a matching LOAD segment, as demonstrated by objcopy.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00072.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00008.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7570",
+          "https://security.gentoo.org/glsa/201811-17",
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22881",
+          "https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git;h=01f7e10cf2dcf403462b2feed06c43135651556d"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-7642",
+        "PkgName": "binutils",
+        "InstalledVersion": "2.30-r1",
+        "FixedVersion": "2.30-r2",
+        "Title": "binutils: NULL pointer dereference in swap_std_reloc_in function in aoutx.h resulting in crash",
+        "Description": "The swap_std_reloc_in function in aoutx.h in the Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.30, allows remote attackers to cause a denial of service (aout_32_swap_std_reloc_out NULL pointer dereference and application crash) via a crafted ELF file, as demonstrated by objcopy.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-7642.html",
+          "http://linux.oracle.com/errata/ELSA-2018-3032.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00072.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00008.html",
+          "https://access.redhat.com/errata/RHBA-2019:0327",
+          "https://access.redhat.com/errata/RHSA-2018:3032",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7642",
+          "https://security.gentoo.org/glsa/201811-17",
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22887",
+          "https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git;h=116acb2c268c89c89186673a7c92620d21825b25"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-7643",
+        "PkgName": "binutils",
+        "InstalledVersion": "2.30-r1",
+        "FixedVersion": "2.30-r2",
+        "Title": "binutils: Integer overflow in the display_debug_ranges function resulting in crash",
+        "Description": "The display_debug_ranges function in dwarf.c in GNU Binutils 2.30 allows remote attackers to cause a denial of service (integer overflow and application crash) or possibly have unspecified other impact via a crafted ELF file, as demonstrated by objdump.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-7643.html",
+          "http://linux.oracle.com/errata/ELSA-2018-3032.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00072.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00008.html",
+          "http://www.securityfocus.com/bid/103264",
+          "https://access.redhat.com/errata/RHBA-2019:0327",
+          "https://access.redhat.com/errata/RHSA-2018:3032",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7643",
+          "https://security.gentoo.org/glsa/201811-17",
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22905"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-8945",
+        "PkgName": "binutils",
+        "InstalledVersion": "2.30-r1",
+        "FixedVersion": "2.30-r2",
+        "Title": "binutils: Crash in elf.c:bfd_section_from_shdr() with crafted executable",
+        "Description": "The bfd_section_from_shdr function in elf.c in the Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.30, allows remote attackers to cause a denial of service (segmentation fault) via a large attribute section.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-8945.html",
+          "http://linux.oracle.com/errata/ELSA-2018-3032.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00072.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-11/msg00008.html",
+          "https://access.redhat.com/errata/RHBA-2019:0327",
+          "https://access.redhat.com/errata/RHSA-2018:3032",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8945",
+          "https://security.gentoo.org/glsa/201811-17",
+          "https://sourceware.org/bugzilla/show_bug.cgi?id=22809"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-12900",
+        "PkgName": "bzip2",
+        "InstalledVersion": "1.0.6-r6",
+        "FixedVersion": "1.0.6-r7",
+        "Title": "bzip2: out-of-bounds write in function BZ2_decompress",
+        "Description": "BZ2_decompress in decompress.c in bzip2 through 1.0.6 has an out-of-bounds write when there are many selectors.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12900",
+          "https://gitlab.com/federicomenaquintero/bzip2/commit/74de1e2e6ffc9d51ef9824db71a8ffee5962cdbc",
+          "https://lists.debian.org/debian-lts-announce/2019/06/msg00021.html",
+          "https://usn.ubuntu.com/4038-1/",
+          "https://usn.ubuntu.com/4038-2/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-14618",
+        "PkgName": "curl",
+        "InstalledVersion": "7.61.0-r0",
+        "FixedVersion": "7.61.1-r0",
+        "Title": "curl: NTLM password overflow via integer overflow",
+        "Description": "curl before version 7.61.1 is vulnerable to a buffer overrun in the NTLM authentication code. The internal function Curl_ntlm_core_mk_nt_hash multiplies the length of the password by two (SUM) to figure out how large temporary storage area to allocate from the heap. The length value is then subsequently used to iterate over the password and generate output into the allocated storage buffer. On systems with a 32 bit size_t, the math to calculate SUM triggers an integer overflow when the password length exceeds 2GB (2^31 bytes). This integer overflow usually causes a very small buffer to actually get allocated instead of the intended very huge one, making the use of that buffer end up in a heap buffer overflow. (This bug is almost identical to CVE-2017-8816.)",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-14618.html",
+          "http://linux.oracle.com/errata/ELSA-2019-1880.html",
+          "http://www.securitytracker.com/id/1041605",
+          "https://access.redhat.com/errata/RHSA-2018:3558",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2018-14618",
+          "https://cert-portal.siemens.com/productcert/pdf/ssa-436177.pdf",
+          "https://curl.haxx.se/docs/CVE-2018-14618.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14618",
+          "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2018-0014",
+          "https://security.gentoo.org/glsa/201903-03",
+          "https://usn.ubuntu.com/3765-1/",
+          "https://usn.ubuntu.com/3765-2/",
+          "https://www.debian.org/security/2018/dsa-4286"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-16839",
+        "PkgName": "curl",
+        "InstalledVersion": "7.61.0-r0",
+        "FixedVersion": "7.61.1-r1",
+        "Title": "curl: Integer overflow leading to heap-based buffer overflow in Curl_sasl_create_plain_message()",
+        "Description": "Curl versions 7.33.0 through 7.61.1 are vulnerable to a buffer overrun in the SASL authentication code that may lead to denial of service.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securitytracker.com/id/1042012",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2018-16839",
+          "https://curl.haxx.se/docs/CVE-2018-16839.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16839",
+          "https://github.com/curl/curl/commit/f3a24d7916b9173c69a3e0ee790102993833d6c5",
+          "https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E",
+          "https://lists.debian.org/debian-lts-announce/2018/11/msg00005.html",
+          "https://security.gentoo.org/glsa/201903-03",
+          "https://usn.ubuntu.com/3805-1/",
+          "https://www.debian.org/security/2018/dsa-4331"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-16840",
+        "PkgName": "curl",
+        "InstalledVersion": "7.61.0-r0",
+        "FixedVersion": "7.61.1-r1",
+        "Title": "curl: Use-after-free when closing \"easy\" handle in Curl_close()",
+        "Description": "A heap use-after-free flaw was found in curl versions from 7.59.0 through 7.61.1 in the code related to closing an easy handle. When closing and cleaning up an 'easy' handle in the `Curl_close()` function, the library code first frees a struct (without nulling the pointer) and might then subsequently erroneously write to a struct field within that already freed struct.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securitytracker.com/id/1042013",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2018-16840",
+          "https://curl.haxx.se/docs/CVE-2018-16840.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16840",
+          "https://github.com/curl/curl/commit/81d135d67155c5295b1033679c606165d4e28f3f",
+          "https://security.gentoo.org/glsa/201903-03",
+          "https://usn.ubuntu.com/3805-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-3822",
+        "PkgName": "curl",
+        "InstalledVersion": "7.61.0-r0",
+        "FixedVersion": "7.61.1-r2",
+        "Title": "curl: NTLMv2 type-3 header stack buffer overflow",
+        "Description": "libcurl versions from 7.36.0 to before 7.64.0 are vulnerable to a stack-based buffer overflow. The function creating an outgoing NTLM type-3 header (`lib/vauth/ntlm.c:Curl_auth_create_ntlm_type3_message()`), generates the request HTTP header contents based on previously received data. The check that exists to prevent the local buffer from getting overflowed is implemented wrongly (using unsigned math) and as such it does not prevent the overflow from happening. This output data can grow larger than the local buffer if very large 'nt response' data is extracted from a previous NTLMv2 header provided by the malicious or broken HTTP server. Such a 'large value' needs to be around 1000 bytes or more. The actual payload data copied to the target buffer comes from the NTLMv2 type-2 response header.",
+        "Severity": "HIGH",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-3822.html",
+          "http://linux.oracle.com/errata/ELSA-2019-3701.html",
+          "http://www.securityfocus.com/bid/106950",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3822",
+          "https://cert-portal.siemens.com/productcert/pdf/ssa-436177.pdf",
+          "https://curl.haxx.se/docs/CVE-2019-3822.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3822",
+          "https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E",
+          "https://security.gentoo.org/glsa/201903-03",
+          "https://security.netapp.com/advisory/ntap-20190315-0001/",
+          "https://security.netapp.com/advisory/ntap-20190719-0004/",
+          "https://usn.ubuntu.com/3882-1/",
+          "https://www.debian.org/security/2019/dsa-4386",
+          "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
+          "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-5481",
+        "PkgName": "curl",
+        "InstalledVersion": "7.61.0-r0",
+        "FixedVersion": "7.61.1-r3",
+        "Title": "curl: double free due to subsequent call of realloc()",
+        "Description": "Double-free vulnerability in the FTP-kerberos code in cURL 7.52.0 to 7.65.3.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00048.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00055.html",
+          "https://curl.haxx.se/docs/CVE-2019-5481.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5481",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-5482",
+        "PkgName": "curl",
+        "InstalledVersion": "7.61.0-r0",
+        "FixedVersion": "7.61.1-r3",
+        "Title": "curl: heap buffer overflow in function tftp_receive_packet()",
+        "Description": "Heap buffer overflow in the TFTP protocol handler in cURL 7.19.4 to 7.65.3.",
+        "Severity": "HIGH",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-5482.html",
+          "http://linux.oracle.com/errata/ELSA-2020-5562.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00048.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00055.html",
+          "https://curl.haxx.se/docs/CVE-2019-5482.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5482",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-16842",
+        "PkgName": "curl",
+        "InstalledVersion": "7.61.0-r0",
+        "FixedVersion": "7.61.1-r1",
+        "Title": "curl: Heap-based buffer over-read in the curl tool warning formatting",
+        "Description": "Curl versions 7.14.1 through 7.61.1 are vulnerable to a heap-based buffer over-read in the tool_msgs.c:voutf() function that may result in information exposure and denial of service.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-16842.html",
+          "http://linux.oracle.com/errata/ELSA-2019-2181.html",
+          "http://www.securitytracker.com/id/1042014",
+          "https://access.redhat.com/errata/RHSA-2019:2181",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2018-16842",
+          "https://curl.haxx.se/docs/CVE-2018-16842.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16842",
+          "https://github.com/curl/curl/commit/d530e92f59ae9bb2d47066c3c460b25d2ffeb211",
+          "https://lists.debian.org/debian-lts-announce/2018/11/msg00005.html",
+          "https://security.gentoo.org/glsa/201903-03",
+          "https://usn.ubuntu.com/3805-1/",
+          "https://usn.ubuntu.com/3805-2/",
+          "https://www.debian.org/security/2018/dsa-4331"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-16890",
+        "PkgName": "curl",
+        "InstalledVersion": "7.61.0-r0",
+        "FixedVersion": "7.61.1-r2",
+        "Title": "curl: NTLM type-2 heap out-of-bounds buffer read",
+        "Description": "libcurl versions from 7.36.0 to before 7.64.0 is vulnerable to a heap buffer out-of-bounds read. The function handling incoming NTLM type-2 messages (`lib/vauth/ntlm.c:ntlm_decode_type2_target`) does not validate incoming data correctly and is subject to an integer overflow vulnerability. Using that overflow, a malicious or broken NTLM server could trick libcurl to accept a bad length + offset combination that would lead to a buffer read out-of-bounds.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-16890.html",
+          "http://linux.oracle.com/errata/ELSA-2019-3701.html",
+          "http://www.securityfocus.com/bid/106947",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2018-16890",
+          "https://cert-portal.siemens.com/productcert/pdf/ssa-436177.pdf",
+          "https://curl.haxx.se/docs/CVE-2018-16890.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16890",
+          "https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E",
+          "https://security.netapp.com/advisory/ntap-20190315-0001/",
+          "https://usn.ubuntu.com/3882-1/",
+          "https://www.debian.org/security/2019/dsa-4386",
+          "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
+          "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-3823",
+        "PkgName": "curl",
+        "InstalledVersion": "7.61.0-r0",
+        "FixedVersion": "7.61.1-r2",
+        "Title": "curl: SMTP end-of-response out-of-bounds read",
+        "Description": "libcurl versions from 7.34.0 to before 7.64.0 are vulnerable to a heap out-of-bounds read in the code handling the end-of-response for SMTP. If the buffer passed to `smtp_endofresp()` isn't NUL terminated and contains no character ending the parsed number, and `len` is set to 5, then the `strtol()` call reads beyond the allocated buffer. The read contents will not be returned to the caller.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-3823.html",
+          "http://linux.oracle.com/errata/ELSA-2019-3701.html",
+          "http://www.securityfocus.com/bid/106950",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3823",
+          "https://curl.haxx.se/docs/CVE-2019-3823.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3823",
+          "https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E",
+          "https://security.gentoo.org/glsa/201903-03",
+          "https://security.netapp.com/advisory/ntap-20190315-0001/",
+          "https://usn.ubuntu.com/3882-1/",
+          "https://www.debian.org/security/2019/dsa-4386",
+          "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
+          "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-20843",
+        "PkgName": "expat",
+        "InstalledVersion": "2.2.5-r0",
+        "FixedVersion": "2.2.7-r0",
+        "Title": "expat: large number of colons in input makes parser consume high amount of resources, leading to DoS",
+        "Description": "In libexpat in Expat before 2.2.7, XML input including XML names that contain a large number of colons could make the XML parser consume a high amount of RAM and CPU resources while processing (enough to be usable for denial-of-service attacks).",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=5226",
+          "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=931031",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20843",
+          "https://github.com/libexpat/libexpat/blob/R_2_2_7/expat/Changes",
+          "https://github.com/libexpat/libexpat/issues/186",
+          "https://github.com/libexpat/libexpat/pull/262",
+          "https://github.com/libexpat/libexpat/pull/262/commits/11f8838bf99ea0a6f0b76f9760c43704d00c4ff6",
+          "https://lists.debian.org/debian-lts-announce/2019/06/msg00028.html",
+          "https://seclists.org/bugtraq/2019/Jun/39",
+          "https://security.netapp.com/advisory/ntap-20190703-0001/",
+          "https://usn.ubuntu.com/4040-1/",
+          "https://usn.ubuntu.com/4040-2/",
+          "https://www.debian.org/security/2019/dsa-4472"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-15903",
+        "PkgName": "expat",
+        "InstalledVersion": "2.2.5-r0",
+        "FixedVersion": "2.2.7-r1",
+        "Title": "expat: heap-based buffer over-read via crafted XML input",
+        "Description": "In libexpat before 2.2.8, crafted XML input could fool the parser into changing from DTD parsing to document parsing too early; a consecutive call to XML_GetCurrentLineNumber (or XML_GetCurrentColumnNumber) then resulted in a heap-based buffer over-read.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-15903.html",
+          "http://linux.oracle.com/errata/ELSA-2019-3237.html",
+          "http://packetstormsecurity.com/files/154503/Slackware-Security-Advisory-expat-Updates.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15903",
+          "https://github.com/libexpat/libexpat/commit/c20b758c332d9a13afbbb276d30db1d183a85d43",
+          "https://github.com/libexpat/libexpat/issues/317",
+          "https://github.com/libexpat/libexpat/issues/342",
+          "https://github.com/libexpat/libexpat/pull/318",
+          "https://seclists.org/bugtraq/2019/Sep/30",
+          "https://usn.ubuntu.com/4132-1/",
+          "https://usn.ubuntu.com/4132-2/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-18218",
+        "PkgName": "file",
+        "InstalledVersion": "5.32-r0",
+        "FixedVersion": "5.32-r2",
+        "Title": "file: heap-based buffer overflow in cdf_read_property_info in cdf.c",
+        "Description": "cdf_read_property_info in cdf.c in file through 5.37 does not restrict the number of CDF_VECTOR elements, which allows a heap-based buffer overflow (4-byte out-of-bounds write).",
+        "Severity": "HIGH",
+        "References": [
+          "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=16780",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18218",
+          "https://github.com/file/file/commit/46a8443f76cec4b41ec736eca396984c74664f84",
+          "https://lists.debian.org/debian-lts-announce/2019/10/msg00032.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CV6PFCEYHYALMTT45QE2U5C5TEJZQPXJ/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VBK6XOJR6OVWT2FUEBO7V7KCOSSLAP52/",
+          "https://usn.ubuntu.com/4172-1/",
+          "https://usn.ubuntu.com/4172-2/",
+          "https://www.debian.org/security/2019/dsa-4550"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-8905",
+        "PkgName": "file",
+        "InstalledVersion": "5.32-r0",
+        "FixedVersion": "5.32-r1",
+        "Title": "file: stack-based buffer over-read in do_core_note in readelf.c",
+        "Description": "do_core_note in readelf.c in libmagic.a in file 5.35 has a stack-based buffer over-read, related to file_printable, a different vulnerability than CVE-2018-10360.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-03/msg00027.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00053.html",
+          "http://www.securityfocus.com/bid/107137",
+          "https://bugs.astron.com/view.php?id=63",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-8905",
+          "https://lists.debian.org/debian-lts-announce/2019/02/msg00044.html",
+          "https://usn.ubuntu.com/3911-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-8906",
+        "PkgName": "file",
+        "InstalledVersion": "5.32-r0",
+        "FixedVersion": "5.32-r1",
+        "Title": "file: out-of-bounds read in do_core_note in readelf.c",
+        "Description": "do_core_note in readelf.c in libmagic.a in file 5.35 has an out-of-bounds read because memcpy is misused.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-03/msg00027.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00053.html",
+          "https://bugs.astron.com/view.php?id=64",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-8906",
+          "https://github.com/file/file/commit/2858eaf99f6cc5aae129bcbf1e24ad160240185f",
+          "https://support.apple.com/kb/HT209599",
+          "https://support.apple.com/kb/HT209600",
+          "https://support.apple.com/kb/HT209601",
+          "https://support.apple.com/kb/HT209602",
+          "https://usn.ubuntu.com/3911-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-8907",
+        "PkgName": "file",
+        "InstalledVersion": "5.32-r0",
+        "FixedVersion": "5.32-r1",
+        "Title": "file: do_core_note in readelf.c allows remote attackers to cause a denial of service",
+        "Description": "do_core_note in readelf.c in libmagic.a in file 5.35 allows remote attackers to cause a denial of service (stack corruption and application crash) or possibly have unspecified other impact.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-03/msg00027.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00053.html",
+          "https://bugs.astron.com/view.php?id=65",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-8907",
+          "https://lists.debian.org/debian-lts-announce/2019/02/msg00044.html",
+          "https://usn.ubuntu.com/3911-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-19218",
+        "PkgName": "file",
+        "InstalledVersion": "5.32-r0",
+        "FixedVersion": "5.32-r2",
+        "Description": "BMC Control-M/Agent 7.0.00.000 has Insecure Password Storage.",
+        "Severity": "UNKNOWN",
+        "References": [
+          "https://herolab.usd.de/security-advisories/usd-2019-0066/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-1349",
+        "PkgName": "git",
+        "InstalledVersion": "2.15.2-r0",
+        "FixedVersion": "2.15.4-r0",
+        "Title": "git: Recursive submodule cloning allows using git directory twice with synonymous directory name written in .git/",
+        "Description": "A remote code execution vulnerability exists when Git for Visual Studio improperly sanitizes input, aka 'Git for Visual Studio Remote Code Execution Vulnerability'. This CVE ID is unique from CVE-2019-1350, CVE-2019-1352, CVE-2019-1354, CVE-2019-1387.",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-1349.html",
+          "http://linux.oracle.com/errata/ELSA-2019-4356.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00056.html",
+          "https://access.redhat.com/errata/RHSA-2020:0228",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1349",
+          "https://github.com/git/git/security/advisories/GHSA-4qvh-qvv7-frc7",
+          "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1349",
+          "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-1350",
+        "PkgName": "git",
+        "InstalledVersion": "2.15.2-r0",
+        "FixedVersion": "2.15.4-r0",
+        "Title": "git: Incorrect quoting of command-line arguments allowed remote code execution during a recursive clone",
+        "Description": "A remote code execution vulnerability exists when Git for Visual Studio improperly sanitizes input, aka 'Git for Visual Studio Remote Code Execution Vulnerability'. This CVE ID is unique from CVE-2019-1349, CVE-2019-1352, CVE-2019-1354, CVE-2019-1387.",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00056.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1350",
+          "https://github.com/git/git/security/advisories/GHSA-44fr-r2hj-3f4x",
+          "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1350",
+          "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-1352",
+        "PkgName": "git",
+        "InstalledVersion": "2.15.2-r0",
+        "FixedVersion": "2.15.4-r0",
+        "Title": "git: Files inside the .git directory may be overwritten during cloning via NTFS Alternate Data Streams",
+        "Description": "A remote code execution vulnerability exists when Git for Visual Studio improperly sanitizes input, aka 'Git for Visual Studio Remote Code Execution Vulnerability'. This CVE ID is unique from CVE-2019-1349, CVE-2019-1350, CVE-2019-1354, CVE-2019-1387.",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-1352.html",
+          "http://linux.oracle.com/errata/ELSA-2019-4356.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00056.html",
+          "https://access.redhat.com/errata/RHSA-2020:0228",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1352",
+          "https://github.com/git/git/security/advisories/GHSA-5wph-8frv-58vj",
+          "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1352",
+          "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-1354",
+        "PkgName": "git",
+        "InstalledVersion": "2.15.2-r0",
+        "FixedVersion": "2.15.4-r0",
+        "Title": "git: Git does not refuse to write out tracked files with backlashes in filenames",
+        "Description": "A remote code execution vulnerability exists when Git for Visual Studio improperly sanitizes input, aka 'Git for Visual Studio Remote Code Execution Vulnerability'. This CVE ID is unique from CVE-2019-1349, CVE-2019-1350, CVE-2019-1352, CVE-2019-1387.",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00056.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1354",
+          "https://github.com/git/git/security/advisories/GHSA-xjx4-8694-q2fq",
+          "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1354",
+          "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-17456",
+        "PkgName": "git",
+        "InstalledVersion": "2.15.2-r0",
+        "FixedVersion": "2.15.3-r0",
+        "Title": "git: arbitrary code execution via .gitmodules",
+        "Description": "Git before 2.14.5, 2.15.x before 2.15.3, 2.16.x before 2.16.5, 2.17.x before 2.17.2, 2.18.x before 2.18.1, and 2.19.x before 2.19.1 allows remote code execution during processing of a recursive \"git clone\" of a superproject if a .gitmodules file has a URL field beginning with a '-' character.",
+        "Severity": "HIGH",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-17456.html",
+          "http://linux.oracle.com/errata/ELSA-2020-0316.html",
+          "http://packetstormsecurity.com/files/152173/Sourcetree-Git-Arbitrary-Code-Execution-URL-Handling.html",
+          "http://www.securityfocus.com/bid/105523",
+          "http://www.securityfocus.com/bid/107511",
+          "http://www.securitytracker.com/id/1041811",
+          "https://access.redhat.com/errata/RHSA-2018:3408",
+          "https://access.redhat.com/errata/RHSA-2018:3505",
+          "https://access.redhat.com/errata/RHSA-2018:3541",
+          "https://access.redhat.com/errata/RHSA-2020:0316",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17456",
+          "https://github.com/git/git/commit/1a7fd1fb2998002da6e9ff2ee46e1bdd25ee8404",
+          "https://github.com/git/git/commit/a124133e1e6ab5c7a9fef6d0e6bcb084e3455b46",
+          "https://marc.info/?l=git\u0026m=153875888916397\u0026w=2",
+          "https://seclists.org/bugtraq/2019/Mar/30",
+          "https://usn.ubuntu.com/3791-1/",
+          "https://www.debian.org/security/2018/dsa-4311",
+          "https://www.exploit-db.com/exploits/45548/",
+          "https://www.exploit-db.com/exploits/45631/",
+          "https://www.openwall.com/lists/oss-security/2018/10/06/3"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-19486",
+        "PkgName": "git",
+        "InstalledVersion": "2.15.2-r0",
+        "FixedVersion": "2.15.3-r0",
+        "Title": "git: Improper handling of PATH allows for commands to be executed from the current directory",
+        "Description": "Git before 2.19.2 on Linux and UNIX executes commands from the current working directory (as if '.' were at the end of $PATH) in certain cases involving the run_command() API and run-command.c, because there was a dangerous change from execvp to execv during 2017.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.securityfocus.com/bid/106020",
+          "http://www.securitytracker.com/id/1042166",
+          "https://access.redhat.com/errata/RHSA-2018:3800",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19486",
+          "https://git.kernel.org/pub/scm/git/git.git/commit/?id=321fd82389742398d2924640ce3a61791fd27d60",
+          "https://git.kernel.org/pub/scm/git/git.git/tree/Documentation/RelNotes/2.19.2.txt",
+          "https://security.gentoo.org/glsa/201904-13",
+          "https://usn.ubuntu.com/3829-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-1353",
+        "PkgName": "git",
+        "InstalledVersion": "2.15.2-r0",
+        "FixedVersion": "2.15.4-r0",
+        "Title": "git: NTFS protections inactive when running Git in the Windows Subsystem for Linux",
+        "Description": "An issue was found in Git before v2.24.1, v2.23.1, v2.22.2, v2.21.1, v2.20.2, v2.19.3, v2.18.2, v2.17.3, v2.16.6, v2.15.4, and v2.14.6. When running Git in the Windows Subsystem for Linux (also known as \"WSL\") while accessing a working directory on a regular Windows drive, none of the NTFS protections were active.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00056.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1353",
+          "https://github.com/git/git/security/advisories/GHSA-589j-mmg9-733v",
+          "https://lore.kernel.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/T/#u",
+          "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/",
+          "https://security.gentoo.org/glsa/202003-30"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-1351",
+        "PkgName": "git",
+        "InstalledVersion": "2.15.2-r0",
+        "FixedVersion": "2.15.4-r0",
+        "Title": "git: Git mistakes some paths for relative paths allowing writing outside of the worktree while cloning",
+        "Description": "A tampering vulnerability exists when Git for Visual Studio improperly handles virtual drive paths, aka 'Git for Visual Studio Tampering Vulnerability'.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00056.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1351",
+          "https://github.com/git/git/security/advisories/GHSA-39hj-fvvf-mq4f",
+          "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1351",
+          "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/",
+          "https://security.gentoo.org/glsa/202003-30"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-1387",
+        "PkgName": "git",
+        "InstalledVersion": "2.15.2-r0",
+        "FixedVersion": "2.15.4-r0",
+        "Title": "git: Remote code execution in recursive clones with nested submodules",
+        "Description": "An issue was found in Git before v2.24.1, v2.23.1, v2.22.2, v2.21.1, v2.20.2, v2.19.3, v2.18.2, v2.17.3, v2.16.6, v2.15.4, and v2.14.6. Recursive clones are currently affected by a vulnerability that is caused by too-lax validation of submodule names, allowing very targeted attacks via remote code execution in recursive clones.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-1387.html",
+          "http://linux.oracle.com/errata/ELSA-2020-0124.html",
+          "https://access.redhat.com/errata/RHSA-2019:4356",
+          "https://access.redhat.com/errata/RHSA-2020:0002",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1387",
+          "https://github.com/git/git/security/advisories/GHSA-4wfr-gwrh-8mj2",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/N6UGTEOXWIYSM5KDZL74QD2GK6YQNQCP/",
+          "https://lore.kernel.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/T/#u"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-1348",
+        "PkgName": "git",
+        "InstalledVersion": "2.15.2-r0",
+        "FixedVersion": "2.15.4-r0",
+        "Title": "git: Arbitrary path overwriting via export-marks in-stream command feature",
+        "Description": "An issue was found in Git before v2.24.1, v2.23.1, v2.22.2, v2.21.1, v2.20.2, v2.19.3, v2.18.2, v2.17.3, v2.16.6, v2.15.4, and v2.14.6. The --export-marks option of git fast-import is exposed also via the in-stream command feature export-marks=... and it allows overwriting arbitrary paths.",
+        "Severity": "LOW",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-1348.html",
+          "http://linux.oracle.com/errata/ELSA-2019-4356.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00056.html",
+          "https://access.redhat.com/errata/RHSA-2020:0228",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1348",
+          "https://github.com/git/git/security/advisories/GHSA-2pw3-gwg9-8pqr",
+          "https://lore.kernel.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/T/#u",
+          "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/",
+          "https://support.apple.com/kb/HT210729"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-3829",
+        "PkgName": "gnutls",
+        "InstalledVersion": "3.6.1-r0",
+        "FixedVersion": "3.6.7-r0",
+        "Title": "gnutls: use-after-free/double-free in certificate verification",
+        "Description": "A vulnerability was found in gnutls versions from 3.5.8 before 3.6.7. A memory corruption (double free) vulnerability in the certificate verification API. Any client or server application that verifies X.509 certificates with GnuTLS 3.5.8 or later is affected.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-3829.html",
+          "http://linux.oracle.com/errata/ELSA-2019-3600.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-05/msg00017.html",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3829",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3829",
+          "https://gitlab.com/gnutls/gnutls/issues/694",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/A3ETBUFBB4G7AITAOUYPGXVMBGVXKUAN/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/L7TJIBRJWGWSH6XIO2MXIQ3W6ES4R6I4/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WRSOL66LHP4SD3Y2ECJDOGT4K663ECDU/",
+          "https://security.gentoo.org/glsa/201904-14",
+          "https://usn.ubuntu.com/3999-1/",
+          "https://www.gnutls.org/security-new.html#GNUTLS-SA-2019-03-27"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-3836",
+        "PkgName": "gnutls",
+        "InstalledVersion": "3.6.1-r0",
+        "FixedVersion": "3.6.7-r0",
+        "Title": "gnutls: invalid pointer access upon receiving async handshake messages",
+        "Description": "It was discovered in gnutls before version 3.6.7 upstream that there is an uninitialized pointer access in gnutls versions 3.6.3 or later which can be triggered by certain post-handshake messages.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-3836.html",
+          "http://linux.oracle.com/errata/ELSA-2019-3600.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-05/msg00017.html",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3836",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3836",
+          "https://gitlab.com/gnutls/gnutls/issues/704",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/A3ETBUFBB4G7AITAOUYPGXVMBGVXKUAN/",
+          "https://security.gentoo.org/glsa/201904-14",
+          "https://security.netapp.com/advisory/ntap-20190502-0005/",
+          "https://usn.ubuntu.com/3999-1/",
+          "https://www.gnutls.org/security-new.html#GNUTLS-SA-2019-03-27"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-12904",
+        "PkgName": "libgcrypt",
+        "InstalledVersion": "1.8.3-r0",
+        "FixedVersion": "1.8.3-r1",
+        "Title": "Libgcrypt: physical addresses being available to other processes leads to a flush-and-reload side-channel attack",
+        "Description": "In Libgcrypt 1.8.4, the C implementation of AES is vulnerable to a flush-and-reload side-channel attack because physical addresses are available to other processes. (The C implementation is used on platforms where an assembly-language implementation is unavailable.)",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00049.html",
+          "https://dev.gnupg.org/T4541",
+          "https://github.com/gpg/libgcrypt/commit/a4c561aab1014c3630bc88faf6f5246fee16b020",
+          "https://github.com/gpg/libgcrypt/commit/daedbbb5541cd8ecda1459d3b843ea4d92788762",
+          "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12904.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-3855",
+        "PkgName": "libssh2",
+        "InstalledVersion": "1.8.0-r2",
+        "FixedVersion": "1.8.1-r0",
+        "Title": "libssh2: Integer overflow in transport read resulting in out of bounds write",
+        "Description": "An integer overflow flaw which could lead to an out of bounds write was discovered in libssh2 before 1.8.1 in the way packets are read from the server. A remote attacker who compromises a SSH server may be able to execute code on the client system when a user connects to the server.",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-3855.html",
+          "http://linux.oracle.com/errata/ELSA-2019-1652.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-03/msg00040.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00003.html",
+          "http://packetstormsecurity.com/files/152136/Slackware-Security-Advisory-libssh2-Updates.html",
+          "http://www.openwall.com/lists/oss-security/2019/03/18/3",
+          "http://www.securityfocus.com/bid/107485",
+          "https://access.redhat.com/errata/RHSA-2019:0679",
+          "https://access.redhat.com/errata/RHSA-2019:1175",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3855",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3855",
+          "https://lists.debian.org/debian-lts-announce/2019/03/msg00032.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5DK6VO2CEUTAJFYIKWNZKEKYMYR3NO2O/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XCWEA5ZCLKRDUK62QVVYMFWLWKOPX3LO/",
+          "https://seclists.org/bugtraq/2019/Apr/25",
+          "https://seclists.org/bugtraq/2019/Mar/25",
+          "https://security.netapp.com/advisory/ntap-20190327-0005/",
+          "https://www.broadcom.com/support/fibre-channel-networking/security-advisories/brocade-security-advisory-2019-767",
+          "https://www.debian.org/security/2019/dsa-4431",
+          "https://www.libssh2.org/CVE-2019-3855.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-3856",
+        "PkgName": "libssh2",
+        "InstalledVersion": "1.8.0-r2",
+        "FixedVersion": "1.8.1-r0",
+        "Title": "libssh2: Integer overflow in keyboard interactive handling resulting in out of bounds write",
+        "Description": "An integer overflow flaw, which could lead to an out of bounds write, was discovered in libssh2 before 1.8.1 in the way keyboard prompt requests are parsed. A remote attacker who compromises a SSH server may be able to execute code on the client system when a user connects to the server.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-3856.html",
+          "http://linux.oracle.com/errata/ELSA-2019-1652.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-03/msg00040.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00003.html",
+          "https://access.redhat.com/errata/RHSA-2019:0679",
+          "https://access.redhat.com/errata/RHSA-2019:1175",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3856",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3856",
+          "https://lists.debian.org/debian-lts-announce/2019/03/msg00032.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5DK6VO2CEUTAJFYIKWNZKEKYMYR3NO2O/",
+          "https://seclists.org/bugtraq/2019/Apr/25",
+          "https://security.netapp.com/advisory/ntap-20190327-0005/",
+          "https://www.debian.org/security/2019/dsa-4431",
+          "https://www.libssh2.org/CVE-2019-3856.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-3857",
+        "PkgName": "libssh2",
+        "InstalledVersion": "1.8.0-r2",
+        "FixedVersion": "1.8.1-r0",
+        "Title": "libssh2: Integer overflow in SSH packet processing channel resulting in out of bounds write",
+        "Description": "An integer overflow flaw which could lead to an out of bounds write was discovered in libssh2 before 1.8.1 in the way SSH_MSG_CHANNEL_REQUEST packets with an exit signal are parsed. A remote attacker who compromises a SSH server may be able to execute code on the client system when a user connects to the server.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-3857.html",
+          "http://linux.oracle.com/errata/ELSA-2019-1652.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-03/msg00040.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00003.html",
+          "https://access.redhat.com/errata/RHSA-2019:0679",
+          "https://access.redhat.com/errata/RHSA-2019:1175",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3857",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3857",
+          "https://lists.debian.org/debian-lts-announce/2019/03/msg00032.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5DK6VO2CEUTAJFYIKWNZKEKYMYR3NO2O/",
+          "https://seclists.org/bugtraq/2019/Apr/25",
+          "https://security.netapp.com/advisory/ntap-20190327-0005/",
+          "https://www.debian.org/security/2019/dsa-4431",
+          "https://www.libssh2.org/CVE-2019-3857.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-3858",
+        "PkgName": "libssh2",
+        "InstalledVersion": "1.8.0-r2",
+        "FixedVersion": "1.8.1-r0",
+        "Title": "libssh2: Zero-byte allocation with a specially crafted SFTP packed leading to an out-of-bounds read",
+        "Description": "An out of bounds read flaw was discovered in libssh2 before 1.8.1 when a specially crafted SFTP packet is received from the server. A remote attacker who compromises a SSH server may be able to cause a Denial of Service or read data in the client memory.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-3858.html",
+          "http://linux.oracle.com/errata/ELSA-2019-2136.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-03/msg00040.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00003.html",
+          "http://packetstormsecurity.com/files/152136/Slackware-Security-Advisory-libssh2-Updates.html",
+          "http://www.openwall.com/lists/oss-security/2019/03/18/3",
+          "http://www.securityfocus.com/bid/107485",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3858",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3858",
+          "https://lists.debian.org/debian-lts-announce/2019/03/msg00032.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5DK6VO2CEUTAJFYIKWNZKEKYMYR3NO2O/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XCWEA5ZCLKRDUK62QVVYMFWLWKOPX3LO/",
+          "https://seclists.org/bugtraq/2019/Apr/25",
+          "https://seclists.org/bugtraq/2019/Mar/25",
+          "https://security.netapp.com/advisory/ntap-20190327-0005/",
+          "https://www.broadcom.com/support/fibre-channel-networking/security-advisories/brocade-security-advisory-2019-767",
+          "https://www.debian.org/security/2019/dsa-4431",
+          "https://www.libssh2.org/CVE-2019-3858.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-3859",
+        "PkgName": "libssh2",
+        "InstalledVersion": "1.8.0-r2",
+        "FixedVersion": "1.8.1-r0",
+        "Title": "libssh2: Unchecked use of _libssh2_packet_require and _libssh2_packet_requirev resulting in out-of-bounds read",
+        "Description": "An out of bounds read flaw was discovered in libssh2 before 1.8.1 in the _libssh2_packet_require and _libssh2_packet_requirev functions. A remote attacker who compromises a SSH server may be able to cause a Denial of Service or read data in the client memory.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-03/msg00040.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00003.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00102.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00103.html",
+          "http://packetstormsecurity.com/files/152136/Slackware-Security-Advisory-libssh2-Updates.html",
+          "http://www.openwall.com/lists/oss-security/2019/03/18/3",
+          "http://www.securityfocus.com/bid/107485",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3859",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3859",
+          "https://lists.debian.org/debian-lts-announce/2019/03/msg00032.html",
+          "https://lists.debian.org/debian-lts-announce/2019/04/msg00006.html",
+          "https://lists.debian.org/debian-lts-announce/2019/07/msg00024.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5DK6VO2CEUTAJFYIKWNZKEKYMYR3NO2O/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XCWEA5ZCLKRDUK62QVVYMFWLWKOPX3LO/",
+          "https://seclists.org/bugtraq/2019/Apr/25",
+          "https://seclists.org/bugtraq/2019/Mar/25",
+          "https://security.netapp.com/advisory/ntap-20190327-0005/",
+          "https://www.broadcom.com/support/fibre-channel-networking/security-advisories/brocade-security-advisory-2019-767",
+          "https://www.debian.org/security/2019/dsa-4431",
+          "https://www.libssh2.org/CVE-2019-3859.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-3860",
+        "PkgName": "libssh2",
+        "InstalledVersion": "1.8.0-r2",
+        "FixedVersion": "1.8.1-r0",
+        "Title": "libssh2: Out-of-bounds reads with specially crafted SFTP packets",
+        "Description": "An out of bounds read flaw was discovered in libssh2 before 1.8.1 in the way SFTP packets with empty payloads are parsed. A remote attacker who compromises a SSH server may be able to cause a Denial of Service or read data in the client memory.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-03/msg00040.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00003.html",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3860",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3860",
+          "https://lists.debian.org/debian-lts-announce/2019/03/msg00032.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5DK6VO2CEUTAJFYIKWNZKEKYMYR3NO2O/",
+          "https://seclists.org/bugtraq/2019/Apr/25",
+          "https://security.netapp.com/advisory/ntap-20190327-0005/",
+          "https://www.debian.org/security/2019/dsa-4431",
+          "https://www.libssh2.org/CVE-2019-3860.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-3861",
+        "PkgName": "libssh2",
+        "InstalledVersion": "1.8.0-r2",
+        "FixedVersion": "1.8.1-r0",
+        "Title": "libssh2: Out-of-bounds reads with specially crafted SSH packets",
+        "Description": "An out of bounds read flaw was discovered in libssh2 before 1.8.1 in the way SSH packets with a padding length value greater than the packet length are parsed. A remote attacker who compromises a SSH server may be able to cause a Denial of Service or read data in the client memory.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-3861.html",
+          "http://linux.oracle.com/errata/ELSA-2019-2136.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-03/msg00040.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00003.html",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3861",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3861",
+          "https://lists.debian.org/debian-lts-announce/2019/03/msg00032.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5DK6VO2CEUTAJFYIKWNZKEKYMYR3NO2O/",
+          "https://seclists.org/bugtraq/2019/Apr/25",
+          "https://security.netapp.com/advisory/ntap-20190327-0005/",
+          "https://www.debian.org/security/2019/dsa-4431",
+          "https://www.libssh2.org/CVE-2019-3861.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-3862",
+        "PkgName": "libssh2",
+        "InstalledVersion": "1.8.0-r2",
+        "FixedVersion": "1.8.1-r0",
+        "Title": "libssh2: Out-of-bounds memory comparison with specially crafted message channel request",
+        "Description": "An out of bounds read flaw was discovered in libssh2 before 1.8.1 in the way SSH_MSG_CHANNEL_REQUEST packets with an exit status message and no payload are parsed. A remote attacker who compromises a SSH server may be able to cause a Denial of Service or read data in the client memory.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-3862.html",
+          "http://linux.oracle.com/errata/ELSA-2019-4693.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-03/msg00040.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00003.html",
+          "http://packetstormsecurity.com/files/152136/Slackware-Security-Advisory-libssh2-Updates.html",
+          "http://www.openwall.com/lists/oss-security/2019/03/18/3",
+          "http://www.securityfocus.com/bid/107485",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3862",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3862",
+          "https://lists.debian.org/debian-lts-announce/2019/03/msg00032.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5DK6VO2CEUTAJFYIKWNZKEKYMYR3NO2O/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XCWEA5ZCLKRDUK62QVVYMFWLWKOPX3LO/",
+          "https://seclists.org/bugtraq/2019/Apr/25",
+          "https://seclists.org/bugtraq/2019/Mar/25",
+          "https://security.netapp.com/advisory/ntap-20190327-0005/",
+          "https://www.broadcom.com/support/fibre-channel-networking/security-advisories/brocade-security-advisory-2019-767",
+          "https://www.debian.org/security/2019/dsa-4431",
+          "https://www.libssh2.org/CVE-2019-3862.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-3863",
+        "PkgName": "libssh2",
+        "InstalledVersion": "1.8.0-r2",
+        "FixedVersion": "1.8.1-r0",
+        "Title": "libssh2: Integer overflow in user authenticate keyboard interactive allows out-of-bounds writes",
+        "Description": "A flaw was found in libssh2 before 1.8.1. A server could send a multiple keyboard interactive response messages whose total length are greater than unsigned char max characters. This value is used as an index to copy memory causing in an out of bounds memory write error.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-3863.html",
+          "http://linux.oracle.com/errata/ELSA-2019-1652.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-03/msg00040.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00003.html",
+          "https://access.redhat.com/errata/RHSA-2019:0679",
+          "https://access.redhat.com/errata/RHSA-2019:1175",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3863",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3863",
+          "https://lists.debian.org/debian-lts-announce/2019/03/msg00032.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5DK6VO2CEUTAJFYIKWNZKEKYMYR3NO2O/",
+          "https://seclists.org/bugtraq/2019/Apr/25",
+          "https://security.netapp.com/advisory/ntap-20190327-0005/",
+          "https://www.debian.org/security/2019/dsa-4431",
+          "https://www.libssh2.org/CVE-2019-3863.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-1000654",
+        "PkgName": "libtasn1",
+        "InstalledVersion": "4.12-r3",
+        "FixedVersion": "4.12-r4",
+        "Title": "libtasn1: Infinite loop in _asn1_expand_object_id(ptree) leads to memory exhaustion",
+        "Description": "GNU Libtasn1-4.13 libtasn1-4.13 version libtasn1-4.13, libtasn1-4.12 contains a DoS, specifically CPU usage will reach 100% when running asn1Paser against the POC due to an issue in _asn1_expand_object_id(p_tree), after a long time, the program will be killed. This attack appears to be exploitable via parsing a crafted file.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00009.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00018.html",
+          "http://www.securityfocus.com/bid/105151",
+          "https://gitlab.com/gnutls/libtasn1/issues/4"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-14404",
+        "PkgName": "libxml2",
+        "InstalledVersion": "2.9.7-r0",
+        "FixedVersion": "2.9.8-r1",
+        "Title": "libxml2: NULL pointer dereference in xmlXPathCompOpEval() function in xpath.c",
+        "Description": "A NULL pointer dereference vulnerability exists in the xpath.c:xmlXPathCompOpEval() function of libxml2 through 2.9.8 when parsing an invalid XPath expression in the XPATH_OP_AND or XPATH_OP_OR case. Applications processing untrusted XSL format inputs with the use of the libxml2 library may be vulnerable to a denial of service attack due to a crash of the application.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-14404.html",
+          "http://linux.oracle.com/errata/ELSA-2020-1190.html",
+          "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=901817",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=1595985",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14404",
+          "https://github.com/sparklemotion/nokogiri/issues/1785",
+          "https://gitlab.gnome.org/GNOME/libxml2/commit/2240fbf5912054af025fb6e01e26375100275e74",
+          "https://gitlab.gnome.org/GNOME/libxml2/commit/a436374994c47b12d5de1b8b1d191a098fa23594",
+          "https://gitlab.gnome.org/GNOME/libxml2/issues/10",
+          "https://groups.google.com/forum/#!msg/ruby-security-ann/uVrmO2HjqQw/Fw3ocLI0BQAJ",
+          "https://lists.debian.org/debian-lts-announce/2018/09/msg00035.html",
+          "https://usn.ubuntu.com/3739-1/",
+          "https://usn.ubuntu.com/3739-2/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-14567",
+        "PkgName": "libxml2",
+        "InstalledVersion": "2.9.7-r0",
+        "FixedVersion": "2.9.8-r1",
+        "Title": "libxml2: Infinite loop caused by incorrect error detection during LZMA decompression",
+        "Description": "libxml2 2.9.8, if --with-lzma is used, allows remote attackers to cause a denial of service (infinite loop) via a crafted XML file that triggers LZMA_MEMLIMIT_ERROR, as demonstrated by xmllint, a different vulnerability than CVE-2015-8035 and CVE-2018-9251.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-14567.html",
+          "http://linux.oracle.com/errata/ELSA-2020-1190.html",
+          "http://www.securityfocus.com/bid/105198",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14567",
+          "https://gitlab.gnome.org/GNOME/libxml2/commit/2240fbf5912054af025fb6e01e26375100275e74",
+          "https://lists.debian.org/debian-lts-announce/2018/09/msg00035.html",
+          "https://usn.ubuntu.com/3739-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-9251",
+        "PkgName": "libxml2",
+        "InstalledVersion": "2.9.7-r0",
+        "FixedVersion": "2.9.8-r1",
+        "Title": "libxml2: infinite loop in xz_decomp function in xzlib.c",
+        "Description": "The xz_decomp function in xzlib.c in libxml2 2.9.8, if --with-lzma is used, allows remote attackers to cause a denial of service (infinite loop) via a crafted XML file that triggers LZMA_MEMLIMIT_ERROR, as demonstrated by xmllint, a different vulnerability than CVE-2015-8035.",
+        "Severity": "LOW",
+        "References": [
+          "https://bugzilla.gnome.org/show_bug.cgi?id=794914",
+          "https://lists.debian.org/debian-lts-announce/2018/09/msg00035.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-3902",
+        "PkgName": "mercurial",
+        "InstalledVersion": "4.5.2-r0",
+        "FixedVersion": "4.5.2-r1",
+        "Title": "mercurial: Path-checking logic bypass via symlinks and subrepositories",
+        "Description": "A flaw was found in Mercurial before 4.9. It was possible to use symlinks and subrepositories to defeat Mercurial's path-checking logic and write files outside a repository.",
+        "Severity": "MEDIUM",
+        "References": [
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3902",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3902",
+          "https://lists.debian.org/debian-lts-announce/2019/04/msg00024.html",
+          "https://usn.ubuntu.com/4086-1/",
+          "https://www.mercurial-scm.org/wiki/WhatsNew#Mercurial_4.9_.282019-02-01.29"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-14697",
+        "PkgName": "musl",
+        "InstalledVersion": "1.1.18-r3",
+        "FixedVersion": "1.1.18-r4",
+        "Description": "musl libc through 1.1.23 has an x87 floating-point stack adjustment imbalance, related to the math/i386/ directory. In some cases, use of this library could introduce out-of-bounds writes that are not present in an application's source code.",
+        "Severity": "HIGH",
+        "References": [
+          "http://www.openwall.com/lists/oss-security/2019/08/06/4",
+          "https://security.gentoo.org/glsa/202003-13",
+          "https://www.openwall.com/lists/musl/2019/08/06/1"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-17740",
+        "PkgName": "openldap",
+        "InstalledVersion": "2.4.45-r3",
+        "FixedVersion": "2.4.46-r0",
+        "Title": "openldap: contrib/slapd-modules/nops/nops.c attempts to free stack buffer allowing remote attackers to cause a denial of service",
+        "Description": "contrib/slapd-modules/nops/nops.c in OpenLDAP through 2.4.45, when both the nops module and the memberof overlay are enabled, attempts to free a buffer that was allocated on the stack, which allows remote attackers to cause a denial of service (slapd crash) via a member MODDN operation.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00053.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00058.html",
+          "http://www.openldap.org/its/index.cgi/Incoming?id=8759"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-13565",
+        "PkgName": "openldap",
+        "InstalledVersion": "2.4.45-r3",
+        "FixedVersion": "2.4.48-r0",
+        "Title": "openldap: ACL restrictions bypass due to sasl_ssf value being set permanently",
+        "Description": "An issue was discovered in OpenLDAP 2.x before 2.4.48. When using SASL authentication and session encryption, and relying on the SASL security layers in slapd access controls, it is possible to obtain access that would otherwise be denied via a simple bind for any identity covered in those ACLs. After the first SASL bind is completed, the sasl_ssf value is retained for all new non-SASL connections. Depending on the ACL configuration, this can affect different types of operations (searches, modifications, etc.). In other words, a successful authorization step completed by one user affects the authorization requirement for a different user.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00053.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00058.html",
+          "http://www.openldap.org/lists/openldap-announce/201907/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13565",
+          "https://lists.debian.org/debian-lts-announce/2019/08/msg00024.html",
+          "https://openldap.org/its/?findid=9052",
+          "https://usn.ubuntu.com/4078-1/",
+          "https://usn.ubuntu.com/4078-2/",
+          "https://www.openldap.org/its/index.cgi/?findid=9052",
+          "https://www.openldap.org/lists/openldap-announce/201907/msg00001.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2017-14159",
+        "PkgName": "openldap",
+        "InstalledVersion": "2.4.45-r3",
+        "FixedVersion": "2.4.46-r0",
+        "Title": "openldap: Privilege escalation via PID file manipulation",
+        "Description": "slapd in OpenLDAP 2.4.45 and earlier creates a PID file after dropping privileges to a non-root account, which might allow local users to kill arbitrary processes by leveraging access to this non-root account for PID file modification before a root script executes a \"kill `cat /pathname`\" command, as demonstrated by openldap-initscript.",
+        "Severity": "LOW",
+        "References": [
+          "http://www.openldap.org/its/index.cgi?findid=8703"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-13057",
+        "PkgName": "openldap",
+        "InstalledVersion": "2.4.45-r3",
+        "FixedVersion": "2.4.48-r0",
+        "Title": "openldap: Information disclosure issue in slapd component",
+        "Description": "An issue was discovered in the server in OpenLDAP before 2.4.48. When the server administrator delegates rootDN (database admin) privileges for certain databases but wants to maintain isolation (e.g., for multi-tenant deployments), slapd does not properly stop a rootDN from requesting authorization as an identity from another database during a SASL bind or with a proxyAuthz (RFC 4370) control. (It is not a common configuration to deploy a system where the server administrator and a DB administrator enjoy different levels of trust.)",
+        "Severity": "LOW",
+        "References": [
+          "http://www.openldap.org/lists/openldap-announce/201907/msg00001.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13057",
+          "https://lists.debian.org/debian-lts-announce/2019/08/msg00024.html",
+          "https://openldap.org/its/?findid=9038",
+          "https://security.netapp.com/advisory/ntap-20190822-0004/",
+          "https://usn.ubuntu.com/4078-1/",
+          "https://usn.ubuntu.com/4078-2/",
+          "https://www.openldap.org/its/?findid=9038",
+          "https://www.openldap.org/lists/openldap-announce/201907/msg00001.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-6109",
+        "PkgName": "openssh",
+        "InstalledVersion": "7.5_p1-r9",
+        "FixedVersion": "7.5_p1-r10",
+        "Title": "openssh: Missing character encoding in progress display allows for spoofing of scp client output",
+        "Description": "An issue was discovered in OpenSSH 7.9. Due to missing character encoding in the progress display, a malicious server (or Man-in-The-Middle attacker) can employ crafted object names to manipulate the client output, e.g., by using ANSI control codes to hide additional files being transferred. This affects refresh_progress_meter() in progressmeter.c.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-6109.html",
+          "http://linux.oracle.com/errata/ELSA-2019-3702.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-6109",
+          "https://cvsweb.openbsd.org/src/usr.bin/ssh/progressmeter.c",
+          "https://cvsweb.openbsd.org/src/usr.bin/ssh/scp.c",
+          "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W3YVQ2BPTOVDCFDVNC2GGF5P5ISFG37G/",
+          "https://security.gentoo.org/glsa/201903-16",
+          "https://security.netapp.com/advisory/ntap-20190213-0001/",
+          "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
+          "https://usn.ubuntu.com/3885-1/",
+          "https://www.debian.org/security/2019/dsa-4387"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-6111",
+        "PkgName": "openssh",
+        "InstalledVersion": "7.5_p1-r9",
+        "FixedVersion": "7.5_p1-r10",
+        "Title": "openssh: Improper validation of object names allows malicious server to overwrite files via scp client",
+        "Description": "An issue was discovered in OpenSSH 7.9. Due to the scp implementation being derived from 1983 rcp, the server chooses which files/directories are sent to the client. However, the scp client only performs cursory validation of the object name returned (only directory traversal attacks are prevented). A malicious scp server (or Man-in-The-Middle attacker) can overwrite arbitrary files in the scp client target directory. If recursive operation (-r) is performed, the server can manipulate subdirectories as well (for example, to overwrite the .ssh/authorized_keys file).",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-6111.html",
+          "http://linux.oracle.com/errata/ELSA-2019-3702.html",
+          "http://www.openwall.com/lists/oss-security/2019/04/18/1",
+          "http://www.securityfocus.com/bid/106741",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=1677794",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-6111",
+          "https://cvsweb.openbsd.org/src/usr.bin/ssh/scp.c",
+          "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W3YVQ2BPTOVDCFDVNC2GGF5P5ISFG37G/",
+          "https://security.gentoo.org/glsa/201903-16",
+          "https://security.netapp.com/advisory/ntap-20190213-0001/",
+          "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
+          "https://usn.ubuntu.com/3885-1/",
+          "https://usn.ubuntu.com/3885-2/",
+          "https://www.debian.org/security/2019/dsa-4387",
+          "https://www.exploit-db.com/exploits/46193/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-20685",
+        "PkgName": "openssh",
+        "InstalledVersion": "7.5_p1-r9",
+        "FixedVersion": "7.5_p1-r10",
+        "Title": "openssh: scp client improper directory name validation",
+        "Description": "In OpenSSH 7.9, scp.c in the scp client allows remote SSH servers to bypass intended access restrictions via the filename of . or an empty filename. The impact is modifying the permissions of the target directory on the client side.",
+        "Severity": "LOW",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-20685.html",
+          "http://linux.oracle.com/errata/ELSA-2019-3702.html",
+          "http://www.securityfocus.com/bid/106531",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2018-20685",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20685",
+          "https://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/scp.c.diff?r1=1.197\u0026r2=1.198\u0026f=h",
+          "https://github.com/openssh/openssh-portable/commit/6010c0303a422a9c5fa8860c061bf7105eb7f8b2",
+          "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
+          "https://security.gentoo.org/glsa/201903-16",
+          "https://security.netapp.com/advisory/ntap-20190215-0001/",
+          "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
+          "https://usn.ubuntu.com/3885-1/",
+          "https://www.debian.org/security/2019/dsa-4387",
+          "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
+          "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-13638",
+        "PkgName": "patch",
+        "InstalledVersion": "2.7.5-r2",
+        "FixedVersion": "2.7.6-r0",
+        "Title": "patch: OS shell command injection when processing crafted patch files",
+        "Description": "GNU patch through 2.7.6 is vulnerable to OS shell command injection that can be exploited by opening a crafted patch file that contains an ed style diff payload with shell metacharacters. The ed editor does not need to be present on the vulnerable system. This is different from CVE-2018-1000156.",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-13638.html",
+          "http://linux.oracle.com/errata/ELSA-2019-2964.html",
+          "http://packetstormsecurity.com/files/154124/GNU-patch-Command-Injection-Directory-Traversal.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13638",
+          "https://git.savannah.gnu.org/cgit/patch.git/commit/?id=3fcd042d26d70856e826a42b5f93dc4854d80bf0",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SVWWGISFWACROJJPVJJL4UBLVZ7LPOLT/",
+          "https://seclists.org/bugtraq/2019/Aug/29",
+          "https://seclists.org/bugtraq/2019/Jul/54",
+          "https://security-tracker.debian.org/tracker/CVE-2019-13638",
+          "https://security.gentoo.org/glsa/201908-22",
+          "https://www.debian.org/security/2019/dsa-4489"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-1000156",
+        "PkgName": "patch",
+        "InstalledVersion": "2.7.5-r2",
+        "FixedVersion": "2.7.6-r0",
+        "Title": "patch: Malicious patch files cause ed to execute arbitrary commands",
+        "Description": "GNU Patch version 2.7.6 contains an input validation vulnerability when processing patch files, specifically the EDITOR_PROGRAM invocation (using ed) can result in code execution. This attack appear to be exploitable via a patch file processed via the patch utility. This is similar to FreeBSD's CVE-2015-1418 however although they share a common ancestry the code bases have diverged over time.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-1000156.html",
+          "http://linux.oracle.com/errata/ELSA-2018-1200.html",
+          "http://rachelbythebay.com/w/2018/04/05/bangpatch/",
+          "https://access.redhat.com/errata/RHSA-2018:1199",
+          "https://access.redhat.com/errata/RHSA-2018:1200",
+          "https://access.redhat.com/errata/RHSA-2018:2091",
+          "https://access.redhat.com/errata/RHSA-2018:2092",
+          "https://access.redhat.com/errata/RHSA-2018:2093",
+          "https://access.redhat.com/errata/RHSA-2018:2094",
+          "https://access.redhat.com/errata/RHSA-2018:2095",
+          "https://access.redhat.com/errata/RHSA-2018:2096",
+          "https://access.redhat.com/errata/RHSA-2018:2097",
+          "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=894667#19",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1000156",
+          "https://lists.debian.org/debian-lts-announce/2018/04/msg00013.html",
+          "https://savannah.gnu.org/bugs/index.php?53566",
+          "https://seclists.org/bugtraq/2019/Jul/54",
+          "https://security.gentoo.org/glsa/201904-17",
+          "https://twitter.com/kurtseifried/status/982028968877436928",
+          "https://usn.ubuntu.com/3624-1/",
+          "https://usn.ubuntu.com/3624-2/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-6952",
+        "PkgName": "patch",
+        "InstalledVersion": "2.7.5-r2",
+        "FixedVersion": "2.7.6-r0",
+        "Title": "patch: Double free of memory in pch.c:another_hunk() causes a crash",
+        "Description": "A double free exists in the another_hunk function in pch.c in GNU patch through 2.7.6.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2018-6952.html",
+          "http://linux.oracle.com/errata/ELSA-2019-2033.html",
+          "http://www.securityfocus.com/bid/103047",
+          "https://savannah.gnu.org/bugs/index.php?53133",
+          "https://security.gentoo.org/glsa/201904-17"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-13636",
+        "PkgName": "patch",
+        "InstalledVersion": "2.7.5-r2",
+        "FixedVersion": "2.7.5-r3",
+        "Title": "patch: the following of symlinks in inp.c and util.c is mishandled in cases other than input files",
+        "Description": "In GNU patch through 2.7.6, the following of symlinks is mishandled in certain cases other than input files. This affects inp.c and util.c.",
+        "Severity": "MEDIUM",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13636",
+          "https://git.savannah.gnu.org/cgit/patch.git/commit/?id=dce4683cbbe107a95f1f0d45fabc304acfb5d71a",
+          "https://lists.debian.org/debian-lts-announce/2019/07/msg00016.html",
+          "https://seclists.org/bugtraq/2019/Jul/54",
+          "https://usn.ubuntu.com/4071-1/",
+          "https://usn.ubuntu.com/4071-2/",
+          "https://www.debian.org/security/2019/dsa-4489"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-8457",
+        "PkgName": "sqlite",
+        "InstalledVersion": "3.21.0-r1",
+        "FixedVersion": "3.25.3-r1",
+        "Title": "sqlite: heap out-of-bound read in function rtreenode()",
+        "Description": "SQLite3 from 3.6.0 to and including 3.27.2 is vulnerable to heap out-of-bound read in the rtreenode() function when handling invalid rtree tables.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00074.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-8457",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OPKYSWCOM3CL66RI76TYVIG6TJ263RXH/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SJPFGA45DI4F5MCF2OAACGH3HQOF4G3M/",
+          "https://security.netapp.com/advisory/ntap-20190606-0002/",
+          "https://usn.ubuntu.com/4004-1/",
+          "https://usn.ubuntu.com/4004-2/",
+          "https://usn.ubuntu.com/4019-1/",
+          "https://usn.ubuntu.com/4019-2/",
+          "https://www.oracle.com/security-alerts/cpuapr2020.html",
+          "https://www.oracle.com/security-alerts/cpujan2020.html",
+          "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html",
+          "https://www.sqlite.org/releaselog/3_28_0.html",
+          "https://www.sqlite.org/src/info/90acdbfce9c08858"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-20346",
+        "PkgName": "sqlite",
+        "InstalledVersion": "3.21.0-r1",
+        "FixedVersion": "3.25.3-r0",
+        "Title": "CVE-2018-20505 CVE-2018-20506 sqlite: Multiple flaws in sqlite which can be triggered via corrupted internal databases (Magellan)",
+        "Description": "SQLite before 3.25.3, when the FTS3 extension is enabled, encounters an integer overflow (and resultant buffer overflow) for FTS3 queries that occur after crafted changes to FTS3 shadow tables, allowing remote attackers to execute arbitrary code by leveraging the ability to run arbitrary SQL statements (such as in certain WebSQL use cases), aka Magellan.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00040.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00070.html",
+          "http://www.securityfocus.com/bid/106323",
+          "https://access.redhat.com/articles/3758321",
+          "https://blade.tencent.com/magellan/index_en.html",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=1659379",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=1659677",
+          "https://chromereleases.googleblog.com/2018/12/stable-channel-update-for-desktop.html",
+          "https://chromium.googlesource.com/chromium/src/+/c368e30ae55600a1c3c9cb1710a54f9c55de786e",
+          "https://crbug.com/900910",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20346",
+          "https://github.com/zhuowei/worthdoingbadly.com/blob/master/_posts/2018-12-14-sqlitebug.html",
+          "https://lists.debian.org/debian-lts-announce/2018/12/msg00012.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PU4NZ6DDU4BEM3ACM3FM6GLEPX56ZQXK/",
+          "https://news.ycombinator.com/item?id=18685296",
+          "https://security.gentoo.org/glsa/201904-21",
+          "https://sqlite.org/src/info/940f2adc8541a838",
+          "https://sqlite.org/src/info/d44318f59044162e",
+          "https://support.apple.com/HT209443",
+          "https://support.apple.com/HT209446",
+          "https://support.apple.com/HT209447",
+          "https://support.apple.com/HT209448",
+          "https://support.apple.com/HT209450",
+          "https://support.apple.com/HT209451",
+          "https://usn.ubuntu.com/4019-1/",
+          "https://usn.ubuntu.com/4019-2/",
+          "https://worthdoingbadly.com/sqlitebug/",
+          "https://www.freebsd.org/security/advisories/FreeBSD-EN-19:03.sqlite.asc",
+          "https://www.mail-archive.com/sqlite-users@mailinglists.sqlite.org/msg113218.html",
+          "https://www.sqlite.org/releaselog/3_25_3.html",
+          "https://www.synology.com/security/advisory/Synology_SA_18_61"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-11782",
+        "PkgName": "subversion",
+        "InstalledVersion": "1.9.7-r0",
+        "FixedVersion": "1.9.12-r0",
+        "Title": "subversion: remotely triggerable DoS vulnerability in svnserve 'get-deleted-rev'",
+        "Description": "In Apache Subversion versions up to and including 1.9.10, 1.10.4, 1.12.0, Subversion's svnserve server process may exit when a well-formed read-only request produces a particular answer. This can lead to disruption for users of the server.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://subversion.apache.org/security/CVE-2018-11782-advisory.txt",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11782",
+          "https://subversion.apache.org/security/CVE-2018-11782-advisory.txt"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-0203",
+        "PkgName": "subversion",
+        "InstalledVersion": "1.9.7-r0",
+        "FixedVersion": "1.9.12-r0",
+        "Title": "subversion: NULL pointer dereference in svnserve leading to an unauthenticated remote DoS",
+        "Description": "In Apache Subversion versions up to and including 1.9.10, 1.10.4, 1.12.0, Subversion's svnserve server process may exit when a client sends certain sequences of protocol commands. This can lead to disruption for users of the server.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-0203.html",
+          "http://linux.oracle.com/errata/ELSA-2019-2512.html",
+          "http://subversion.apache.org/security/CVE-2019-0203-advisory.txt",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0203",
+          "https://subversion.apache.org/security/CVE-2019-0203-advisory.txt"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-20482",
+        "PkgName": "tar",
+        "InstalledVersion": "1.29-r1",
+        "FixedVersion": "1.31-r0",
+        "Title": "tar: Infinite read loop in sparse_dump_region function in sparse.c",
+        "Description": "GNU Tar through 1.30, when --sparse is used, mishandles file shrinkage during read access, which allows local users to cause a denial of service (infinite read loop in sparse_dump_region in sparse.c) by modifying a file that is supposed to be archived by a different user's process (e.g., a system backup running as root).",
+        "Severity": "LOW",
+        "References": [
+          "http://git.savannah.gnu.org/cgit/tar.git/commit/?id=c15c42ccd1e2377945fd0414eca1a49294bff454",
+          "http://lists.gnu.org/archive/html/bug-tar/2018-12/msg00023.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00077.html",
+          "http://www.securityfocus.com/bid/106354",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20482",
+          "https://lists.debian.org/debian-lts-announce/2018/12/msg00023.html",
+          "https://news.ycombinator.com/item?id=18745431",
+          "https://security.gentoo.org/glsa/201903-05",
+          "https://twitter.com/thatcks/status/1076166645708668928",
+          "https://utcc.utoronto.ca/~cks/space/blog/sysadmin/TarFindingTruncateBug"
+        ]
+      }
+    ]
+  },
+  {
+    "Target": "node-app/package-lock.json",
+    "Vulnerabilities": [
+      {
+        "VulnerabilityID": "CVE-2019-11358",
+        "PkgName": "jquery",
+        "InstalledVersion": "3.3.9",
+        "FixedVersion": "\u003e=3.4.0",
+        "Title": "js-jquery: prototype pollution in object's prototype leading to denial of service or remote code execution or property injection",
+        "Description": "jQuery before 3.4.0, as used in Drupal, Backdrop CMS, and other products, mishandles jQuery.extend(true, {}, ...) because of Object.prototype pollution. If an unsanitized source object contained an enumerable __proto__ property, it could extend the native Object.prototype.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://packetstormsecurity.com/files/152787/dotCMS-5.1.1-Vulnerable-Dependencies.html",
+          "http://packetstormsecurity.com/files/153237/RetireJS-CORS-Issue-Script-Execution.html",
+          "http://seclists.org/fulldisclosure/2019/May/10",
+          "http://seclists.org/fulldisclosure/2019/May/11",
+          "http://seclists.org/fulldisclosure/2019/May/13",
+          "http://www.openwall.com/lists/oss-security/2019/06/03/2",
+          "http://www.securityfocus.com/bid/108023",
+          "https://access.redhat.com/errata/RHSA-2019:1456",
+          "https://backdropcms.org/security/backdrop-sa-core-2019-009",
+          "https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11358",
+          "https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b",
+          "https://github.com/jquery/jquery/pull/4333",
+          "https://hackerone.com/reports/454365",
+          "https://lists.apache.org/thread.html/08720ef215ee7ab3386c05a1a90a7d1c852bf0706f176a7816bf65fc@%3Ccommits.airflow.apache.org%3E",
+          "https://lists.apache.org/thread.html/5928aa293e39d248266472210c50f176cac1535220f2486e6a7fa844@%3Ccommits.airflow.apache.org%3E",
+          "https://lists.apache.org/thread.html/6097cdbd6f0a337bedd9bb5cc441b2d525ff002a96531de367e4259f@%3Ccommits.airflow.apache.org%3E",
+          "https://lists.apache.org/thread.html/88fb0362fd40e5b605ea8149f63241537b8b6fb5bfa315391fc5cbb7@%3Ccommits.airflow.apache.org%3E",
+          "https://lists.apache.org/thread.html/b736d0784cf02f5a30fbb4c5902762a15ad6d47e17e2c5a17b7d6205@%3Ccommits.airflow.apache.org%3E",
+          "https://lists.debian.org/debian-lts-announce/2019/05/msg00006.html",
+          "https://lists.debian.org/debian-lts-announce/2019/05/msg00029.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4UOAZIFCSZ3ENEFOR5IXX6NFAD3HV7FA/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5IABSKTYZ5JUGL735UKGXL5YPRYOPUYI/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KYH3OAGR2RTCHRA5NOKX2TES7SNQMWGO/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QV3PKZC3PQCO3273HAT76PAQZFBEO4KP/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RLXRX23725JL366CNZGJZ7AQQB7LHQ6F/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WZW27UCJ5CYFL4KFFFMYMIBNMIU2ALG5/",
+          "https://seclists.org/bugtraq/2019/Apr/32",
+          "https://seclists.org/bugtraq/2019/Jun/12",
+          "https://seclists.org/bugtraq/2019/May/18",
+          "https://snyk.io/vuln/SNYK-JS-JQUERY-174006",
+          "https://www.debian.org/security/2019/dsa-4434",
+          "https://www.debian.org/security/2019/dsa-4460",
+          "https://www.drupal.org/sa-core-2019-006"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-5428",
+        "PkgName": "jquery",
+        "InstalledVersion": "3.3.9",
+        "FixedVersion": "\u003e=3.4.0",
+        "Title": "Modification of Assumed-Immutable Data (MAID)",
+        "Description": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2019-11358. Reason: This candidate is a duplicate of CVE-2019-11358. Notes: All CVE users should reference CVE-2019-11358 instead of this candidate. All references and descriptions in this candidate have been removed to prevent accidental usage.",
+        "Severity": "MEDIUM",
+        "References": [
+          "https://hackerone.com/reports/454365"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-16487",
+        "PkgName": "lodash",
+        "InstalledVersion": "4.17.4",
+        "FixedVersion": "\u003e=4.17.11",
+        "Title": "lodash: Prototype pollution in utilities function",
+        "Description": "A prototype pollution vulnerability was found in lodash \u003c4.17.11 where the functions merge, mergeWith, and defaultsDeep can be tricked into adding or modifying properties of Object.prototype.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16487",
+          "https://hackerone.com/reports/380873",
+          "https://security.netapp.com/advisory/ntap-20190919-0004/",
+          "https://www.npmjs.com/advisories/782"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-3721",
+        "PkgName": "lodash",
+        "InstalledVersion": "4.17.4",
+        "FixedVersion": "\u003e=4.17.5",
+        "Title": "lodash: Prototype pollution in utilities function",
+        "Description": "lodash node module before 4.17.5 suffers from a Modification of Assumed-Immutable Data (MAID) vulnerability via defaultsDeep, merge, and mergeWith functions, which allows a malicious user to modify the prototype of \"Object\" via __proto__, causing the addition or modification of an existing property that will exist on all objects.",
+        "Severity": "MEDIUM",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3721",
+          "https://github.com/lodash/lodash/commit/d8e069cc3410082e44eb18fcf8e7f3d08ebe1d4a",
+          "https://hackerone.com/reports/310443",
+          "https://security.netapp.com/advisory/ntap-20190919-0004/"
+        ]
+      }
+    ]
+  },
+  {
+    "Target": "php-app/composer.lock",
+    "Vulnerabilities": [
+      {
+        "VulnerabilityID": "CVE-2016-5385",
+        "PkgName": "guzzlehttp/guzzle",
+        "InstalledVersion": "6.2.0",
+        "FixedVersion": "4.2.4, 5.3.1, 6.2.1",
+        "Title": "PHP: sets environmental variable based on user supplied Proxy request header",
+        "Description": "PHP through 7.0.8 does not attempt to address RFC 3875 section 4.1.18 namespace conflicts and therefore does not protect applications from the presence of untrusted client data in the HTTP_PROXY environment variable, which might allow remote attackers to redirect an application's outbound HTTP traffic to an arbitrary proxy server via a crafted Proxy header in an HTTP request, as demonstrated by (1) an application that makes a getenv('HTTP_PROXY') call or (2) a CGI configuration of PHP, aka an \"httpoxy\" issue.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2016-5385.html",
+          "http://linux.oracle.com/errata/ELSA-2016-1613.html",
+          "http://lists.opensuse.org/opensuse-updates/2016-08/msg00003.html",
+          "http://rhn.redhat.com/errata/RHSA-2016-1609.html",
+          "http://rhn.redhat.com/errata/RHSA-2016-1610.html",
+          "http://rhn.redhat.com/errata/RHSA-2016-1611.html",
+          "http://rhn.redhat.com/errata/RHSA-2016-1612.html",
+          "http://rhn.redhat.com/errata/RHSA-2016-1613.html",
+          "http://www.debian.org/security/2016/dsa-3631",
+          "http://www.kb.cert.org/vuls/id/797896",
+          "http://www.oracle.com/technetwork/security-advisory/cpujan2018-3236628.html",
+          "http://www.oracle.com/technetwork/security-advisory/cpujul2017-3236622.html",
+          "http://www.oracle.com/technetwork/topics/security/linuxbulletinjul2016-3090544.html",
+          "http://www.securityfocus.com/bid/91821",
+          "http://www.securitytracker.com/id/1036335",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=1353794",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5385",
+          "https://github.com/guzzle/guzzle/releases/tag/6.2.1",
+          "https://github.com/humbug/file_get_contents/releases/tag/1.1.2",
+          "https://h20566.www2.hpe.com/hpsc/doc/public/display?docLocale=en_US\u0026docId=emr_na-hpesbhf03770en_us",
+          "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05320149",
+          "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05333297",
+          "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05390722",
+          "https://httpoxy.org/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7RMYXAVNYL2MOBJTFATE73TOVOEZYC5R/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GXFEIMZPSVGZQQAYIQ7U7DFVX3IBSDLF/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KZOIUYZDBWNDDHC6XTOLZYRMRXZWTJCP/",
+          "https://security.gentoo.org/glsa/201611-22",
+          "https://www.drupal.org/SA-CORE-2016-003"
+        ]
+      }
+    ]
+  },
+  {
+    "Target": "python-app/Pipfile.lock",
+    "Vulnerabilities": [
+      {
+        "VulnerabilityID": "pyup.io-37132",
+        "PkgName": "django-cors-headers",
+        "InstalledVersion": "2.5.2",
+        "FixedVersion": "3.0.0",
+        "Title": "In django-cors-headers version 3.0.0, ``CORS_ORIGIN_WHITELIST`` requires URI schemes, and optionally ports. This is part of the CORS specification (Section 3.2 \u003chttps://tools.ietf.org/html/rfc6454section-3.2\u003e) that was not implemented in this library, except from with the ``CORS_ORIGIN_REGEX_WHITELIST`` setting. It fixes a security issue where the CORS middleware would allow requests between schemes, for example from insecure ``http://`` Origins to a secure ``https://`` site.\r\n\r\nYou will need to update your whitelist to include schemes, for example from this:\r\n\r\nCORS_ORIGIN_WHITELIST = ['example.com']\r\n\r\nto this:\r\n\r\nCORS_ORIGIN_WHITELIST = ['https://example.com']",
+        "Severity": "UNKNOWN"
+      },
+      {
+        "VulnerabilityID": "CVE-2020-1747",
+        "PkgName": "pyyaml",
+        "InstalledVersion": "5.1.0",
+        "FixedVersion": "5.3.1",
+        "Title": "PyYAML: arbitrary command execution through python/object/new when FullLoader is used",
+        "Description": "A vulnerability was discovered in the PyYAML library in versions before 5.3.1, where it is susceptible to arbitrary code execution when it processes untrusted YAML files through the full_load method or with the FullLoader loader. Applications that use the library to process untrusted input may be vulnerable to this flaw. An attacker could use this flaw to execute arbitrary code on the system by abusing the python/object/new constructor.",
+        "Severity": "CRITICAL",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-04/msg00017.html",
+          "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2020-1747",
+          "https://github.com/yaml/pyyaml/pull/386",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/K5HEPD7LEVDPCITY5IMDYWXUMX37VFMY/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WORRFHPQVAFKKXXWLSSW6XKUYLWM6CSH/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZBJA3SGNJKCAYPSHOHWY3KBCWNM5NYK2/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11236",
+        "PkgName": "urllib3",
+        "InstalledVersion": "1.24.1",
+        "Title": "python-urllib3: CRLF injection due to not encoding the '\\r\\n' sequence leading to possible attack on internal service",
+        "Description": "In the urllib3 library through 1.24.1 for Python, CRLF injection is possible if the attacker controls the request parameter.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-11236.html",
+          "http://linux.oracle.com/errata/ELSA-2020-0851.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11236",
+          "https://github.com/urllib3/urllib3/issues/1553",
+          "https://lists.debian.org/debian-lts-announce/2019/06/msg00016.html",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/R62XGEYPUTXMRHGX5I37EBCGQ5COHGKR/",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TBI45HO533KYHNB5YRO43TBYKA3E3VRL/",
+          "https://usn.ubuntu.com/3990-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-11324",
+        "PkgName": "urllib3",
+        "InstalledVersion": "1.24.1",
+        "FixedVersion": "1.24.2",
+        "Title": "python-urllib3: Certification mishandle when error should be thrown",
+        "Description": "The urllib3 library before 1.24.2 for Python mishandles certain cases where the desired set of CA certificates is different from the OS store of CA certificates, which results in SSL connections succeeding in situations where a verification failure is the correct outcome. This is related to use of the ssl_context, ca_certs, or ca_certs_dir argument.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://linux.oracle.com/cve/CVE-2019-11324.html",
+          "http://linux.oracle.com/errata/ELSA-2020-0850.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00039.html",
+          "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00041.html",
+          "http://www.openwall.com/lists/oss-security/2019/04/19/1",
+          "https://github.com/urllib3/urllib3/compare/a6ec68a...1efadf4",
+          "https://usn.ubuntu.com/3990-1/",
+          "https://www.openwall.com/lists/oss-security/2019/04/17/3"
+        ]
+      }
+    ]
+  },
+  {
+    "Target": "ruby-app/Gemfile.lock",
+    "Vulnerabilities": [
+      {
+        "VulnerabilityID": "CVE-2020-5267",
+        "PkgName": "actionview",
+        "InstalledVersion": "5.2.3",
+        "FixedVersion": "~\u003e 5.2.4, \u003e= 5.2.4.2, \u003e= 6.0.2.2",
+        "Title": "Possible XSS vulnerability in ActionView",
+        "Description": "In ActionView before versions 6.0.2.2 and 5.2.4.2, there is a possible XSS vulnerability in ActionView's JavaScript literal escape helpers. Views that use the `j` or `escape_javascript` methods may be susceptible to XSS attacks. The issue is fixed in versions 6.0.2.2 and 5.2.4.2.",
+        "Severity": "LOW",
+        "References": [
+          "http://www.openwall.com/lists/oss-security/2020/03/19/1",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-5267",
+          "https://github.com/rails/rails/commit/033a738817abd6e446e1b320cb7d1a5c15224e9a",
+          "https://github.com/rails/rails/security/advisories/GHSA-65cv-r6x7-79hv",
+          "https://groups.google.com/forum/#!topic/rubyonrails-security/55reWMM_Pg8",
+          "https://lists.debian.org/debian-lts-announce/2020/03/msg00022.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2020-10663",
+        "PkgName": "json",
+        "InstalledVersion": "2.2.0",
+        "FixedVersion": "\u003e= 2.3.0",
+        "Title": "rubygem-json: Unsafe Object Creation Vulnerability in JSON",
+        "Description": "The JSON gem through 2.2.0 for Ruby, as used in Ruby 2.4 through 2.4.9, 2.5 through 2.5.7, and 2.6 through 2.6.5, has an Unsafe Object Creation Vulnerability. This is quite similar to CVE-2013-0269, but does not rely on poor garbage-collection behavior within Ruby. Specifically, use of JSON parsing methods can lead to creation of a malicious object within the interpreter, with adverse effects that are application-dependent.",
+        "Severity": "HIGH",
+        "References": [
+          "http://lists.opensuse.org/opensuse-security-announce/2020-05/msg00004.html",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10663",
+          "https://groups.google.com/forum/#!topic/ruby-security-ann/ermX1eQqqKA",
+          "https://lists.debian.org/debian-lts-announce/2020/04/msg00030.html",
+          "https://www.ruby-lang.org/en/news/2020/03/19/json-dos-cve-2020-10663/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-15587",
+        "PkgName": "loofah",
+        "InstalledVersion": "2.2.3",
+        "FixedVersion": "\u003e= 2.3.1",
+        "Title": "rubygem-loofah: XXS when a crafted SVG element is republished",
+        "Description": "In the Loofah gem for Ruby through v2.3.0 unsanitized JavaScript may occur in sanitized output when a crafted SVG element is republished.",
+        "Severity": "LOW",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15587",
+          "https://github.com/flavorjones/loofah/issues/171",
+          "https://hackerone.com/reports/709009",
+          "https://www.debian.org/security/2019/dsa-4554"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-5477",
+        "PkgName": "nokogiri",
+        "InstalledVersion": "1.10.3",
+        "FixedVersion": "\u003e= 1.10.4",
+        "Title": "Rexical Command Injection Vulnerability",
+        "Description": "A command injection vulnerability in Nokogiri v1.10.3 and earlier allows commands to be executed in a subprocess via Ruby's `Kernel.open` method. Processes are vulnerable only if the undocumented method `Nokogiri::CSS::Tokenizer#load_file` is being called with unsafe user input as the filename. This vulnerability appears in code generated by the Rexical gem versions v1.0.6 and earlier. Rexical is used by Nokogiri to generate lexical scanner code for parsing CSS queries. The underlying vulnerability was addressed in Rexical v1.0.7 and Nokogiri upgraded to this version of Rexical in Nokogiri v1.10.4.",
+        "Severity": "HIGH",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5477",
+          "https://github.com/sparklemotion/nokogiri/issues/1915",
+          "https://github.com/tenderlove/rexical/blob/master/CHANGELOG.rdoc",
+          "https://github.com/tenderlove/rexical/blob/master/CHANGELOG.rdoc#107--2019-08-06",
+          "https://github.com/tenderlove/rexical/commit/a652474dbc66be350055db3e8f9b3a7b3fd75926",
+          "https://groups.google.com/forum/#!msg/ruby-security-ann/YMnKFsASOAE/Fw3ocLI0BQAJ",
+          "https://hackerone.com/reports/650835",
+          "https://lists.debian.org/debian-lts-announce/2019/09/msg00027.html"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-13117",
+        "PkgName": "nokogiri",
+        "InstalledVersion": "1.10.3",
+        "FixedVersion": "\u003e= 1.10.5",
+        "Title": "libxslt: an xsl number with certain format strings could lead to a uninitialized read in xsltNumberFormatInsertNumbers",
+        "Description": "In numbers.c in libxslt 1.1.33, an xsl:number with certain format strings could lead to a uninitialized read in xsltNumberFormatInsertNumbers. This could allow an attacker to discern whether a byte on the stack contains the characters A, a, I, i, or 0, or any other character.",
+        "Severity": "MEDIUM",
+        "References": [
+          "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=14471",
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13117",
+          "https://github.com/sparklemotion/nokogiri/issues/1943",
+          "https://gitlab.gnome.org/GNOME/libxslt/commit/2232473733b7313d67de8836ea3b29eec6e8e285",
+          "https://gitlab.gnome.org/GNOME/libxslt/commit/6ce8de69330783977dd14f6569419489875fb71b",
+          "https://gitlab.gnome.org/GNOME/libxslt/commit/c5eb6cf3aba0af048596106ed839b4ae17ecbcb1",
+          "https://groups.google.com/d/msg/ruby-security-ann/-Wq4aouIA3Q/yc76ZHemBgAJ",
+          "https://lists.debian.org/debian-lts-announce/2019/07/msg00020.html",
+          "https://oss-fuzz.com/testcase-detail/5631739747106816",
+          "https://usn.ubuntu.com/4164-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2020-7595",
+        "PkgName": "nokogiri",
+        "InstalledVersion": "1.10.3",
+        "FixedVersion": "\u003e= 1.10.8",
+        "Title": "libxml2: infinite loop in xmlStringLenDecodeEntities in some end-of-file situations",
+        "Description": "xmlStringLenDecodeEntities in parser.c in libxml2 2.9.10 has an infinite loop in a certain end-of-file situation.",
+        "Severity": "MEDIUM",
+        "References": [
+          "https://github.com/sparklemotion/nokogiri/issues/1992",
+          "https://gitlab.gnome.org/GNOME/libxml2/commit/0e1a49c89076",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/545SPOI3ZPPNPX4TFRIVE4JVRTJRKULL/",
+          "https://usn.ubuntu.com/4274-1/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2019-16782",
+        "PkgName": "rack",
+        "InstalledVersion": "2.0.7",
+        "FixedVersion": "~\u003e 1.6.12, \u003e= 2.0.8",
+        "Title": "rubygem-rack: hijack sessions by using timing attacks targeting the session id",
+        "Description": "There's a possible information leak / session hijack vulnerability in Rack (RubyGem rack). This vulnerability is patched in versions 1.6.12 and 2.0.8. Attackers may be able to find and hijack sessions by using timing attacks targeting the session id. Session ids are usually stored and indexed in a database that uses some kind of scheme for speeding up lookups of that session id. By carefully measuring the amount of time it takes to look up a session, an attacker may be able to find a valid session id and hijack the session. The session id itself may be generated randomly, but the way the session is indexed by the backing store does not use a secure comparison.",
+        "Severity": "MEDIUM",
+        "References": [
+          "http://www.openwall.com/lists/oss-security/2019/12/18/2",
+          "http://www.openwall.com/lists/oss-security/2019/12/18/3",
+          "http://www.openwall.com/lists/oss-security/2019/12/19/3",
+          "https://github.com/rack/rack/commit/7fecaee81f59926b6e1913511c90650e76673b38",
+          "https://github.com/rack/rack/security/advisories/GHSA-hrqr-hxpp-chr3",
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HZXMWILCICQLA2BYSP6I2CRMUG53YBLX/"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2018-3741",
+        "PkgName": "rails-html-sanitizer",
+        "InstalledVersion": "1.0.3",
+        "FixedVersion": "\u003e= 1.0.4",
+        "Title": "rubygem-rails-html-sanitizer: non-whitelisted attributes are present in sanitized output when input with specially-crafted HTML fragments leading to XSS vulnerability",
+        "Description": "There is a possible XSS vulnerability in all rails-html-sanitizer gem versions below 1.0.4 for Ruby. The gem allows non-whitelisted attributes to be present in sanitized output when input with specially-crafted HTML fragments, and these attributes can lead to an XSS attack on target applications. This issue is similar to CVE-2018-8048 in Loofah. All users running an affected release should either upgrade or use one of the workarounds immediately.",
+        "Severity": "MEDIUM",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3741",
+          "https://github.com/rails/rails-html-sanitizer/commit/f3ba1a839a35f2ba7f941c15e239a1cb379d56ae",
+          "https://groups.google.com/d/msg/rubyonrails-security/tP7W3kLc5u4/uDy2Br7xBgAJ"
+        ]
+      },
+      {
+        "VulnerabilityID": "CVE-2020-8130",
+        "PkgName": "rake",
+        "InstalledVersion": "12.3.2",
+        "FixedVersion": "\u003e= 12.3.3",
+        "Title": "rake: OS Command Injection via egrep in Rake::FileList",
+        "Description": "There is an OS command injection vulnerability in Ruby Rake \u003c 12.3.3 in Rake::FileList when supplying a filename that begins with the pipe character `|`.",
+        "Severity": "CRITICAL",
+        "References": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8130",
+          "https://github.com/advisories/GHSA-jppv-gw3r-w3q8",
+          "https://hackerone.com/reports/651518",
+          "https://lists.debian.org/debian-lts-announce/2020/02/msg00026.html",
+          "https://usn.ubuntu.com/4295-1/"
+        ]
+      }
+    ]
+  },
+  {
+    "Target": "rust-app/Cargo.lock",
+    "Vulnerabilities": [
+      {
+        "VulnerabilityID": "RUSTSEC-2019-0001",
+        "PkgName": "ammonia",
+        "InstalledVersion": "1.9.0",
+        "Title": "Uncontrolled recursion leads to abort in HTML serialization",
+        "Description": "Affected versions of this crate did use recursion for serialization of HTML\nDOM trees.\n\nThis allows an attacker to cause abort due to stack overflow by providing\na pathologically nested input.\n\nThe flaw was corrected by serializing the DOM tree iteratively instead.\n",
+        "Severity": "UNKNOWN",
+        "References": [
+          "https://github.com/rust-ammonia/ammonia/blob/master/CHANGELOG.md#210"
+        ]
+      },
+      {
+        "VulnerabilityID": "RUSTSEC-2016-0001",
+        "PkgName": "openssl",
+        "InstalledVersion": "0.8.3",
+        "Title": "SSL/TLS MitM vulnerability due to insecure defaults",
+        "Description": "All versions of rust-openssl prior to 0.9.0 contained numerous insecure defaults\nincluding off-by-default certificate verification and no API to perform hostname\nverification.\n\nUnless configured correctly by a developer, these defaults could allow an attacker\nto perform man-in-the-middle attacks.\n\nThe problem was addressed in newer versions by enabling certificate verification\nby default and exposing APIs to perform hostname verification. Use the\n`SslConnector` and `SslAcceptor` types to take advantage of these new features\n(as opposed to the lower-level `SslContext` type).\n",
+        "Severity": "UNKNOWN",
+        "References": [
+          "https://github.com/sfackler/rust-openssl/releases/tag/v0.9.0"
+        ]
+      },
+      {
+        "VulnerabilityID": "RUSTSEC-2018-0010",
+        "PkgName": "openssl",
+        "InstalledVersion": "0.8.3",
+        "Title": "Use after free in CMS Signing",
+        "Description": "Affected versions of the OpenSSL crate used structures after they'd been freed.",
+        "Severity": "UNKNOWN",
+        "References": [
+          "https://github.com/sfackler/rust-openssl/pull/942"
+        ]
+      },
+      {
+        "VulnerabilityID": "RUSTSEC-2018-0003",
+        "PkgName": "smallvec",
+        "InstalledVersion": "0.6.9",
+        "Title": "Possible double free during unwinding in SmallVec::insert_many",
+        "Description": "If an iterator passed to `SmallVec::insert_many` panicked in `Iterator::next`,\ndestructors were run during unwinding while the vector was in an inconsistent\nstate, possibly causing a double free (a destructor running on two copies of\nthe same value).\n\nThis is fixed in smallvec 0.6.3 by ensuring that the vector's length is not\nupdated to include moved items until they have been removed from their\noriginal positions.  Items may now be leaked if `Iterator::next` panics, but\nthey will not be dropped more than once.\n\nThank you to @Vurich for reporting this bug.\n",
+        "Severity": "UNKNOWN",
+        "References": [
+          "https://github.com/servo/rust-smallvec/issues/96"
+        ]
+      },
+      {
+        "VulnerabilityID": "RUSTSEC-2019-0009",
+        "PkgName": "smallvec",
+        "InstalledVersion": "0.6.9",
+        "Title": "Double-free and use-after-free in SmallVec::grow()",
+        "Description": "Attempting to call `grow` on a spilled SmallVec with a value equal to the current capacity causes it to free the existing data. This performs a double free immediately and may lead to use-after-free on subsequent accesses to the SmallVec contents.\n\nAn attacker that controls the value passed to `grow` may exploit this flaw to obtain memory contents or gain remote code execution.\n\nCredits to @ehuss for discovering, reporting and fixing the bug.\n",
+        "Severity": "UNKNOWN",
+        "References": [
+          "https://github.com/servo/rust-smallvec/issues/148"
+        ]
+      },
+      {
+        "VulnerabilityID": "RUSTSEC-2019-0012",
+        "PkgName": "smallvec",
+        "InstalledVersion": "0.6.9",
+        "Title": "Memory corruption in SmallVec::grow()",
+        "Description": "Attempting to call `grow` on a spilled SmallVec with a value less than the current capacity causes corruption of memory allocator data structures.\n\nAn attacker that controls the value passed to `grow` may exploit this flaw to obtain memory contents or gain remote code execution.\n\nCredits to @ehuss for discovering, reporting and fixing the bug.\n",
+        "Severity": "UNKNOWN",
+        "References": [
+          "https://github.com/servo/rust-smallvec/issues/149"
+        ]
+      }
+    ]
+  }
+]
