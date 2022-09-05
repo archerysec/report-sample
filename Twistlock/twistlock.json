@@ -69,6 +69,23 @@
 					}
 				},
 				{
+					"id": "CVE-2018-1000001",
+					"status": "open",
+					"cvss": 6.8,
+					"vector": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+					"description": "In glibc 2.26 and earlier there is confusion in the usage of getcwd() by realpath() which can be used to write before the destination buffer leading to a buffer underflow and potential code execution.",
+					"severity": "medium",
+					"packageName": "glibc (used in libc6, multiarch-support, libc-bin)",
+					"packageVersion": "2.24-11+deb9u4",
+					"link": "https://security-tracker.debian.org/tracker/CVE-2018-1000001",
+					"riskFactors": {
+						"Attack complexity: low": {},
+						"Exploit exists": {},
+						"High severity": {},
+						"Recent vulnerability": {}
+					}
+				},
+				{
 					"id": "CVE-2018-9234",
 					"status": "open",
 					"cvss": 7.5,

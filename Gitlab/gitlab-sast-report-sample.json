@@ -39,6 +39,43 @@
       ]
     },
     {
+      "id": "9e96e0ab-23da-4d7d-a09e-0acbaa5e83ca",
+      "category": "sast",
+      "name": "Predictable pseudorandom number generator",
+      "message": "Predictable pseudorandom number generator",
+      "description": "The use of java.util.Random is predictable",
+      "severity": "Critical",
+      "confidence": "Medium",
+      "scanner": {
+        "id": "find_sec_bugs",
+        "name": "Find Security Bugs"
+      },
+      "location": {
+        "file": "groovy/src/main/groovy/com/gitlab/security_products/tests/App.groovy",
+        "start_line": 47,
+        "end_line": 47,
+        "class": "com.gitlab.security_products.tests.App",
+        "method": "generateSecretToken2",
+        "dependency": {
+          "package": {}
+        }
+      },
+      "identifiers": [
+        {
+          "type": "find_sec_bugs_type",
+          "name": "Find Security Bugs-PREDICTABLE_RANDOM",
+          "value": "PREDICTABLE_RANDOM",
+          "url": "https://find-sec-bugs.github.io/bugs.htm#PREDICTABLE_RANDOM"
+        },
+        {
+          "type": "cwe",
+          "name": "CWE-330",
+          "value": "330",
+          "url": "https://cwe.mitre.org/data/definitions/330.html"
+        }
+      ]
+    },
+    {
       "id": "e6dbf91f-4c07-46f7-a365-0169489c27d1",
       "category": "sast",
       "message": "Probable insecure usage of temp file/directory.",

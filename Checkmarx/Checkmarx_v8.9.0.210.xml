@@ -381,6 +381,70 @@
         </PathNode>
       </Path>
     </Result>
+    <Result NodeId="12439150273" FileName="webgoat-lessons/challenge/src/main/java/org/owasp/webgoat/challenges/challenge7/Assignment7.java" Status="New" Line="59" Column="68" FalsePositive="False" Severity="Critical" AssignToUser="" state="0" Remark="" DeepLink="http://EP1VUCHMRX30001/CxWebClient/ViewerMain.aspx?scanid=1243915&amp;projectid=20728&amp;pathid=273" SeverityIndex="3">
+      <Path ResultId="1243915" PathId="273" SimilarityId="842465608">
+        <PathNode>
+          <FileName>webgoat-lessons/challenge/src/main/java/org/owasp/webgoat/challenges/challenge7/Assignment7.java</FileName>
+          <Line>59</Line>
+          <Column>68</Column>
+          <NodeId>1</NodeId>
+          <Name>email</Name>
+          <Type></Type>
+          <Length>5</Length>
+          <Snippet>
+            <Line>
+              <Number>59</Number>
+              <Code>    public AttackResult sendPasswordResetLink(@RequestParam String email, HttpServletRequest request) throws URISyntaxException {</Code>
+            </Line>
+          </Snippet>
+        </PathNode>
+        <PathNode>
+          <FileName>webgoat-lessons/challenge/src/main/java/org/owasp/webgoat/challenges/challenge7/Assignment7.java</FileName>
+          <Line>73</Line>
+          <Column>66</Column>
+          <NodeId>2</NodeId>
+          <Name>email</Name>
+          <Type></Type>
+          <Length>5</Length>
+          <Snippet>
+            <Line>
+              <Number>73</Number>
+              <Code>        return success(this).feedback("email.send").feedbackArgs(email).build();</Code>
+            </Line>
+          </Snippet>
+        </PathNode>
+        <PathNode>
+          <FileName>webgoat-lessons/challenge/src/main/java/org/owasp/webgoat/challenges/challenge7/Assignment7.java</FileName>
+          <Line>73</Line>
+          <Column>65</Column>
+          <NodeId>3</NodeId>
+          <Name>feedbackArgs</Name>
+          <Type></Type>
+          <Length>1</Length>
+          <Snippet>
+            <Line>
+              <Number>73</Number>
+              <Code>        return success(this).feedback("email.send").feedbackArgs(email).build();</Code>
+            </Line>
+          </Snippet>
+        </PathNode>
+        <PathNode>
+          <FileName>webgoat-lessons/challenge/src/main/java/org/owasp/webgoat/challenges/challenge7/Assignment7.java</FileName>
+          <Line>73</Line>
+          <Column>78</Column>
+          <NodeId>4</NodeId>
+          <Name>build</Name>
+          <Type></Type>
+          <Length>1</Length>
+          <Snippet>
+            <Line>
+              <Number>73</Number>
+              <Code>        return success(this).feedback("email.send").feedbackArgs(email).build();</Code>
+            </Line>
+          </Snippet>
+        </PathNode>
+      </Path>
+    </Result>
     <Result NodeId="12439150274" FileName="webgoat-lessons/cross-site-scripting/src/main/java/org/owasp/webgoat/xss/CrossSiteScriptingLesson5a.java" Status="New" Line="45" Column="84" FalsePositive="False" Severity="High" AssignToUser="" state="0" Remark="" DeepLink="http://EP1VUCHMRX30001/CxWebClient/ViewerMain.aspx?scanid=1243915&amp;projectid=20728&amp;pathid=274" SeverityIndex="3">
       <Path ResultId="1243915" PathId="274" SimilarityId="-329596375">
         <PathNode>
@@ -9226,7 +9290,7 @@
       </Path>
     </Result>
   </Query>
-  <Query id="594" categories="PCI DSS v3.2;PCI DSS (3.2) - 6.5.1 - Injection flaws - particularly SQL injection,OWASP Top 10 2013;A1-Injection,FISMA 2014;System And Information Integrity,NIST SP 800-53;SI-10 Information Input Validation (P1),OWASP Top 10 2017;A1-Injection,OWASP Mobile Top 10 2016;M7-Client Code Quality" cweId="89" name="SQL_Injection" group="Java_High_Risk" Severity="High" Language="Java" LanguageHash="0125956323748501" LanguageChangeDate="2020-03-28T00:00:00.0000000" SeverityIndex="3" QueryPath="Java\Cx\Java High Risk\SQL Injection Version:2" QueryVersionCode="56152908">
+  <Query id="594" categories="PCI DSS v3.2;PCI DSS (3.2) - 6.5.1 - Injection flaws - particularly SQL injection,OWASP Top 10 2013;A1-Injection,FISMA 2014;System And Information Integrity,NIST SP 800-53;SI-10 Information Input Validation (P1),OWASP Top 10 2017;A1-Injection,OWASP Mobile Top 10 2016;M7-Client Code Quality" cweId="89" name="SQL_Injection" group="Java_High_Risk" Severity="Critical" Language="Java" LanguageHash="0125956323748501" LanguageChangeDate="2020-03-28T00:00:00.0000000" SeverityIndex="3" QueryPath="Java\Cx\Java High Risk\SQL Injection Version:2" QueryVersionCode="56152908">
     <Result NodeId="12439150325" FileName="webgoat-lessons/sql-injection/src/main/java/org/owasp/webgoat/sql_injection/advanced/SqlInjectionChallenge.java" Status="New" Line="56" Column="62" FalsePositive="False" Severity="High" AssignToUser="" state="0" Remark="" DeepLink="http://EP1VUCHMRX30001/CxWebClient/ViewerMain.aspx?scanid=1243915&amp;projectid=20728&amp;pathid=325" SeverityIndex="3">
       <Path ResultId="1243915" PathId="325" SimilarityId="1765178421">
         <PathNode>
@@ -21351,6 +21415,87 @@
       </Path>
     </Result>
   </Query>
+  <Query id="1683" categories="OWASP Top 10 2013;A6-Sensitive Data Exposure,FISMA 2014;Media Protection,NIST SP 800-53;SC-13 Cryptographic Protection (P1),OWASP Top 10 2017;A3-Sensitive Data Exposure" cweId="759" name="Use_of_a_One_Way_Hash_without_a_Salt" group="Java_Medium_Threat" Severity="Medium" Language="Java" LanguageHash="0125956323748501" LanguageChangeDate="2020-03-28T00:00:00.0000000" SeverityIndex="2" QueryPath="Java\Cx\Java Medium Threat\Use of a One Way Hash without a Salt Version:1" QueryVersionCode="68273771">
+    <Result NodeId="12439150071" FileName="webgoat-lessons/missing-function-ac/src/main/java/org/owasp/webgoat/missing_ac/DisplayUser.java" Status="New" Line="63" Column="54" FalsePositive="False" Severity="Critical" AssignToUser="" state="0" Remark="" DeepLink="http://EP1VUCHMRX30001/CxWebClient/ViewerMain.aspx?scanid=1243915&amp;projectid=20728&amp;pathid=71" SeverityIndex="2">
+      <Path ResultId="1243915" PathId="71" SimilarityId="1314377612">
+        <PathNode>
+          <FileName>webgoat-lessons/missing-function-ac/src/main/java/org/owasp/webgoat/missing_ac/DisplayUser.java</FileName>
+          <Line>63</Line>
+          <Column>54</Column>
+          <NodeId>1</NodeId>
+          <Name>""SHA-256""</Name>
+          <Type></Type>
+          <Length>9</Length>
+          <Snippet>
+            <Line>
+              <Number>63</Number>
+              <Code>        MessageDigest md = MessageDigest.getInstance("SHA-256");</Code>
+            </Line>
+          </Snippet>
+        </PathNode>
+        <PathNode>
+          <FileName>webgoat-lessons/missing-function-ac/src/main/java/org/owasp/webgoat/missing_ac/DisplayUser.java</FileName>
+          <Line>63</Line>
+          <Column>53</Column>
+          <NodeId>2</NodeId>
+          <Name>getInstance</Name>
+          <Type></Type>
+          <Length>1</Length>
+          <Snippet>
+            <Line>
+              <Number>63</Number>
+              <Code>        MessageDigest md = MessageDigest.getInstance("SHA-256");</Code>
+            </Line>
+          </Snippet>
+        </PathNode>
+        <PathNode>
+          <FileName>webgoat-lessons/missing-function-ac/src/main/java/org/owasp/webgoat/missing_ac/DisplayUser.java</FileName>
+          <Line>63</Line>
+          <Column>23</Column>
+          <NodeId>3</NodeId>
+          <Name>md</Name>
+          <Type></Type>
+          <Length>2</Length>
+          <Snippet>
+            <Line>
+              <Number>63</Number>
+              <Code>        MessageDigest md = MessageDigest.getInstance("SHA-256");</Code>
+            </Line>
+          </Snippet>
+        </PathNode>
+        <PathNode>
+          <FileName>webgoat-lessons/missing-function-ac/src/main/java/org/owasp/webgoat/missing_ac/DisplayUser.java</FileName>
+          <Line>67</Line>
+          <Column>23</Column>
+          <NodeId>4</NodeId>
+          <Name>md</Name>
+          <Type></Type>
+          <Length>2</Length>
+          <Snippet>
+            <Line>
+              <Number>67</Number>
+              <Code>        byte[] hash = md.digest(salted.getBytes("UTF-8"));</Code>
+            </Line>
+          </Snippet>
+        </PathNode>
+        <PathNode>
+          <FileName>webgoat-lessons/missing-function-ac/src/main/java/org/owasp/webgoat/missing_ac/DisplayUser.java</FileName>
+          <Line>67</Line>
+          <Column>32</Column>
+          <NodeId>5</NodeId>
+          <Name>digest</Name>
+          <Type></Type>
+          <Length>1</Length>
+          <Snippet>
+            <Line>
+              <Number>67</Number>
+              <Code>        byte[] hash = md.digest(salted.getBytes("UTF-8"));</Code>
+            </Line>
+          </Snippet>
+        </PathNode>
+      </Path>
+    </Result>
+  </Query>
   <Query id="3890" categories="FISMA 2014;Identification And Authentication,NIST SP 800-53;AC-3 Access Enforcement (P1)" cweId="285" name="Improper_Resource_Access_Authorization" group="Java_Low_Visibility" Severity="Low" Language="Java" LanguageHash="0125956323748501" LanguageChangeDate="2020-03-28T00:00:00.0000000" SeverityIndex="1" QueryPath="Java\Cx\Java Low Visibility\Improper Resource Access Authorization Version:6" QueryVersionCode="96566362">
     <Result NodeId="12439150144" FileName="webgoat-lessons/missing-function-ac/src/main/java/org/owasp/webgoat/missing_ac/Users.java" Status="New" Line="56" Column="59" FalsePositive="False" Severity="Low" AssignToUser="" state="0" Remark="" DeepLink="http://EP1VUCHMRX30001/CxWebClient/ViewerMain.aspx?scanid=1243915&amp;projectid=20728&amp;pathid=144" SeverityIndex="1">
       <Path ResultId="1243915" PathId="144" SimilarityId="-1111859396">
@@ -22418,7 +22563,7 @@
     </Result>
   </Query>
   <Query id="3884" categories="FISMA 2014;Access Control,NIST SP 800-53;AC-3 Access Enforcement (P1),OWASP Top 10 2017;A6-Security Misconfiguration" cweId="732" name="Incorrect_Permission_Assignment_For_Critical_Resources" group="Java_Low_Visibility" Severity="Low" Language="Java" LanguageHash="0125956323748501" LanguageChangeDate="2020-03-28T00:00:00.0000000" SeverityIndex="1" QueryPath="Java\Cx\Java Low Visibility\Incorrect Permission Assignment For Critical Resources Version:3" QueryVersionCode="96441331">
-    <Result NodeId="12439150105" FileName="webgoat-lessons/auth-bypass/src/main/java/org/owasp/webgoat/auth_bypass/VerifyAccount.java" Status="New" Line="57" Column="18" FalsePositive="False" Severity="Low" AssignToUser="" state="0" Remark="" DeepLink="http://EP1VUCHMRX30001/CxWebClient/ViewerMain.aspx?scanid=1243915&amp;projectid=20728&amp;pathid=105" SeverityIndex="1">
+    <Result NodeId="12439150105" FileName="webgoat-lessons/auth-bypass/src/main/java/org/owasp/webgoat/auth_bypass/VerifyAccount.java" Status="New" Line="57" Column="18" FalsePositive="False" Severity="Critical" AssignToUser="" state="0" Remark="" DeepLink="http://EP1VUCHMRX30001/CxWebClient/ViewerMain.aspx?scanid=1243915&amp;projectid=20728&amp;pathid=105" SeverityIndex="1">
       <Path ResultId="1243915" PathId="105" SimilarityId="-1705675583">
         <PathNode>
           <FileName>webgoat-lessons/auth-bypass/src/main/java/org/owasp/webgoat/auth_bypass/VerifyAccount.java</FileName>

@@ -1,0 +1,29 @@
+Alert ID,Policy Name,Policy Type,Description,Policy Labels,Policy Severity,Resource Name,Cloud Type,Cloud Account Id,Cloud Account Name,Region,Recommendation,Alert Status,Alert Time,Event Occurred,Dismissed On,Dismissed By,Dismissal Reason,Resolved On,Resolution Reason,Resource ID
+N-40482,AWS EC2 instance with unrestricted outbound access to internet,network,"This policy identifies EC2 instances that allow unrestricted outbound traffic to the internet. As a best practice, restrict outbound traffic and limit the access to known hosts or services.",,critical,sample-report,aws,4044XXXXXX,AWS Account,AWS Virginia,"The following steps are recommended to restrict unrestricted access to the Internet:
+1. Visit the Network path Analysis from Source to Destination and review the network path components that allow internet access.
+2. Identify the network component on which restrictive rules can be implemented.
+3. Implement the required changes and make sure no other resources have been impacted due to these changes:
+ a) The overly permissive Security Group rules can be made more restrictive.
+ b) Move the instance inside a restrictive subnet if the instance does not need to have outbound access to the internet.
+ c) Define a NAT rule to restrict traffic going to the Internet from the respective instance.",open,"Jul 04, 2022 05.54 PDT America/Los_Angeles",,,,,,,i-0c07aea8xxxxxxx
+N-29868,AWS EC2 instance with unrestricted outbound access to internet,network,"This policy identifies EC2 instances that allow unrestricted outbound traffic to the internet. As a best practice, restrict outbound traffic and limit the access to known hosts or services.",,high,vault-server,aws,4044XXXXXX,Sample account,AWS Virginia,"The following steps are recommended to restrict unrestricted access to the Internet:
+1. Visit the Network path Analysis from Source to Destination and review the network path components that allow internet access.
+2. Identify the network component on which restrictive rules can be implemented.
+3. Implement the required changes and make sure no other resources have been impacted due to these changes:
+ a) The overly permissive Security Group rules can be made more restrictive.
+ b) Move the instance inside a restrictive subnet if the instance does not need to have outbound access to the internet.
+ c) Define a NAT rule to restrict traffic going to the Internet from the respective instance.",open,"Jul 03, 2022 23.04 PDT America/Los_Angeles",,,,,,,i-029df4758xxxxxx
+N-29668,AWS EC2 instance with unrestricted outbound access to internet,network,"This policy identifies EC2 instances that allow unrestricted outbound traffic to the internet. As a best practice, restrict outbound traffic and limit the access to known hosts or services.",,medium,sample-report-resource,aws,4044XXXXXX,test account,AWS Virginia,"The following steps are recommended to restrict unrestricted access to the Internet:
+1. Visit the Network path Analysis from Source to Destination and review the network path components that allow internet access.
+2. Identify the network component on which restrictive rules can be implemented.
+3. Implement the required changes and make sure no other resources have been impacted due to these changes:
+ a) The overly permissive Security Group rules can be made more restrictive.
+ b) Move the instance inside a restrictive subnet if the instance does not need to have outbound access to the internet.
+ c) Define a NAT rule to restrict traffic going to the Internet from the respective instance.",open,"Jul 03, 2022 23.04 PDT America/Los_Angeles",,,,,,,i-0fdc4458xxxxxxx
+N-29569,AWS EC2 instance with unrestricted outbound access to internet,network,"This policy identifies EC2 instances that allow unrestricted outbound traffic to the internet. As a best practice, restrict outbound traffic and limit the access to known hosts or services.",,low,server,aws,4044XXXXXX,accoun test,AWS Virginia,"The following steps are recommended to restrict unrestricted access to the Internet:
+1. Visit the Network path Analysis from Source to Destination and review the network path components that allow internet access.
+2. Identify the network component on which restrictive rules can be implemented.
+3. Implement the required changes and make sure no other resources have been impacted due to these changes:
+ a) The overly permissive Security Group rules can be made more restrictive.
+ b) Move the instance inside a restrictive subnet if the instance does not need to have outbound access to the internet.
+ c) Define a NAT rule to restrict traffic going to the Internet from the respective instance.",open,"Jul 03, 2022 23.04 PDT America/Los_Angeles",,,,,,,i-0d838exxxxxxxx

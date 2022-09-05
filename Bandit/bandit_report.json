@@ -60,6 +60,34 @@
       "code": "226 \t\t\t\tdata = request.data\n227 \t\t\t\ttree = ET.fromstring(data)\n228 \t\t\t\tdata1 = tree.find('.//{tns}username').text\n",
       "filename": "routes.py",
       "issue_confidence": "HIGH",
+      "issue_severity": "CRITICAL",
+      "issue_text": "Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+      "line_number": 227,
+      "line_range": [
+        227
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b313-b320-xml-bad-elementtree",
+      "test_id": "B314",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "226 \t\t\t\tdata = request.data\n227 \t\t\t\ttree = ET.fromstring(data)\n228 \t\t\t\tdata1 = tree.find('.//{tns}username').text\n",
+      "filename": "routes.py",
+      "issue_confidence": "HIGH",
+      "issue_severity": "HIGH",
+      "issue_text": "Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+      "line_number": 227,
+      "line_range": [
+        227
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b313-b320-xml-bad-elementtree",
+      "test_id": "B314",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "226 \t\t\t\tdata = request.data\n227 \t\t\t\ttree = ET.fromstring(data)\n228 \t\t\t\tdata1 = tree.find('.//{tns}username').text\n",
+      "filename": "routes.py",
+      "issue_confidence": "HIGH",
       "issue_severity": "MEDIUM",
       "issue_text": "Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
       "line_number": 227,

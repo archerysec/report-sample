@@ -135,6 +135,25 @@
       "confidence": "Medium"
     },
     {
+      "warning_type": "SQL Injection",
+      "warning_code": 0,
+      "fingerprint": "0c8be6f7618c44181ab46aa9108a3e3624df7f89146349e4de884f5ae2d35a77",
+      "check_name": "SQL",
+      "message": "SQL injection",
+      "file": "app/models/test2.rb",
+      "line": 260,
+      "link": "https://brakemanscanner.org/docs/warning_types/sql_injection/",
+      "code": "where(\"#{column_name} IS NOT NULL\")",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "Test",
+        "method": "Test.test_retrieve"
+      },
+      "user_input": "column_name",
+      "confidence": "Critical"
+    },
+    {
       "warning_type": "Dynamic Render Path",
       "warning_code": 15,
       "fingerprint": "1c1e1a42a8b8bb0ad2b74bd3b91db2dd48f21062b3fe7e96e45be3ea1faa7c43",
